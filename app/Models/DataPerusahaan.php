@@ -1,0 +1,70 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class DataPerusahaan extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        "user_id",
+        "kode_pendaftaran",
+        "name",
+        "no_tlp",
+        "wa",
+        "jenis_usaha",
+        "alamat",
+        "provinsi",
+        "kabupaten",
+        "kecamatan",
+        "desa",
+        "kode_pos",
+        "nama_pemilik_usaha",
+        "alamat_pemilik_usaha",
+        "provinsi_pemilik_usaha",
+        "kabupaten_pemilik_usaha",
+        "kecamatan_pemilik_usaha",
+        "desa_pemilik_usaha",
+        "nomor_akte_pendirian",
+        "pendirian_perusahaan",
+        "perpindahan_perusahaan",
+        "status_perusahaan",
+        "jumlah_cabang_di_indonesia",
+        "jumlah_cabang_di_luar_indonesia",
+        "status_kepemilikan",
+        "status_permodalan",
+        "asal_negara",
+        "waktu_kerja",
+        "sektor_pertambangan",
+        "sektor_esdm",
+        "sektor_perikanan",
+        "instalasi_pengolahan_limbah",
+        "pihak_ketiga",
+        "tingkat_upah_terendah",
+        "tingkat_upah_tertinggi",
+        "fasilitas_keselamatan_dan_kesehatan",
+        "fasilitas_kesejahteraan",
+        "nomor_bpjs",
+        "program_jaminan_kesehatan",
+        "program_jkk",
+        "program_jht",
+        "program_jkm",
+        "program_jp",
+        "perangkat_hubungan_kerja",
+        "perangkat_organisasi_keterangan",
+        "sudah_mempunyai_perencanaan_tenaga_kerja",
+        "rencana_jumlah_pekerja",
+        "rencana_jumlah_pekerja_laki_laki",
+        "jumlah_pekerja_terakhir",
+        "jumlah_pekerja_laki_laki_terakhir",
+        "jumlah_penerimaan_pekerja_dalam_12_bulan_terakhir",
+        "jumlan_pekerja_yang_berhenti_dalam_12_bulan_terakhir",
+        "program_pelatihan_bagi_pekerja",
+        "program_pemagangan",
+        "tanggal_lapor",
+        "tanggal_lapor_kembali",
+        "status",
+    ];
+}
