@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('pelatihan_nakers', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('type');
+            $table->string('judul');
+            $table->string('nomor_wa_pendaftaran')->nullable();
+            $table->string('lokasi_pelatihan')->nullable();
+            $table->string('link_pendaftaran')->nullable();
+            $table->string('image')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

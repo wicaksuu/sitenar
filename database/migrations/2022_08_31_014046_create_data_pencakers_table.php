@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('data_pencakers', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('lowongan_id');
+            $table->string('status');
             $table->timestamps();
         });
     }

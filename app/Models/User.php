@@ -49,6 +49,20 @@ class User extends Authenticatable
         'nomor_bpjs',
         'omset',
         'jumlah_tenaga_kerja',
+        'agama',
+        'pendidikan_terakhir',
+        'jurusan',
+        'tahun_kelulusan',
+        'nama_sekolah',
+        'jabatan_dalam_negeri',
+        'wilayah_kerja_dalam_negeri',
+        'province_id_dalam_negeri',
+        'regencie_id_dalam_negeri',
+        'district_id_dalam_negeri',
+        'village_id_dalam_negeri',
+        'jabatan_luar_negeri',
+        'wilayah_kerja_luar_negeri',
+        'negara_tujuan_luar_negeri',
     ];
 
     /**

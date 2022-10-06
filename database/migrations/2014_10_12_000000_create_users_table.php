@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
 
             $table->string('role');
-            $table->string('wa');
+            $table->string('wa')->nullable();
             $table->string('ktp')->nullable();
             $table->string('kk')->nullable();
             $table->string('npwp')->nullable();
@@ -27,6 +27,23 @@ return new class extends Migration
             $table->string('regencie_id')->nullable();
             $table->string('province_id')->nullable();
             $table->string('district_id')->nullable();
+
+
+            $table->string('agama')->nullable();
+            $table->string('pendidikan_terakhir')->nullable();
+            $table->string('jurusan')->nullable();
+            $table->string('tahun_kelulusan')->nullable();
+            $table->string('nama_sekolah')->nullable();
+
+            $table->string('jabatan_dalam_negeri')->nullable();
+            $table->string('wilayah_kerja_dalam_negeri')->nullable();
+            $table->string('province_id_dalam_negeri')->nullable();
+            $table->string('regencie_id_dalam_negeri')->nullable();
+            $table->string('district_id_dalam_negeri')->nullable();
+            $table->string('village_id_dalam_negeri')->nullable();
+            $table->string('jabatan_luar_negeri')->nullable();
+            $table->string('wilayah_kerja_luar_negeri')->nullable();
+            $table->string('negara_tujuan_luar_negeri')->nullable();
 
             //perusahaan
             $table->string('no_tlp')->nullable();

@@ -147,7 +147,9 @@
                                 .</p>
 
                             <!-- button starts -->
-                            <a class="dtr-btn dtr-btn-small dtr-mt-50" href="#" role="button">
+                            @if (!Auth::check())
+
+                            <a class="dtr-btn dtr-btn-small dtr-mt-50" href="{{ url('register') }}" role="button">
                                 <!-- icon -->
                                 <i class="icon-rocket-launch-fill" aria-hidden="true"></i>
                                 <p>
@@ -156,12 +158,12 @@
                                     <!-- text -->
                                     <span class="dtr-btn-text">Sekarang</span>
                                 </p>
-                            </a>
+                            </a>@endif
                             <!-- button ends -->
 
                         </div>
                         <div class="col-12 col-md-6 small-device-space">
-                            <img src="assets/images/section-img1.png" alt="image">
+                            <img src="dasson/images/maintenance.png" alt="image">
                         </div>
                     </div>
                     <!--== row ends ==-->
@@ -196,7 +198,6 @@
         </section>
         <!-- hero section ends
 ================================================== -->
-
         <!-- blog section starts
             ================================================== -->
         <section id="blog" class="dtr-section dtr-py-100 bg-white">
@@ -215,21 +216,25 @@
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-post-item">
                             <div class="dtr-post-img"> <img style="height: 200px"
-                                    src="https://disnaker.madiunkab.go.id/wp-content/uploads/2020/07/naker3-300x134.jpg"
+                                    src="https://www.harianbhirawa.co.id/wp-content/uploads/2022/09/02-kilas-dar-3.jpg"
                                     alt="image">
                             </div>
                             <div class="dtr-post-content"> <span class="dtr-meta-category">
                                     <a href="#">Berita</a>
                                 </span>
-                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Lulusan SMA dan Sarjana di Madiun
-                                        Dibekali...</a></h5>
+                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Konsolidasi Pemkab Madiun dengan
+                                        LKS...</a></h5>
                                 <div class="dtr-meta color-dark-gray"> <span class="dtr-meta-author-avatar"><img
-                                            src="assets/images/user-1-80x80.jpg" alt="image"></span> Aurora
-                                    Walker<span class="dtr-meta-date">15. 08. 2021</span></div>
-                                <p class="dtr-post-excerpt">Pemerintah Kabupaten Madiun melalui Dinas Tenaga Kerja
-                                    Kabupaten Madiun membekali lulusan SLTA dan sarjana dengan
-                                    ketrampilan. Pelatihan dilakukan di UPT BLK Madiun, Jl. Sumatra Caruban.</p>
-                                <a class="dtr-read-more" href="#"><span class="dtr-read-more-content">Continue
+                                            src="assets/images/user-1-80x80.jpg" alt="image"></span> Helmi
+                                    Supriyatno<span class="dtr-meta-date">14. 09. 2022</span></div>
+                                <p class="dtr-post-excerpt">Bupati Madiun H. Ahmad Dawami mengharapkan komitmen Lembaga
+                                    Kerja
+                                    Sama (LKS) Tripartit yang terdiri dari unsur pemerintah, pengusaha, serta pekerja
+                                    dapat
+                                    dijalankan sesuai dengan kesepakatan.</p>
+                                <a class="dtr-read-more"
+                                    href="https://www.harianbhirawa.co.id/konsolidasi-pemkab-madiun-dengan-lks-tripartit-dapat-bekerja-sesuai-kesepakatan/"><span
+                                        class="dtr-read-more-content">Continue
                                         Reading ...</span></a>
                             </div>
                         </div>
@@ -240,20 +245,24 @@
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-post-item">
                             <div class="dtr-post-img"> <img style="height: 200px"
-                                    src="https://disnaker.madiunkab.go.id/wp-content/uploads/2020/04/naker-300x177.jpg"
+                                    src="https://www.jatimpos.co/images/2022/06/06/20220606-1831_1654539707344.jpg"
                                     alt="image">
                             </div>
                             <div class="dtr-post-content"> <span class="dtr-meta-category"><a href="#">Berita</a></span>
-                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">​Penuhi Kebutuhan PT Global Way,
-                                        Disnaker...</a></h5>
+                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Gandeng PT DMA, Disnaker
+                                        Kabupaten...</a>
+                                </h5>
                                 <div class="dtr-meta color-dark-gray"> <span class="dtr-meta-author-avatar"><img
-                                            src="assets/images/user-2-80x80.jpg" alt="image"></span> Noah
-                                    Wilson<span class="dtr-meta-date">20. 07. 2021</span></div>
-                                <p class="dtr-post-excerpt">​Dinas Tenaga Kerja Kabupaten Madiun menyiapkan tenaga kerja
-                                    siap pakai untuk menindaklanjuti laporan kebutuhan tenaga
-                                    kerja menjahit sepatu di PT Global Way Indonesia. Penyiapan tenaga kerja itu
-                                    diwujudkan dengan penyelenggaraan</p>
-                                <a class="dtr-read-more" href="#"><span class="dtr-read-more-content">Continue
+                                            src="assets/images/user-2-80x80.jpg" alt="image"></span> Mataraman<span
+                                        class="dtr-meta-date">20. 07. 2022</span></div>
+                                <p class="dtr-post-excerpt">Pemerintah Kabupaten Madiun melalui Dinas Tenaga Kerja
+                                    (Disnaker)
+                                    Kabupaten Madiun menggelar pelatihan berbasis kompetensi bagi karyawan pabrik rokok
+                                    PT.
+                                    Digjaya Mulia Abadi (DMA), yang ada di Desa Tiron, Kecamatan Madiun.</p>
+                                <a class="dtr-read-more"
+                                    href="https://www.jatimpos.co/jatim/mataraman/8878-gandeng-pt-dma-disnaker-kabupaten-madiun-gelar-pelatihan-prosesing-menjahit-dan-tata-rias-rambut"><span
+                                        class="dtr-read-more-content">Continue
                                         Reading ...</span></a>
                             </div>
                         </div>
@@ -264,21 +273,24 @@
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-post-item">
                             <div class="dtr-post-img"> <img style="height: 200px"
-                                    src="https://disnaker.madiunkab.go.id/wp-content/uploads/2020/07/naker2-300x159.jpg"
+                                    src="https://radarsukabumi.com/wp-content/uploads/2019/10/Pelatihan-Menjahit-Sukabumi.jpg"
                                     alt="image">
                             </div>
                             <div class="dtr-post-content"> <span class="dtr-meta-category"><a
                                         href="#">Pelatihan</a></span>
-                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Why SaaS application usage
-                                        exploding!</a></h5>
+                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Pelatihan Menjahit Sepatu Oleh
+                                        Disnaker</a></h5>
                                 <div class="dtr-meta color-dark-gray"> <span class="dtr-meta-author-avatar"><img
-                                            src="assets/images/user-1-80x80.jpg" alt="image"></span> Aurora
-                                    Walker<span class="dtr-meta-date">22. 06. 2021</span></div>
-                                <p class="dtr-post-excerpt">Pemkab Madiun, Jawa Timur, melalui Dinas Tenaga Kerja,
-                                    mengadakan pelatihan kerajinan sepatu di Balai Pelatihan Disnaker
-                                    Kabupaten Madiun, Selasa 15 Oktober 2019. Ada 50 orang peserta yang mengikuti
-                                    pelatihan tersebut </p>
-                                <a class="dtr-read-more" href="#"><span class="dtr-read-more-content">Continue
+                                            src="https://sitenar.madiunkab.go.id/assets/images/icons/icon.png"
+                                            alt="image"></span> Disnaker<span class="dtr-meta-date">22. 06. 2021</span>
+                                </div>
+                                <p class="dtr-post-excerpt">Kerjasama antara dinas tenaga kerja Kab. Madiun dengan
+                                    asosiasi
+                                    persepatuan Indonesia yang bertempat di balaidesa Ngampel Mejayan dan dilakasanakan
+                                    pada
+                                    bulan Oktober tahun 2022 </p>
+                                <a class="dtr-read-more" href="https://bit.ly/menjahitsepatu2022"><span
+                                        class="dtr-read-more-content">Continue
                                         Reading ...</span></a>
                             </div>
                         </div>
@@ -291,7 +303,6 @@
         </section>
         <!-- blog section ends
             ================================================== -->
-
 
         <!-- testimonial section starts
 ================================================== -->
@@ -316,18 +327,18 @@
                     <!--== slide 1 starts ==-->
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img src="assets/images/user-1-80x80.jpg"
+                            <p class="dtr-testimonial-user"><img
+                                    src="https://th.bing.com/th/id/R.b599bb8d59a28f752b1f7375690f31ec?rik=aBfiGZYdYldGtA&riu=http%3a%2f%2fcpfood.co.id%2fthemes%2fcpfood%2fassets%2fimages%2ffavicon-singa-merah.png&ehk=g0y5tPMQYAawbYwsigdU%2bxN%2fkg5kPzgf8zUu7nFQ2t4%3d&risl=&pid=ImgRaw&r=0"
                                     alt="Eleanor Jensen"></p>
                             <div>
-                                <h5 class="dtr-client-name">David James</h5>
-                                <span class="dtr-client-job">Spin Automation</span>
+                                <h5 class="dtr-client-name">Food Division</h5>
+                                <span class="dtr-client-job">PT. Charoen Pokphand Indonesia</span>
                             </div>
                             <span class="dtr-testimonial-stars dtr-stars-5"></span>
                         </div>
-                        <p class="dtr-testimonial-content">“There are many variations of passages of lorem ipsum
-                            available but the majority have suffered alteration in some form by injected humour
-                            or
-                            randomised words which don’t look even slightly believable.”</p>
+                        <p class="dtr-testimonial-content">Kami membutuhkan Sales/marketing, Foreman Engineering,
+                            Operator WWT,
+                            Forman Produksi, QC Inspector dan Teknisi</p>
                         <a class="dtr-read-more" href="#"><span class="dtr-read-more-content">Continue
                                 Reading ...</span></a>
                     </div>
@@ -336,19 +347,19 @@
                     <!--== slide 2 starts ==-->
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img src="assets/images/user-2-80x80.jpg"
+                            <p class="dtr-testimonial-user"><img
+                                    src="https://lh5.ggpht.com/AiDTpPjet2_aSGbOtQQuhZoFrIrurbK1l0ePrjjAAi0wIFt7AgndKuYfN3rsyXn2K1rl=w300"
                                     alt="Eleanor Jensen"></p>
                             <div>
-                                <h5 class="dtr-client-name">Eleanor Jensen</h5>
-                                <span class="dtr-client-job">Entrepreneur</span>
+                                <h5 class="dtr-client-name">Agen Perisai BPJS</h5>
+                                <span class="dtr-client-job">BPJS Ketenagakerjaan</span>
                             </div>
                             <span class="dtr-testimonial-stars dtr-stars-4"></span>
                         </div>
-                        <p class="dtr-testimonial-content">“There are many variations of passages of lorem ipsum
-                            available but the majority have suffered alteration in some form by injected humour
-                            or
-                            randomised words which don’t look even slightly believable.”</p><a class="dtr-read-more"
-                            href="#"><span class="dtr-read-more-content">Continue
+                        <p class="dtr-testimonial-content">Membutuhkan agen perisai ketenaga kerjaan diutamakan domisili
+                            di Kota
+                            Madiun, Kabupaten Madiun dan Kabupaten Magetan</p><a class="dtr-read-more"
+                            href="https://bit.ly/perisaimadiun"><span class="dtr-read-more-content">Continue
                                 Reading ...</span></a>
                     </div>
                     <!--== slide 2 ends ==-->
@@ -356,19 +367,19 @@
                     <!--== slide 3 starts ==-->
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img src="assets/images/user-3-80x80.jpg"
+                            <p class="dtr-testimonial-user"><img
+                                    src="https://cdn0.astonhotelsinternational.com/v3/assets/images/brand_logo/aston-logo-color.png"
                                     alt="Eleanor Jensen"></p>
                             <div>
-                                <h5 class="dtr-client-name">Alizee Denten</h5>
-                                <span class="dtr-client-job">Kantole Global</span>
+                                <h5 class="dtr-client-name">Front Desk Agent</h5>
+                                <span class="dtr-client-job">Aston Hotel</span>
                             </div>
                             <span class="dtr-testimonial-stars dtr-stars-5"></span>
                         </div>
-                        <p class="dtr-testimonial-content">“There are many variations of passages of lorem ipsum
-                            available but the majority have suffered alteration in some form by injected humour
-                            or
-                            randomised words which don’t look even slightly believable.”</p><a class="dtr-read-more"
-                            href="#"><span class="dtr-read-more-content">Continue
+                        <p class="dtr-testimonial-content">Lokasi kerja Aston Mojokerto Hotel & Conference Center.
+                            Salary Upah
+                            Minimum Kabupaten/Kota setempat</p><a class="dtr-read-more" href="#"><span
+                                class="dtr-read-more-content">Continue
                                 Reading ...</span></a>
                     </div>
                     <!--== slide 3 ends ==-->
@@ -376,19 +387,19 @@
                     <!--== slide 4 starts ==-->
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img src="assets/images/user-1-80x80.jpg"
+                            <p class="dtr-testimonial-user"><img
+                                    src="https://sitenar.madiunkab.go.id/assets/images/icons/icon.png"
                                     alt="Eleanor Jensen"></p>
                             <div>
-                                <h5 class="dtr-client-name">Andrew Graham</h5>
-                                <span class="dtr-client-job">Entrepreneur</span>
+                                <h5 class="dtr-client-name">Sales Marketing</h5>
+                                <span class="dtr-client-job">PT. Sinar Kediri Sakti</span>
                             </div>
                             <span class="dtr-testimonial-stars dtr-stars-4"></span>
                         </div>
-                        <p class="dtr-testimonial-content">“There are many variations of passages of lorem ipsum
-                            available but the majority have suffered alteration in some form by injected humour
-                            or
-                            randomised words which don’t look even slightly believable.”</p><a class="dtr-read-more"
-                            href="#"><span class="dtr-read-more-content">Continue
+                        <p class="dtr-testimonial-content">Pengalaman sales minimal 1 tahun. Dimisili Madiun dan
+                            menguasai area
+                            Kota dan Kabupaten Madiun </p><a class="dtr-read-more" href="#"><span
+                                class="dtr-read-more-content">Continue
                                 Reading ...</span></a>
                     </div>
                     <!--== slide 4 ends ==-->
@@ -404,7 +415,7 @@
 ================================================== -->
 
         <!-- team section starts
-================================================== -->
+    ================================================== -->
         <section id="team" class="dtr-section dtr-pt-100 dtr-pb-70">
             <div class="container">
 
@@ -417,7 +428,7 @@
 
                 {{-- test --}}
 
-                <div class="dtr-slick-slider dtr-testimonial-slider dtr-slick-has-dots">
+                <div class="dtr-slick-slider dtr-testimonial-slider dtr-slick-has-dots text-center">
                     <!-- column 1 starts -->
                     <div class="dtr-testimonial">
                         <div style="width: 300px">
@@ -426,12 +437,11 @@
                                 <div
                                     class="dtr-team dtr-team-social-onhover text-center dtr-team-offset-border dtr-box-rounded">
                                     <div class="dtr-team-content-wrapper dtr-shadow">
-                                        <div class="dtr-team-img"> <img src="assets/images/team-member-1.jpg"
-                                                alt="image">
+                                        <div class="dtr-team-img"> <img src="img/DSC02257.jpg" alt="image">
                                         </div>
                                         <div class="dtr-team-content bg-white">
-                                            <h5 class="dtr-team-title">Will McMilan</h5>
-                                            <p class="dtr-team-subtitle">CEO</p>
+                                            <h5 class="dtr-team-title">Heru Kuncoro, S.Sos, M.Msi</h5>
+                                            <p class="dtr-team-subtitle">Kepala Dinas</p>
                                             <!-- team social starts -->
                                             <div class="dtr-team-social">
                                                 <ul class="dtr-social dtr-social-list">
@@ -439,9 +449,11 @@
                                                             title="twitter"></a>
                                                     </li>
                                                     <li><a href="#" class="dtr-facebook" target="_blank"
-                                                            title="facebook"></a></li>
+                                                            title="facebook"></a>
+                                                    </li>
                                                     <li><a href="#" class="dtr-linkedin" target="_blank"
-                                                            title="linkedin"></a></li>
+                                                            title="linkedin"></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <!-- team social ends -->
@@ -462,12 +474,11 @@
                                 <div
                                     class="dtr-team dtr-team-social-onhover text-center dtr-team-offset-border dtr-box-rounded">
                                     <div class="dtr-team-content-wrapper dtr-shadow">
-                                        <div class="dtr-team-img"> <img src="assets/images/team-member-1.jpg"
-                                                alt="image">
+                                        <div class="dtr-team-img"> <img src="img/DSC02262.jpg" alt="image">
                                         </div>
                                         <div class="dtr-team-content bg-white">
-                                            <h5 class="dtr-team-title">Will McMilan</h5>
-                                            <p class="dtr-team-subtitle">CEO</p>
+                                            <h5 class="dtr-team-title">Tri Budihartoyo, SE. M.Si</h5>
+                                            <p class="dtr-team-subtitle">Sekertaris Dinas</p>
                                             <!-- team social starts -->
                                             <div class="dtr-team-social">
                                                 <ul class="dtr-social dtr-social-list">
@@ -475,9 +486,11 @@
                                                             title="twitter"></a>
                                                     </li>
                                                     <li><a href="#" class="dtr-facebook" target="_blank"
-                                                            title="facebook"></a></li>
+                                                            title="facebook"></a>
+                                                    </li>
                                                     <li><a href="#" class="dtr-linkedin" target="_blank"
-                                                            title="linkedin"></a></li>
+                                                            title="linkedin"></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <!-- team social ends -->
@@ -499,12 +512,11 @@
                                 <div
                                     class="dtr-team dtr-team-social-onhover text-center dtr-team-offset-border dtr-box-rounded">
                                     <div class="dtr-team-content-wrapper dtr-shadow">
-                                        <div class="dtr-team-img"> <img src="assets/images/team-member-1.jpg"
-                                                alt="image">
+                                        <div class="dtr-team-img"> <img src="img/DSC02265.jpg" alt="image">
                                         </div>
                                         <div class="dtr-team-content bg-white">
-                                            <h5 class="dtr-team-title">Will McMilan</h5>
-                                            <p class="dtr-team-subtitle">CEO</p>
+                                            <h5 class="dtr-team-title">Ratnasari Wandanwulan, S.H</h5>
+                                            <p class="dtr-team-subtitle">Hubungan Industrial & jamsostek</p>
                                             <!-- team social starts -->
                                             <div class="dtr-team-social">
                                                 <ul class="dtr-social dtr-social-list">
@@ -512,9 +524,126 @@
                                                             title="twitter"></a>
                                                     </li>
                                                     <li><a href="#" class="dtr-facebook" target="_blank"
-                                                            title="facebook"></a></li>
+                                                            title="facebook"></a>
+                                                    </li>
                                                     <li><a href="#" class="dtr-linkedin" target="_blank"
-                                                            title="linkedin"></a></li>
+                                                            title="linkedin"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- team social ends -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- member ends -->
+
+                        </div>
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 1 starts -->
+                    <div class="dtr-testimonial">
+                        <div style="width: 300px">
+                            <div class="dtr-post-item">
+                                <!-- member starts -->
+                                <div
+                                    class="dtr-team dtr-team-social-onhover text-center dtr-team-offset-border dtr-box-rounded">
+                                    <div class="dtr-team-content-wrapper dtr-shadow">
+                                        <div class="dtr-team-img"> <img src="img/DSC02248.jpg" alt="image">
+                                        </div>
+                                        <div class="dtr-team-content bg-white">
+                                            <h5 class="dtr-team-title">Rahayu Susanti, S.STP, M.Si</h5>
+                                            <p class="dtr-team-subtitle">Perindustrian</p>
+                                            <!-- team social starts -->
+                                            <div class="dtr-team-social">
+                                                <ul class="dtr-social dtr-social-list">
+                                                    <li><a href="#" class="dtr-twitter" target="_blank"
+                                                            title="twitter"></a>
+                                                    </li>
+                                                    <li><a href="#" class="dtr-facebook" target="_blank"
+                                                            title="facebook"></a>
+                                                    </li>
+                                                    <li><a href="#" class="dtr-linkedin" target="_blank"
+                                                            title="linkedin"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- team social ends -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- member ends -->
+
+                        </div>
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 1 starts -->
+                    <div class="dtr-testimonial">
+                        <div style="width: 300px">
+                            <div class="dtr-post-item">
+                                <!-- member starts -->
+                                <div
+                                    class="dtr-team dtr-team-social-onhover text-center dtr-team-offset-border dtr-box-rounded">
+                                    <div class="dtr-team-content-wrapper dtr-shadow">
+                                        <div class="dtr-team-img"> <img src="img/DSC02244.jpg" alt="image">
+                                        </div>
+                                        <div class="dtr-team-content bg-white">
+                                            <h5 class="dtr-team-title">Hengky Sukarno, S.Sos</h5>
+                                            <p class="dtr-team-subtitle">Penempatan dan Perluasan Kesempatan Kerja</p>
+                                            <!-- team social starts -->
+                                            <div class="dtr-team-social">
+                                                <ul class="dtr-social dtr-social-list">
+                                                    <li><a href="#" class="dtr-twitter" target="_blank"
+                                                            title="twitter"></a>
+                                                    </li>
+                                                    <li><a href="#" class="dtr-facebook" target="_blank"
+                                                            title="facebook"></a>
+                                                    </li>
+                                                    <li><a href="#" class="dtr-linkedin" target="_blank"
+                                                            title="linkedin"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- team social ends -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- member ends -->
+
+                        </div>
+                    </div>
+                    <!-- column 1 ends -->
+
+
+                    <!-- column 1 starts -->
+                    <div class="dtr-testimonial">
+                        <div style="width: 300px">
+                            <div class="dtr-post-item">
+                                <!-- member starts -->
+                                <div
+                                    class="dtr-team dtr-team-social-onhover text-center dtr-team-offset-border dtr-box-rounded">
+                                    <div class="dtr-team-content-wrapper dtr-shadow">
+                                        <div class="dtr-team-img"> <img src="img/DSC02254.jpg" alt="image">
+                                        </div>
+                                        <div class="dtr-team-content bg-white">
+                                            <h5 class="dtr-team-title">Tri Waluyo Jatmika, S.Sos, MM</h5>
+                                            <p class="dtr-team-subtitle">Pelatihan dan Produktifitas</p>
+                                            <!-- team social starts -->
+                                            <div class="dtr-team-social">
+                                                <ul class="dtr-social dtr-social-list">
+                                                    <li><a href="#" class="dtr-twitter" target="_blank"
+                                                            title="twitter"></a>
+                                                    </li>
+                                                    <li><a href="#" class="dtr-facebook" target="_blank"
+                                                            title="facebook"></a>
+                                                    </li>
+                                                    <li><a href="#" class="dtr-linkedin" target="_blank"
+                                                            title="linkedin"></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <!-- team social ends -->
@@ -533,15 +662,14 @@
             </div>
         </section>
         <!-- team section ends
-================================================== -->
-
+    ================================================== -->
         <!-- section starts
 ================================================== -->
         <section id="statistik" class="dtr-section dtr-pt-100">
             <div class="container">
 
                 <!-- heading starts -->
-                <div class="dtr-section-intro text-left dtr-mb-50">
+                <div class="dtr-section-intro text-left dtr-mb-50 text-center">
                     <h2 class="dtr-intro-heading">Statistik & Tutorial</h2>
 
                 </div>
@@ -551,13 +679,13 @@
                 <div class="row">
 
                     <!-- column 1 starts -->
-                    <div class="col-12 col-md-4 dtr-py-50">
+                    <div class="col-12 col-md-4 dtr-py-50 text-center">
 
                         <!-- counter starts -->
-                        <div class="dtr-counter"> <i class="icon-cursor-fill color-blue"></i>
-                            <div> <span class="dtr-counter-number counting-number color-blue" data-from="1" data-to="20"
-                                    data-speed="1600">90</span> <span
-                                    class="dtr-counter-suffix color-light-purple">+</span>
+                        <div class="dtr-counter "> <i class="icon-cursor-fill color-blue"></i>
+                            <div> <span class="dtr-counter-number counting-number color-blue" data-from="0"
+                                    data-to="{{ $count_lowongan }}" data-speed="1600">{{ $count_lowongan }}</span>
+                                <span class="dtr-counter-suffix color-light-purple">+</span>
                                 <p class="dtr-count-text">Jumlah Lowongan</p>
                             </div>
                         </div>
@@ -567,13 +695,13 @@
                     <!-- column 1 ends -->
 
                     <!-- column 2 starts -->
-                    <div class="col-12 col-md-4 dtr-py-50 dtr-border-left dtr-border-right">
+                    <div class="col-12 col-md-4 dtr-py-50 dtr-border-left dtr-border-right text-center">
 
                         <!-- counter starts -->
-                        <div class="dtr-counter"> <i class="icon-cloud-arrow-down-fill color-blue"></i>
-                            <div> <span class="dtr-counter-number counting-number color-blue" data-from="1"
-                                    data-to="236" data-speed="1600">236</span> <span
-                                    class="dtr-counter-suffix color-light-purple">+</span>
+                        <div class="dtr-counter "> <i class="icon-cloud-arrow-down-fill color-blue"></i>
+                            <div> <span class="dtr-counter-number counting-number color-blue" data-from="0"
+                                    data-to="{{ $count_perusahaan }}" data-speed="1600">{{ $count_perusahaan }}</span>
+                                <span class="dtr-counter-suffix color-light-purple">+</span>
                                 <p class="dtr-count-text">Jumlah Perusahaan</p>
                             </div>
                         </div>
@@ -583,13 +711,13 @@
                     <!-- column 2 ends -->
 
                     <!-- column 3 starts -->
-                    <div class="col-12 col-md-4 dtr-py-50">
+                    <div class="col-12 col-md-4 dtr-py-50 text-center">
 
                         <!-- counter starts -->
-                        <div class="dtr-counter"> <i class="icon-user-circle-gear-fill color-blue"></i>
-                            <div><span class="dtr-counter-number counting-number color-blue" data-from="1" data-to="82"
-                                    data-speed="1600">82</span> <span
-                                    class="dtr-counter-suffix color-light-purple">%</span>
+                        <div class="dtr-counter "> <i class="icon-user-circle-gear-fill color-blue"></i>
+                            <div><span class="dtr-counter-number counting-number color-blue" data-from="0"
+                                    data-to="{{ $count_pekerja }}" data-speed="1600">{{ $count_pekerja }}</span> <span
+                                    class="dtr-counter-suffix color-light-purple">+</span>
                                 <p class="dtr-count-text">Pekerja Aktif</p>
                             </div>
                         </div>

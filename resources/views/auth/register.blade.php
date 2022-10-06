@@ -1,6 +1,6 @@
 @extends('layouts.dasson.master-without-nav')
 @section('title')
-@lang('Registrasi')
+Registrasi
 @endsection
 @section('content')
 
@@ -29,8 +29,8 @@
                                     @csrf
                                     <div class="form-floating form-floating-custom mb-4">
                                         <select name="role" required class="form-control form-select" id="slcx">
-                                            <option value="perusahaan">Pemilik Usaha</option>
                                             <option value="user">Perorangan</option>
+                                            <option value="perusahaan">Pemilik Usaha</option>
                                         </select>
                                         <label for="slcx">Daftar Sebagai</label>
                                         <div class="form-floating-icon">

@@ -17,7 +17,7 @@
                 <div class="d-flex align-items-end mt-3 mt-sm-0">
                     <div class="flex-shrink-0">
                         <div class="avatar-xxl me-3">
-                            <img src="@if (Auth::user()->profile_photo_path != ''){{ URL::asset('images/'. Auth::user()->profile_photo_path) }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
+                            <img src="@if (Auth::user()->profile_photo_path != ''){{ Auth::user()->profile_photo_path }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
                                 alt="profile-image" class="img-fluid rounded-circle d-block img-thumbnail">
                         </div>
                     </div>
@@ -44,13 +44,8 @@
 
 
 <div class="card">
-    @if (\Session::has('info'))
-    <br>
-    <div class="alert alert-success alert-border-left alert-dismissible fade show" role="alert">
-        <i class="mdi mdi-check-all me-3 align-middle"></i><strong>{!! \Session::get('info') !!}</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif
+    @include('notif')
+
     <div class="card-header">
         <h5 class="card-title mb-0">Profile Perusahaan</h5>
     </div>
@@ -307,7 +302,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" method="POST" enctype="multipart/form-data" id="update-profile">
+                <form class="form-horizontal" method="POST" enctype="multipart/form-data" id="update-profile"
+                    action="{{ url('perusahaan-update-profile') }}">
                     @csrf
                     <div class="mb-3">
                         <label for="avatar">Profile Picture</label>
@@ -315,10 +311,6 @@
                             <input type="file" class="form-control @error('avatar') is-invalid @enderror" id="avatar"
                                 name="avatar" autofocus>
                             <label class="input-group-text" for="avatar">Upload</label>
-                        </div>
-                        <div class="text-start mt-2">
-                            <img src="@if (Auth::user()->avatar != ''){{ URL::asset('images/'. Auth::user()->avatar) }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
-                                alt="" class="rounded-circle avatar-lg">
                         </div>
                         <div class="text-danger" role="alert" id="avatarError" data-ajax-feedback="avatar"></div>
                     </div>

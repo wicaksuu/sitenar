@@ -3,61 +3,92 @@
 @section('content')
 @component('components.breadcrumb')
 @slot('li_1') Lowongan @endslot
-@slot('title') Daftar Pelamar @endslot
+@slot('title') Daftar Pelamar {{ $data->query }} @endslot
 @endcomponent
 <div class="row align-items-center">
     <div class="col-md-6">
         <div class="mb-3">
-            <h5 class="card-title">Total Pelamar <span class="text-muted fw-normal ms-2">(834)</span></h5>
+            <h5 class="card-title">Total Pelamar {{ $data->query }} <span class="text-muted fw-normal ms-2">({{
+                    $data->total }})</span>
+            </h5>
         </div>
     </div>
 </div>
 
 <div class="row">
+    @include('notif')
     <!-- end row -->
-    @for ($i = 1; $i <= 8; $i++) <div class="col-xl-3 col-sm-6">
+    @foreach ($data->data as $value)
+
+    @foreach ($value->daftar_pencaker as $pencaker)
+
+    <div class="col-xl-3 col-sm-6">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-center pb-3">
                     <div>
-                        <img src="{{ URL::asset('dasson/images/users/avatar-3.jpg') }}" alt=""
+                        <img src="{{ $pencaker->pencaker_image }}" alt=""
                             class="avatar-lg rounded-circle img-thumbnail">
                     </div>
                     <div class="flex-1 ms-3">
-                        <h5 class="font-size-15 mb-1"><a href="#" class="text-dark">Paul Sanchez</a></h5>
-                        <p class="text-muted mb-0">Full Stack Developer</p>
+                        <h5 class="font-size-15 mb-1"><a href="#" class="text-dark">{{ $pencaker->pencaker_name }}</a>
+                        </h5>
+                        <p class="text-muted mb-0">{{ $value->judul_lowongan }}</p>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img src="https://marketplace.canva.com/EAFCdp4BFm8/1/0/1131w/canva-ungu-lulusan-baru-resume-38j_mEMyMD8.jpg"
-                        class="img-fluid" alt="">
-                </div>
+                {{-- <div class="text-center">
+                    <img src="{{ $pencaker->pencaker_image }}" class="img-fluid" alt="">
+                </div> --}}
 
                 <div class="mt-3 pt-1">
-                    <p>Saya ingin melamar di perusahan anda sebagai fullstack dev.</p>
-                </div>
-                <div class="mt-3 pt-1">
-                    <p class="text-muted mb-0"><i class="mdi mdi-phone font-size-15 align-middle pe-2 text-primary"></i>
-                        021 0125 5689</p>
+                    <p class="text-muted mb-0">
+                        <i class="mdi mdi-school font-size-15 align-middle pe-2 text-primary"></i>
+                        {{ $pencaker->pencaker_pendidikan_terakhir }}
+                    </p>
+                    <p class="text-muted mb-0 mt-2">
+                        <i class="mdi mdi-chair-school font-size-15 align-middle pe-2 text-primary"></i>
+                        Jurusan {{ $pencaker->pencaker_jurusan }}
+                    </p>
+                    <p class="text-muted mb-0 mt-2">
+                        <i class="mdi mdi-calendar font-size-15 align-middle pe-2 text-primary"></i>
+                        Tahun Lulus {{ $pencaker->pencaker_tahun_kelulusan }}
+                    </p>
+                    <p class="text-muted mb-0 mt-2">
+                        <i class="mdi mdi-school-outline font-size-15 align-middle pe-2 text-primary"></i>
+                        Nama Sekolah {{ $pencaker->pencaker_nama_sekolah }}
+                    </p>
+                    <p class="text-muted mb-0 mt-2"><i
+                            class="mdi mdi-phone font-size-15 align-middle pe-2 text-primary"></i>
+                        {{ $pencaker->pencaker_wa }}</p>
                     <p class="text-muted mb-0 mt-2"><i
                             class="mdi mdi-email font-size-15 align-middle pe-2 text-primary"></i>
-                        DianaOwens@spy.com</p>
+                        {{ $pencaker->pencaker_email }}</p>
                     <p class="text-muted mb-0 mt-2"><i
                             class="mdi mdi-google-maps font-size-15 align-middle pe-2 text-primary"></i>
-                        52 Ilchester MYBSTER 9WX</p>
+                        {{ $pencaker->pencaker_alamat }}</p>
                 </div>
             </div>
+            @if ($data->query !='diterima')
+
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-success"><i class="uil uil-user me-1"></i>
-                    Terima</button>
-                <button type="button" class="btn btn-danger"><i class="uil uil-envelope-alt me-1"></i>
-                    Tolak</button>
+                <a href="{{ url('penerimaan-lowongan/terima/'.$pencaker->data_pencaker_id) }}" class="btn btn-success"
+                    onclick="return confirm('Anda Yakin Akan Menerima {{ $pencaker->pencaker_name }} ?');">
+                    <i class="uil uil-user me-1"></i>
+                    Terima
+                </a>
+                <a href="{{ url('penerimaan-lowongan/tolak/'.$pencaker->data_pencaker_id) }}" class="btn btn-danger"
+                    onclick="return confirm('Anda Yakin Akan Menolak {{ $pencaker->pencaker_name }} ?');">
+                    <i class="uil uil-envelope-alt me-1"></i>
+                    Tolak
+                </a>
             </div>
+            @endif
 
             <!-- end card -->
         </div>
-</div>
-@endfor
+    </div>
+    @endforeach
+    @endforeach
 
 </div>
 

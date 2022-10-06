@@ -2,11 +2,10 @@
 
 use App\Http\Controllers\AlamatController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DataPerusahaanController;
 use App\Http\Controllers\UserController;
-use Laravel\Jetstream\Http\Controllers\Inertia\UserProfileController;
 use App\Http\Controllers\LokerController;
+use App\Http\Controllers\PelatihanNakerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +18,12 @@ use App\Http\Controllers\LokerController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [LokerController::class, 'welcome']);
 Route::get('/provinsi', [AlamatController::class, 'provinsi']);
 Route::get('/kabupaten/{id}', [AlamatController::class, 'kabupaten']);
 Route::get('/kecamatan/{id}', [AlamatController::class, 'kecamatan']);
 Route::get('/desa/{id}', [AlamatController::class, 'desa']);
+Route::get('daftar-lowongan', [LokerController::class, 'view_lowongan']);
 
 Route::middleware([
     'auth:sanctum',
@@ -34,7 +31,6 @@ Route::middleware([
     'verified',
     'role:disnaker'
 ])->group(function () {
-    // Route::get('/dashboard', [OperatorController::class, 'index'])->name('operator');
     Route::get('/disnaker', function () {
         return view('disnaker.dashboard');
     });
@@ -52,24 +48,34 @@ Route::middleware([
     'verified',
     'role:perusahaan'
 ])->group(function () {
-    // Route::get('/perusahaan', function () {
-    //     return view('perusahaan.dashboard');
-    // });
     Route::get('/pages-starter', function () {
         return view('perusahaan.start');
     });
 
     Route::get('perusahaan', [LokerController::class, 'dashboard']);
     Route::get('perusahaan-profile', [UserController::class, 'index']);
+    Route::post('perusahaan-update-profile', [UserController::class, 'update_profile']);
     Route::post('update-profile-usaha', [UserController::class, 'store']);
     Route::post('perusahaan-pelaporan', [DataPerusahaanController::class, 'create']);
     Route::get('laporan-kodefikasi', [DataPerusahaanController::class, 'view_laporan_kodefiaksi']);
     Route::get('laporan-pengesahan', [DataPerusahaanController::class, 'view_laporan_pengesahan']);
     Route::get('laporan-open/{id}', [DataPerusahaanController::class, 'open_laporan_pengesahan']);
 
-    Route::get('daftar-lowongan', [LokerController::class, 'view_lowongan']);
+    Route::get('perusahaan-hapus-lowongan/{id}', [LokerController::class, 'hapus_lowongan']);
     Route::get('tambah-lowongan', [LokerController::class, 'tambah_lowongan']);
-    Route::get('daftar-pelamar', [LokerController::class, 'daftar_pelamar']);
+    Route::get('daftar-pelamar', [LokerController::class, 'daftar_pelamar_diterima']);
+    Route::get('daftar-pelamar/{id}', [LokerController::class, 'daftar_pelamar']);
+    Route::get('penerimaan-lowongan/{query}/{id}', [LokerController::class, 'penerimaan_lowongan']);
+
+    Route::post('upload-lowongan', [LokerController::class, 'upload_lowongan']);
+
+
+    Route::get('perusahaan/berita-pelatihan/{query}', [PelatihanNakerController::class, 'berita_pelatihan']);
+    Route::get('perusahaan/tambah-berita-pelatihan', [PelatihanNakerController::class, 'tambah_berita_pelatihan']);
+    Route::post('perusahaan/tambah-berita-pelatihan-add', [PelatihanNakerController::class, 'tambah_berita_pelatihan_add']);
+    Route::get('perusahaan/hapus-berita/{id}', [PelatihanNakerController::class, 'hapus_berita']);
+    Route::get('perusahaan/daftar-peserta/pelatihan', [PelatihanNakerController::class, 'daftar_peserta_pelatihan']);
+    Route::get('perusahaan/penerimaan-pelatihan/{query}/{id}', [PelatihanNakerController::class, 'update_pelatihan']);
 });
 
 Route::middleware([
@@ -78,8 +84,11 @@ Route::middleware([
     'verified',
     'role:user'
 ])->group(function () {
-    Route::get('/user', function () {
-        return Auth::user()->role;
-    });
-    // Route::get('perusahaan', [LokerController::class, 'dashboard']);
+    Route::get('user', [LokerController::class, 'dashboard']);
+    Route::get('user-lamar/{id}/{name}', [LokerController::class, 'lamar']);
+    Route::get('user-profile', [UserController::class, 'index']);
+    Route::post('update-profile-user', [UserController::class, 'store']);
+    Route::post('user-update-profile', [UserController::class, 'update_profile']);
+    Route::get('user/berita-pelatihan/{query}', [PelatihanNakerController::class, 'berita_pelatihan']);
+    Route::get('user/daftar-pelatihan/{id}/{nama}', [PelatihanNakerController::class, 'daftar_pelatihan']);
 });

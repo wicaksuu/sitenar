@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('lokers', function (Blueprint $table) {
             $table->id();
+            $table->string('judul_lowongan');
+            $table->string('user_id');
+            $table->string('email');
+            $table->string('nomor_wa_pendaftaran');
+            $table->string('lokasi_kerja');
+            $table->string('link_pendaftaran');
+            $table->text('deskripsi');
+            $table->string('image');
             $table->timestamps();
         });
     }

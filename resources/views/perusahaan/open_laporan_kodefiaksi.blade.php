@@ -990,7 +990,6 @@
             @if ($perusahaan->status!=1)
                 <button type="submit" class="btn btn-primary">Update
                     Data</button>
-                </button>
             @endif
         </div>
     </div>

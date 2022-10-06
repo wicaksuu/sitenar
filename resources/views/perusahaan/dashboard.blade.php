@@ -83,7 +83,7 @@
                     <div class="flex-grow-1">
                         <span class="text-muted mb-3 lh-1 d-block text-truncate">Total Lowongan</span>
                         <h4 class="mb-3">
-                            <span class="counter-value" data-target="5">0</span>
+                            <span class="counter-value" data-target="{{ count($data->data) }}">0</span>
                         </h4>
                     </div>
                     <div class="flex-shrink-0 text-end dash-widget">
@@ -107,143 +107,40 @@
 
             <div class="card-body px-0">
                 <div class="px-3" data-simplebar style="max-height: 386px;">
-                    <div class="d-flex align-items-center pb-4">
-                        <div class="avatar-md me-4">
-                            <img src="{{ URL::asset('./dasson/images/users/avatar-2.jpg') }}"
-                                class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <div class="flex-grow-1">
-                            <h5 class="font-size-15 mb-1"><a href="" class="text-dark">Randy Matthews</a></h5>
-                            <span class="text-muted">Randy@gmail.com</span>
-                        </div>
-                        <div class="flex-shrink-0 text-end">
-                            <div class="dropdown align-self-start">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="bx bx-dots-vertical-rounded font-size-24 text-dark"></i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Terima</a>
-                                    <a class="dropdown-item" href="#">Tolak</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @foreach ($data->data as $daftar_lamaran)
+                    @foreach ($daftar_lamaran->daftar_pencaker as $daftar_pencaker)
+                    @if ($daftar_pencaker->data_pencaker_status=='Menunggu')
 
                     <div class="d-flex align-items-center pb-4">
                         <div class="avatar-md me-4">
-                            <img src="{{ URL::asset('./dasson/images/users/avatar-4.jpg') }}"
-                                class="img-fluid rounded-circle" alt="">
+                            <img src="{{$daftar_pencaker->pencaker_image }}" class="img-fluid rounded-circle" alt="">
                         </div>
                         <div class="flex-grow-1">
-                            <h5 class="font-size-15 mb-1"><a href="" class="text-dark">Vernon Wood</a></h5>
-                            <span class="text-muted">Vernon@gmail.com</span>
+                            <h5 class="font-size-15 mb-1">
+                                <a href="{{ url('daftar-pelamar/'.$daftar_lamaran->lowongan_id) }}" class="text-dark">
+                                    {{$daftar_pencaker->pencaker_name }}
+                                </a>
+                            </h5>
+                            <span class="text-muted">{{$daftar_pencaker->pencaker_pendidikan_terakhir }}</span>
                         </div>
                         <div class="flex-shrink-0 text-end">
-                            <div class="dropdown align-self-start">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="bx bx-dots-vertical-rounded font-size-24 text-dark"></i>
+                            <div class="btn-group" role="group">
+                                <a href="{{ url('penerimaan-lowongan/terima/'.$daftar_pencaker->data_pencaker_id) }}"
+                                    class="btn btn-soft-success waves-effect waves-light"
+                                    onclick="return confirm('Anda Yakin Akan Menerima {{ $daftar_pencaker->pencaker_name }} ?');">
+                                    <i class="bx bx-check-double font-size-16 align-middle"></i>
                                 </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Terima</a>
-                                    <a class="dropdown-item" href="#">Tolak</a>
-                                </div>
+                                <a href="{{ url('penerimaan-lowongan/tolak/'.$daftar_pencaker->data_pencaker_id) }}"
+                                    class="btn btn-soft-danger waves-effect waves-light"
+                                    onclick="return confirm('Anda Yakin Akan Menolak {{ $daftar_pencaker->pencaker_name }} ?');">
+                                    <i class="bx bx-block font-size-16 align-middle"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="d-flex align-items-center pb-4">
-                        <div class="avatar-md me-4">
-                            <img src="{{ URL::asset('./dasson/images/users/avatar-5.jpg') }}"
-                                class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <div class="flex-grow-1">
-                            <h5 class="font-size-15 mb-1"><a href="" class="text-dark">Howard Rhoades</a></h5>
-                            <span class="text-muted">Howard@gmail.com</span>
-                        </div>
-                        <div class="flex-shrink-0 text-end">
-                            <div class="dropdown align-self-start">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="bx bx-dots-vertical-rounded font-size-24 text-dark"></i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Terima</a>
-                                    <a class="dropdown-item" href="#">Tolak</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center pb-4">
-                        <div class="avatar-md me-4">
-                            <img src="{{ URL::asset('./dasson/images/users/avatar-6.jpg') }}"
-                                class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <div class="flex-grow-1">
-                            <h5 class="font-size-15 mb-1"><a href="" class="text-dark">Arthur Zurcher</a></h5>
-                            <span class="text-muted">Arthur@gmail.com</span>
-                        </div>
-                        <div class="flex-shrink-0 text-end">
-                            <div class="dropdown align-self-start">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="bx bx-dots-vertical-rounded font-size-24 text-dark"></i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Terima</a>
-                                    <a class="dropdown-item" href="#">Tolak</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center pb-4">
-                        <div class="avatar-md me-4">
-                            <img src="{{ URL::asset('./dasson/images/users/avatar-8.jpg') }}"
-                                class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <div class="flex-grow-1">
-                            <h5 class="font-size-15 mb-1"><a href="" class="text-dark">Angela Palmer</a></h5>
-                            <span class="text-muted">Angela@gmail.com</span>
-                        </div>
-                        <div class="flex-shrink-0 text-end">
-                            <div class="dropdown align-self-start">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="bx bx-dots-vertical-rounded font-size-24 text-dark"></i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Terima</a>
-                                    <a class="dropdown-item" href="#">Tolak</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center pb-3">
-                        <div class="avatar-md me-4">
-                            <img src="{{ URL::asset('./dasson/images/users/avatar-9.jpg') }}"
-                                class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <div class="flex-grow-1">
-                            <h5 class="font-size-15 mb-1"><a href="" class="text-dark">Dorothy Wimson</a></h5>
-                            <span class="text-muted">Dorothy@gmail.com</span>
-                        </div>
-                        <div class="flex-shrink-0 text-end">
-                            <div class="dropdown align-self-start">
-                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="bx bx-dots-vertical-rounded font-size-24 text-dark"></i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Terima</a>
-                                    <a class="dropdown-item" href="#">Tolak</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+                    @endforeach
                 </div>
             </div>
             <!-- end card body -->
@@ -264,32 +161,37 @@
                     <table class="table align-middle table-nowrap ">
                         <tbody>
 
-                            @for ($i = 0; $i < 10; $i++) <tr>
+                            @foreach ($data->data as $daftar_lamaran)
+
+                            <tr>
                                 <td style="width: 50px;">
                                     <div class="avatar-md me-4">
-                                        <img src="{{ URL::asset('assets/images/icons/sitenar120.png') }}"
-                                            class="img-fluid" alt="">
+                                        <img src="@if ($daftar_lamaran->image_perusahaan != ''){{ url($daftar_lamaran->image_perusahaan) }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
+                                            class="img-fluid rounded-circle" alt="">
                                     </div>
                                 </td>
 
                                 <td>
                                     <div>
-                                        <h5 class="font-size-15"><a href="" class="text-dark">Full Stack Dev.</a>
+                                        <h5 class="font-size-15"><a href="{{ url('daftar-lowongan') }}"
+                                                class="text-dark">{{
+                                                $daftar_lamaran->judul_lowongan }}</a>
                                         </h5>
-                                        <span class="text-muted">{{ date('d/m/Y') }}</span>
+                                        <span class="text-muted">{{ $daftar_lamaran->create_at }}</span>
                                     </div>
                                 </td>
 
                                 <td>
                                     <p class="mb-1"><a href="" class="text-dark">Pelamar</a></p>
-                                    <span class="text-muted">{{ rand(0, 200) }}</span>
+                                    <span class="text-muted">{{ $daftar_lamaran->total }}</span>
                                 </td>
                                 <td>
-                                    <p class="mb-1"><a href="" class="text-dark">Diterima</a></p>
-                                    <span class="text-muted">{{ rand(0, 50) }}</span>
+                                    <p class="mb-1"><a href="" class="text-dark">Diterima</a></p><span
+                                        class="text-muted">{{ $daftar_lamaran->diterima }}</span>
                                 </td>
-                                </tr>
-                                @endfor
+                            </tr>
+
+                            @endforeach
 
                         </tbody>
                     </table>

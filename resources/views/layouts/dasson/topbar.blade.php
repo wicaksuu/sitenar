@@ -75,7 +75,7 @@
                     id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <i data-feather="bell" class="icon-lg"></i>
-                    <span class="badge bg-danger rounded-pill">2</span>
+                    {{-- <span class="badge bg-danger rounded-pill">2</span> --}}
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
                     aria-labelledby="page-header-notifications-dropdown">
@@ -85,12 +85,13 @@
                                 <h6 class="m-0"> Notifications </h6>
                             </div>
                             <div class="col-auto">
-                                <a href="#!" class="small text-reset text-decoration-underline"> Unread (1)</a>
+                                {{-- <a href="#!" class="small text-reset text-decoration-underline"> Unread (1)</a>
+                                --}}
                             </div>
                         </div>
                     </div>
                     <div data-simplebar style="max-height: 230px;">
-                        <a href="#!" class="text-reset notification-item">
+                        {{-- <a href="#!" class="text-reset notification-item">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <img src="dasson/images/users/avatar-3.jpg" class="rounded-circle avatar-sm"
@@ -121,7 +122,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
@@ -130,7 +131,7 @@
                 <button type="button" class="btn header-item bg-soft-light border-start border-end"
                     id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
-                        src="@if (Auth::user()->avatar != ''){{ URL::asset('images/'. Auth::user()->avatar) }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
+                        src="@if (Auth::user()->profile_photo_path != ''){{ url(Auth::user()->profile_photo_path) }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ Auth::user()->name }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>

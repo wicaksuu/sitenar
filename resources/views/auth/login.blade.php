@@ -1,6 +1,6 @@
 @extends('layouts.dasson.master-without-nav')
 @section('title')
-@lang('translation.z')
+Login
 @endsection
 @section('content')
 

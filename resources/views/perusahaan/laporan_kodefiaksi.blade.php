@@ -11,6 +11,7 @@
         <div class="card-header">
             <h5 class="card-title mb-0">Data Perusahaan</h5>
         </div>
+        @include('notif')
         <div class="card-body">
             <div class="row">
                 <div class="col-xl-4 col-md-6">
