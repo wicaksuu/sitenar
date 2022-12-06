@@ -67,7 +67,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="form-group mb-3">
                                 <label>Nomor Whatsapp Pendaftaran</label>
-                                <input name="nomor_wa_pendaftaran" type="text" required value="{{ Auth::user()->wa }}"
+                                <input name="nomor_wa_pendaftaran" type="text" value="{{ Auth::user()->wa }}"
                                     placeholder="0822 **** ****"
                                     data-pristine-required-message="Mohon Masukkan Nomor Whatsapp Pendaftaran"
                                     class="form-control" />

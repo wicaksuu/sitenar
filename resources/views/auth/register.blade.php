@@ -105,7 +105,7 @@ Registrasi
                                     </div>
                                 </form>
 
-                                <div class="mt-4 pt-2 text-center">
+                                {{-- <div class="mt-4 pt-2 text-center">
                                     <div class="signin-other-title">
                                         <h5 class="font-size-14 mb-3 text-muted fw-medium">- Sign up using -</h5>
                                     </div>
@@ -130,7 +130,7 @@ Registrasi
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
 
                                 <div class="mt-5 text-center">
                                     <p class="text-muted mb-0">Already have an account ? <a href="{{ url('/login') }}"

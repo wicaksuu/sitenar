@@ -18,13 +18,37 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        \App\Models\User::factory(250)->create();
+        // \App\Models\User::factory(250)->create();
 
         User::factory()->create([
             'name' => 'Bidang A',
             'wa' => '082244456708',
-            'email' => 'dinaker@wicaksu.com',
-            'password' => bcrypt('Jack03061997'),
+            'email' => 'dinaker_a@sitenar.madiunkab.go.id',
+            'password' => bcrypt('123456789'),
+            'role' => 'disnaker',
+
+        ]);
+        User::factory()->create([
+            'name' => 'Bidang B',
+            'wa' => '082244456708',
+            'email' => 'dinaker_b@sitenar.madiunkab.go.id',
+            'password' => bcrypt('123456789'),
+            'role' => 'disnaker',
+
+        ]);
+        User::factory()->create([
+            'name' => 'Bidang C',
+            'wa' => '082244456708',
+            'email' => 'dinaker_c@sitenar.madiunkab.go.id',
+            'password' => bcrypt('123456789'),
+            'role' => 'disnaker',
+
+        ]);
+        User::factory()->create([
+            'name' => 'Bidang D',
+            'wa' => '082244456708',
+            'email' => 'dinaker_d@sitenar.madiunkab.go.id',
+            'password' => bcrypt('123456789'),
             'role' => 'disnaker',
 
         ]);

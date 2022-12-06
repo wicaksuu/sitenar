@@ -487,7 +487,9 @@ class LokerController extends Controller
             } else {
                 $image = $request->cookie('image');
                 if ($image != '') {
-
+                    if ($data['nomor_wa_pendaftaran'] == '') {
+                        $data['nomor_wa_pendaftaran'] = 'Nomor Wa Kosong';
+                    }
                     unset($data['_token']);
                     $data['image'] = $image;
                     $data['user_id'] = Auth::user()->id;
@@ -495,6 +497,7 @@ class LokerController extends Controller
                         Loker::create($data);
                         return redirect('daftar-lowongan')->with('success', 'Lowongan Berhasil Terupload');
                     } catch (\Throwable $th) {
+                        return back()->with('error', $th->getMessage());
                         return back()->with('error', 'Lowongan Gagal Terupload');
                     }
                 } else {

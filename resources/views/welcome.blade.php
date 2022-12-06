@@ -21,10 +21,37 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div id="dtr-wrapper" class="clearfix">
+        <style>
+            .float {
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                bottom: 80px;
+                right: 23px;
+                background-color: #25d366;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 2px 2px 3px #999;
+                z-index: 100;
+            }
+
+            .my-float {
+                margin-top: 16px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://wa.me/6282257850348" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
 
         <!-- preloader starts -->
         {{-- <div class="dtr-preloader">
@@ -33,6 +60,7 @@
             </div>
         </div> --}}
         <!-- preloader ends -->
+
 
         <!-- Small Devices Header
 ============================================= -->
@@ -657,6 +685,7 @@
     </div>
     <br>
     <!-- == main content area ends == -->
+
 
     <!-- footer section starts
 ================================================== -->
