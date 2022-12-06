@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="{{ url('/disnaker') }}" class="logo logo-dark">
+                <a href="{{ url('/') }}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ URL::asset('assets/images/icons/sitenar120.png') }}" alt="" height="30">
                     </span>
@@ -13,7 +13,7 @@
                     </span>
                 </a>
 
-                <a href="{{ url('/disnaker') }}" class="logo logo-light">
+                <a href="{{ url('/') }}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ URL::asset('assets/images/icons/sitenar120.png') }}" alt="" height="30">
                     </span>
@@ -29,17 +29,17 @@
             </button>
 
             <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
+            {{-- <form class="app-search d-none d-lg-block">
                 <div class="position-relative">
                     <input type="text" class="form-control" placeholder="Search...">
                     <button class="btn btn-primary" type="button"><i class="bx bx-search-alt align-middle"></i></button>
                 </div>
-            </form>
+            </form> --}}
         </div>
 
         <div class="d-flex">
 
-            <div class="dropdown d-inline-block d-lg-none ms-2">
+            {{-- <div class="dropdown d-inline-block d-lg-none ms-2">
                 <button type="button" class="btn header-item" id="page-header-search-dropdown" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <i data-feather="search" class="icon-lg"></i>
@@ -58,7 +58,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> --}}
 
 
 
@@ -128,8 +128,8 @@
             </div>
 
             <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item bg-soft-light border-start border-end"
-                    id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn header-item " id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
                         src="@if (Auth::user()->profile_photo_path != ''){{ url(Auth::user()->profile_photo_path) }}@else{{ URL::asset('assets/images/icons/icon.png') }}@endif"
                         alt="Header Avatar">

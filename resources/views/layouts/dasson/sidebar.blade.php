@@ -15,7 +15,15 @@
                         <span data-key="t-dashboard">Dashboards</span>
                     </a>
                 </li>
+                @if (Auth::User()->role!='user')
 
+                <li>
+                    <a href="{{ url('user-data') }}">
+                        <i data-feather="home"></i>
+                        <span data-key="t-dashboard">Daftar Pengguna</span>
+                    </a>
+                </li>
+                @endif
                 @if (Auth::User()->role == 'disnaker')
                 <li>
                     <a href="{{ url('/daftar-perusahaan-list') }}">
@@ -41,8 +49,8 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i data-feather="file-text"></i>
-                        <span data-key="t-pages">Lowongan Pekerjaan</span>
+                        <i data-feather="monitor"></i>
+                        <span data-key="t-ecommerce">Lowongan Pekerjaan</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ url('daftar-lowongan') }}" key="t-starter-page">Daftar Lowongan</a></li>
@@ -72,20 +80,20 @@
                 @if (Auth::User()->role == 'user')
                 <li>
                     <a href="{{ url('daftar-lowongan') }}">
-                        <i data-feather="slack"></i>
-                        <span data-key="t-dashboard">Daftar Lowongan</span>
+                        <i data-feather="list"></i>
+                        <span data-key="t-authentication">Daftar Lowongan</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ url('user/berita-pelatihan/Pelatihan') }}">
-                        <i data-feather="slack"></i>
-                        <span data-key="t-dashboard">Daftar Pelatihan</span>
+                        <i data-feather="package"></i>
+                        <span data-key="t-horizontal">Daftar Pelatihan</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ url('user/berita-pelatihan/Berita') }}">
-                        <i data-feather="slack"></i>
-                        <span data-key="t-dashboard">Berita</span>
+                        <i data-feather="align-center"></i>
+                        <span data-key="t-components">Berita</span>
                     </a>
                 </li>
                 @endif

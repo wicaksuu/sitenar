@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->string('kk')->nullable();
             $table->string('npwp')->nullable();
             $table->string('alamat')->nullable();
+            
             $table->string('village_id')->nullable();
             $table->string('regencie_id')->nullable();
             $table->string('province_id')->nullable();

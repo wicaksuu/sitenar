@@ -69,6 +69,11 @@ Login
                                                 </label>
                                             </div>
                                         </div>
+                                        <div class="col">
+                                            <div class="form-check font-size-15">
+                                                <a href="{{ url('forgot-password') }}">Lupa password</a>
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <div class="mb-3">

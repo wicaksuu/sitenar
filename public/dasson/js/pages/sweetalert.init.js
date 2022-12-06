@@ -1,9 +1,9 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./public/assets/libs/sweetalert2/sweetalert2.min.js":
+/***/ "./public/dasson/libs/sweetalert2/sweetalert2.min.js":
 /*!***********************************************************!*\
-  !*** ./public/assets/libs/sweetalert2/sweetalert2.min.js ***!
+  !*** ./public/dasson/libs/sweetalert2/sweetalert2.min.js ***!
   \***********************************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11,13 +11,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _clas
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get.bind(); } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
 
 function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -25,15 +25,15 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 !function (e, t) {
   "object" == ( false ? 0 : _typeof(exports)) && "undefined" != "object" ? module.exports = t() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (t),
@@ -44,47 +44,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 }(this, function () {
   "use strict";
 
-  var u = Object.freeze({
-    cancel: "cancel",
-    backdrop: "backdrop",
-    close: "close",
-    esc: "esc",
-    timer: "timer"
-  }),
-      t = "SweetAlert2:",
-      o = function o(e) {
-    return e.charAt(0).toUpperCase() + e.slice(1);
-  },
-      s = function s(e) {
-    return Array.prototype.slice.call(e);
-  },
-      a = function a(e) {
-    console.warn("".concat(t, " ").concat("object" == _typeof(e) ? e.join(" ") : e));
-  },
-      r = function r(e) {
-    console.error("".concat(t, " ").concat(e));
-  },
-      n = [],
-      i = function i(e, t) {
-    t = '"'.concat(e, '" is deprecated and will be removed in the next major release. Please use "').concat(t, '" instead.'), n.includes(t) || (n.push(t), a(t));
-  },
-      d = function d(e) {
-    return "function" == typeof e ? e() : e;
-  },
-      c = function c(e) {
-    return e && "function" == typeof e.toPromise;
-  },
-      l = function l(e) {
-    return c(e) ? e.toPromise() : Promise.resolve(e);
-  },
-      p = function p(e) {
-    return e && Promise.resolve(e) === e;
-  },
-      m = function m(e) {
-    return "object" == _typeof(e) && e.jquery;
-  },
-      g = function g(e) {
-    return e instanceof Element || m(e);
+  var p = {
+    awaitingPromise: new WeakMap(),
+    promise: new WeakMap(),
+    innerParams: new WeakMap(),
+    domCache: new WeakMap()
   };
 
   var e = function e(_e2) {
@@ -97,69 +61,97 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return t;
   };
 
-  var h = e(["container", "shown", "height-auto", "iosfix", "popup", "modal", "no-backdrop", "no-transition", "toast", "toast-shown", "show", "hide", "close", "title", "html-container", "actions", "confirm", "deny", "cancel", "default-outline", "footer", "icon", "icon-content", "image", "input", "file", "range", "select", "radio", "checkbox", "label", "textarea", "inputerror", "input-label", "validation-message", "progress-steps", "active-progress-step", "progress-step", "progress-step-line", "loader", "loading", "styled", "top", "top-start", "top-end", "top-left", "top-right", "center", "center-start", "center-end", "center-left", "center-right", "bottom", "bottom-start", "bottom-end", "bottom-left", "bottom-right", "grow-row", "grow-column", "grow-fullscreen", "rtl", "timer-progress-bar", "timer-progress-bar-container", "scrollbar-measure", "icon-success", "icon-warning", "icon-info", "icon-question", "icon-error"]),
-      f = e(["success", "warning", "info", "question", "error"]),
-      b = function b() {
-    return document.body.querySelector(".".concat(h.container));
+  var m = e(["container", "shown", "height-auto", "iosfix", "popup", "modal", "no-backdrop", "no-transition", "toast", "toast-shown", "show", "hide", "close", "title", "html-container", "actions", "confirm", "deny", "cancel", "default-outline", "footer", "icon", "icon-content", "image", "input", "file", "range", "select", "radio", "checkbox", "label", "textarea", "inputerror", "input-label", "validation-message", "progress-steps", "active-progress-step", "progress-step", "progress-step-line", "loader", "loading", "styled", "top", "top-start", "top-end", "top-left", "top-right", "center", "center-start", "center-end", "center-left", "center-right", "bottom", "bottom-start", "bottom-end", "bottom-left", "bottom-right", "grow-row", "grow-column", "grow-fullscreen", "rtl", "timer-progress-bar", "timer-progress-bar-container", "scrollbar-measure", "icon-success", "icon-warning", "icon-info", "icon-question", "icon-error", "no-war"]),
+      o = e(["success", "warning", "info", "question", "error"]),
+      D = "SweetAlert2:",
+      q = function q(e) {
+    return e.charAt(0).toUpperCase() + e.slice(1);
   },
-      y = function y(e) {
-    var t = b();
-    return t ? t.querySelector(e) : null;
+      a = function a(e) {
+    console.warn("".concat(D, " ").concat("object" == _typeof(e) ? e.join(" ") : e));
   },
-      v = function v(e) {
-    return y(".".concat(e));
+      l = function l(e) {
+    console.error("".concat(D, " ").concat(e));
   },
-      w = function w() {
-    return v(h.popup);
+      V = [],
+      N = function N(e, t) {
+    e = '"'.concat(e, '" is deprecated and will be removed in the next major release. Please use "').concat(t, '" instead.'), V.includes(e) || (V.push(e), a(e));
   },
-      C = function C() {
-    return v(h.icon);
+      R = function R(e) {
+    return "function" == typeof e ? e() : e;
   },
-      k = function k() {
-    return v(h.title);
+      F = function F(e) {
+    return e && "function" == typeof e.toPromise;
   },
-      A = function A() {
-    return v(h["html-container"]);
+      u = function u(e) {
+    return F(e) ? e.toPromise() : Promise.resolve(e);
   },
-      P = function P() {
-    return v(h.image);
-  },
-      B = function B() {
-    return v(h["progress-steps"]);
-  },
-      x = function x() {
-    return v(h["validation-message"]);
-  },
-      E = function E() {
-    return y(".".concat(h.actions, " .").concat(h.confirm));
-  },
-      S = function S() {
-    return y(".".concat(h.actions, " .").concat(h.deny));
+      U = function U(e) {
+    return e && Promise.resolve(e) === e;
   };
 
-  var T = function T() {
-    return y(".".concat(h.loader));
+  var g = function g() {
+    return document.body.querySelector(".".concat(m.container));
   },
-      L = function L() {
-    return y(".".concat(h.actions, " .").concat(h.cancel));
+      W = function W(e) {
+    var t = g();
+    return t ? t.querySelector(e) : null;
   },
-      O = function O() {
-    return v(h.actions);
+      t = function t(e) {
+    return W(".".concat(e));
   },
-      j = function j() {
-    return v(h.footer);
+      h = function h() {
+    return t(m.popup);
   },
-      D = function D() {
-    return v(h["timer-progress-bar"]);
+      z = function z() {
+    return t(m.icon);
   },
-      M = function M() {
-    return v(h.close);
+      K = function K() {
+    return t(m.title);
   },
-      I = function I() {
-    var e = s(w().querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')).sort(function (e, t) {
-      return e = parseInt(e.getAttribute("tabindex")), (t = parseInt(t.getAttribute("tabindex"))) < e ? 1 : e < t ? -1 : 0;
-    });
-    var t = s(w().querySelectorAll('\n  a[href],\n  area[href],\n  input:not([disabled]),\n  select:not([disabled]),\n  textarea:not([disabled]),\n  button:not([disabled]),\n  iframe,\n  object,\n  embed,\n  [tabindex="0"],\n  [contenteditable],\n  audio[controls],\n  video[controls],\n  summary\n')).filter(function (e) {
+      _ = function _() {
+    return t(m["html-container"]);
+  },
+      Y = function Y() {
+    return t(m.image);
+  },
+      Z = function Z() {
+    return t(m["progress-steps"]);
+  },
+      X = function X() {
+    return t(m["validation-message"]);
+  },
+      f = function f() {
+    return W(".".concat(m.actions, " .").concat(m.confirm));
+  },
+      b = function b() {
+    return W(".".concat(m.actions, " .").concat(m.deny));
+  };
+
+  var v = function v() {
+    return W(".".concat(m.loader));
+  },
+      y = function y() {
+    return W(".".concat(m.actions, " .").concat(m.cancel));
+  },
+      $ = function $() {
+    return t(m.actions);
+  },
+      J = function J() {
+    return t(m.footer);
+  },
+      Q = function Q() {
+    return t(m["timer-progress-bar"]);
+  },
+      G = function G() {
+    return t(m.close);
+  },
+      ee = function ee() {
+    var e = Array.from(h().querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')).sort(function (e, t) {
+      e = parseInt(e.getAttribute("tabindex")), t = parseInt(t.getAttribute("tabindex"));
+      return t < e ? 1 : e < t ? -1 : 0;
+    }),
+        t = Array.from(h().querySelectorAll('\n  a[href],\n  area[href],\n  input:not([disabled]),\n  select:not([disabled]),\n  textarea:not([disabled]),\n  button:not([disabled]),\n  iframe,\n  object,\n  embed,\n  [tabindex="0"],\n  [contenteditable],\n  audio[controls],\n  video[controls],\n  summary\n')).filter(function (e) {
       return "-1" !== e.getAttribute("tabindex");
     });
     return function (t) {
@@ -171,40 +163,35 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       return n;
     }(e.concat(t)).filter(function (e) {
-      return ee(e);
+      return x(e);
     });
   },
-      H = function H() {
-    return !q() && !document.body.classList.contains(h["no-backdrop"]);
+      te = function te() {
+    return i(document.body, m.shown) && !i(document.body, m["toast-shown"]) && !i(document.body, m["no-backdrop"]);
   },
-      q = function q() {
-    return document.body.classList.contains(h["toast-shown"]);
+      ne = function ne() {
+    return h() && i(h(), m.toast);
   };
 
-  function V(e) {
+  function oe(e) {
     var t = 1 < arguments.length && void 0 !== arguments[1] && arguments[1];
-    var n = D();
-    ee(n) && (t && (n.style.transition = "none", n.style.width = "100%"), setTimeout(function () {
+    var n = Q();
+    x(n) && (t && (n.style.transition = "none", n.style.width = "100%"), setTimeout(function () {
       n.style.transition = "width ".concat(e / 1e3, "s linear"), n.style.width = "0%";
     }, 10));
   }
 
-  var N = {
+  var n = {
     previousBodyPadding: null
   },
-      U = function U(t, e) {
-    if (t.textContent = "", e) {
-      var _n2 = new DOMParser(),
-          _o = _n2.parseFromString(e, "text/html");
-
-      s(_o.querySelector("head").childNodes).forEach(function (e) {
-        t.appendChild(e);
-      }), s(_o.querySelector("body").childNodes).forEach(function (e) {
-        t.appendChild(e);
-      });
-    }
+      w = function w(t, e) {
+    t.textContent = "", e && (e = new DOMParser().parseFromString(e, "text/html"), Array.from(e.querySelector("head").childNodes).forEach(function (e) {
+      t.appendChild(e);
+    }), Array.from(e.querySelector("body").childNodes).forEach(function (e) {
+      e instanceof HTMLVideoElement || e instanceof HTMLAudioElement ? t.appendChild(e.cloneNode(!0)) : t.appendChild(e);
+    }));
   },
-      F = function F(t, e) {
+      i = function i(t, e) {
     if (!e) return !1;
     var n = e.split(/\s+/);
 
@@ -214,450 +201,589 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
     return !0;
   },
-      R = function R(e, t, n) {
-    var o, i;
-
-    if (o = e, i = t, s(o.classList).forEach(function (e) {
-      Object.values(h).includes(e) || Object.values(f).includes(e) || Object.values(i.showClass).includes(e) || o.classList.remove(e);
-    }), t.customClass && t.customClass[n]) {
+      ie = function ie(t, n) {
+    Array.from(t.classList).forEach(function (e) {
+      Object.values(m).includes(e) || Object.values(o).includes(e) || Object.values(n.showClass).includes(e) || t.classList.remove(e);
+    });
+  },
+      C = function C(e, t, n) {
+    if (ie(e, t), t.customClass && t.customClass[n]) {
       if ("string" != typeof t.customClass[n] && !t.customClass[n].forEach) return a("Invalid type of customClass.".concat(n, '! Expected string or iterable object, got "').concat(_typeof(t.customClass[n]), '"'));
-      K(e, t.customClass[n]);
+      A(e, t.customClass[n]);
     }
   },
-      z = function z(e, t) {
+      ae = function ae(e, t) {
     if (!t) return null;
 
     switch (t) {
       case "select":
       case "textarea":
       case "file":
-        return Z(e, h[t]);
+        return e.querySelector(".".concat(m.popup, " > .").concat(m[t]));
 
       case "checkbox":
-        return e.querySelector(".".concat(h.checkbox, " input"));
+        return e.querySelector(".".concat(m.popup, " > .").concat(m.checkbox, " input"));
 
       case "radio":
-        return e.querySelector(".".concat(h.radio, " input:checked")) || e.querySelector(".".concat(h.radio, " input:first-child"));
+        return e.querySelector(".".concat(m.popup, " > .").concat(m.radio, " input:checked")) || e.querySelector(".".concat(m.popup, " > .").concat(m.radio, " input:first-child"));
 
       case "range":
-        return e.querySelector(".".concat(h.range, " input"));
+        return e.querySelector(".".concat(m.popup, " > .").concat(m.range, " input"));
 
       default:
-        return Z(e, h.input);
+        return e.querySelector(".".concat(m.popup, " > .").concat(m.input));
     }
   },
-      W = function W(e) {
+      re = function re(e) {
     var t;
     e.focus(), "file" !== e.type && (t = e.value, e.value = "", e.value = t);
   },
-      _ = function _(e, t, n) {
+      se = function se(e, t, n) {
     e && t && (t = "string" == typeof t ? t.split(/\s+/).filter(Boolean) : t).forEach(function (t) {
-      e.forEach ? e.forEach(function (e) {
+      Array.isArray(e) ? e.forEach(function (e) {
         n ? e.classList.add(t) : e.classList.remove(t);
       }) : n ? e.classList.add(t) : e.classList.remove(t);
     });
   },
-      K = function K(e, t) {
-    _(e, t, !0);
+      A = function A(e, t) {
+    se(e, t, !0);
   },
-      Y = function Y(e, t) {
-    _(e, t, !1);
+      k = function k(e, t) {
+    se(e, t, !1);
   },
-      Z = function Z(t, n) {
-    for (var _e5 = 0; _e5 < t.childNodes.length; _e5++) {
-      if (F(t.childNodes[_e5], n)) return t.childNodes[_e5];
+      d = function d(e, t) {
+    var n = Array.from(e.children);
+
+    for (var _e5 = 0; _e5 < n.length; _e5++) {
+      var o = n[_e5];
+      if (o instanceof HTMLElement && i(o, t)) return o;
     }
   },
-      J = function J(e, t, n) {
+      r = function r(e, t, n) {
     (n = n === "".concat(parseInt(n)) ? parseInt(n) : n) || 0 === parseInt(n) ? e.style[t] = "number" == typeof n ? "".concat(n, "px") : n : e.style.removeProperty(t);
   },
-      X = function X(e) {
+      B = function B(e) {
     e.style.display = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : "flex";
   },
-      $ = function $(e) {
+      P = function P(e) {
     e.style.display = "none";
   },
-      G = function G(e, t, n, o) {
-    var i = e.querySelector(t);
-    i && (i.style[n] = o);
+      ce = function ce(e, t, n, o) {
+    e = e.querySelector(t);
+    e && (e.style[n] = o);
   },
-      Q = function Q(e, t, n) {
-    t ? X(e, n) : $(e);
+      le = function le(e, t) {
+    var n = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : "flex";
+    t ? B(e, n) : P(e);
   },
-      ee = function ee(e) {
+      x = function x(e) {
     return !(!e || !(e.offsetWidth || e.offsetHeight || e.getClientRects().length));
   },
-      te = function te() {
-    return !ee(E()) && !ee(S()) && !ee(L());
+      ue = function ue() {
+    return !x(f()) && !x(b()) && !x(y());
   },
-      ne = function ne(e) {
+      de = function de(e) {
     return !!(e.scrollHeight > e.clientHeight);
   },
-      oe = function oe(e) {
-    var t = window.getComputedStyle(e);
-    var n = parseFloat(t.getPropertyValue("animation-duration") || "0"),
-        e = parseFloat(t.getPropertyValue("transition-duration") || "0");
-    return 0 < n || 0 < e;
+      pe = function pe(e) {
+    var e = window.getComputedStyle(e),
+        t = parseFloat(e.getPropertyValue("animation-duration") || "0"),
+        e = parseFloat(e.getPropertyValue("transition-duration") || "0");
+    return 0 < t || 0 < e;
   },
-      ie = function ie() {
+      me = 100,
+      E = {},
+      ge = function ge() {
+    E.previousActiveElement instanceof HTMLElement ? (E.previousActiveElement.focus(), E.previousActiveElement = null) : document.body && document.body.focus();
+  },
+      he = function he(o) {
+    return new Promise(function (e) {
+      if (!o) return e();
+      var t = window.scrollX,
+          n = window.scrollY;
+      E.restoreFocusTimeout = setTimeout(function () {
+        ge(), e();
+      }, me), window.scrollTo(t, n);
+    });
+  },
+      fe = function fe() {
     return "undefined" == typeof window || "undefined" == typeof document;
   },
-      se = '\n <div aria-labelledby="'.concat(h.title, '" aria-describedby="').concat(h["html-container"], '" class="').concat(h.popup, '" tabindex="-1">\n   <button type="button" class="').concat(h.close, '"></button>\n   <ul class="').concat(h["progress-steps"], '"></ul>\n   <div class="').concat(h.icon, '"></div>\n   <img class="').concat(h.image, '" />\n   <h2 class="').concat(h.title, '" id="').concat(h.title, '"></h2>\n   <div class="').concat(h["html-container"], '" id="').concat(h["html-container"], '"></div>\n   <input class="').concat(h.input, '" />\n   <input type="file" class="').concat(h.file, '" />\n   <div class="').concat(h.range, '">\n     <input type="range" />\n     <output></output>\n   </div>\n   <select class="').concat(h.select, '"></select>\n   <div class="').concat(h.radio, '"></div>\n   <label for="').concat(h.checkbox, '" class="').concat(h.checkbox, '">\n     <input type="checkbox" />\n     <span class="').concat(h.label, '"></span>\n   </label>\n   <textarea class="').concat(h.textarea, '"></textarea>\n   <div class="').concat(h["validation-message"], '" id="').concat(h["validation-message"], '"></div>\n   <div class="').concat(h.actions, '">\n     <div class="').concat(h.loader, '"></div>\n     <button type="button" class="').concat(h.confirm, '"></button>\n     <button type="button" class="').concat(h.deny, '"></button>\n     <button type="button" class="').concat(h.cancel, '"></button>\n   </div>\n   <div class="').concat(h.footer, '"></div>\n   <div class="').concat(h["timer-progress-bar-container"], '">\n     <div class="').concat(h["timer-progress-bar"], '"></div>\n   </div>\n </div>\n').replace(/(^|\n)\s*/g, ""),
-      ae = function ae() {
-    on.isVisible() && on.resetValidationMessage();
+      be = '\n <div aria-labelledby="'.concat(m.title, '" aria-describedby="').concat(m["html-container"], '" class="').concat(m.popup, '" tabindex="-1">\n   <button type="button" class="').concat(m.close, '"></button>\n   <ul class="').concat(m["progress-steps"], '"></ul>\n   <div class="').concat(m.icon, '"></div>\n   <img class="').concat(m.image, '" />\n   <h2 class="').concat(m.title, '" id="').concat(m.title, '"></h2>\n   <div class="').concat(m["html-container"], '" id="').concat(m["html-container"], '"></div>\n   <input class="').concat(m.input, '" />\n   <input type="file" class="').concat(m.file, '" />\n   <div class="').concat(m.range, '">\n     <input type="range" />\n     <output></output>\n   </div>\n   <select class="').concat(m.select, '"></select>\n   <div class="').concat(m.radio, '"></div>\n   <label for="').concat(m.checkbox, '" class="').concat(m.checkbox, '">\n     <input type="checkbox" />\n     <span class="').concat(m.label, '"></span>\n   </label>\n   <textarea class="').concat(m.textarea, '"></textarea>\n   <div class="').concat(m["validation-message"], '" id="').concat(m["validation-message"], '"></div>\n   <div class="').concat(m.actions, '">\n     <div class="').concat(m.loader, '"></div>\n     <button type="button" class="').concat(m.confirm, '"></button>\n     <button type="button" class="').concat(m.deny, '"></button>\n     <button type="button" class="').concat(m.cancel, '"></button>\n   </div>\n   <div class="').concat(m.footer, '"></div>\n   <div class="').concat(m["timer-progress-bar-container"], '">\n     <div class="').concat(m["timer-progress-bar"], '"></div>\n   </div>\n </div>\n').replace(/(^|\n)\s*/g, ""),
+      ve = function ve() {
+    var e = g();
+    return !!e && (e.remove(), k([document.documentElement, document.body], [m["no-backdrop"], m["toast-shown"], m["has-column"]]), !0);
   },
-      re = function re(e) {
-    var t = function () {
-      var e = b();
-      return !!e && (e.remove(), Y([document.documentElement, document.body], [h["no-backdrop"], h["toast-shown"], h["has-column"]]), !0);
-    }();
-
-    if (ie()) r("SweetAlert2 requires document to initialize");else {
-      var _n3 = document.createElement("div");
-
-      _n3.className = h.container, t && K(_n3, h["no-transition"]), U(_n3, se);
-
-      var _o2 = "string" == typeof (t = e.target) ? document.querySelector(t) : t;
-
-      _o2.appendChild(_n3), function (e) {
-        var t = w();
-        t.setAttribute("role", e.toast ? "alert" : "dialog"), t.setAttribute("aria-live", e.toast ? "polite" : "assertive"), e.toast || t.setAttribute("aria-modal", "true");
-      }(e), e = _o2, "rtl" === window.getComputedStyle(e).direction && K(b(), h.rtl), function () {
-        var e = w(),
-            t = Z(e, h.input),
-            n = Z(e, h.file),
-            o = e.querySelector(".".concat(h.range, " input")),
-            i = e.querySelector(".".concat(h.range, " output")),
-            s = Z(e, h.select),
-            a = e.querySelector(".".concat(h.checkbox, " input")),
-            r = Z(e, h.textarea);
-        t.oninput = ae, n.onchange = ae, s.onchange = ae, a.onchange = ae, r.oninput = ae, o.oninput = function () {
-          ae(), i.value = o.value;
-        }, o.onchange = function () {
-          ae(), o.nextSibling.value = o.value;
-        };
-      }();
-    }
+      s = function s() {
+    E.currentInstance.resetValidationMessage();
   },
-      ce = function ce(e, t) {
-    e instanceof HTMLElement ? t.appendChild(e) : "object" == _typeof(e) ? function (e, t) {
-      if (e.jquery) le(t, e);else U(t, e.toString());
-    }(e, t) : e && U(t, e);
+      ye = function ye() {
+    var e = h(),
+        t = d(e, m.input),
+        n = d(e, m.file);
+    var o = e.querySelector(".".concat(m.range, " input")),
+        i = e.querySelector(".".concat(m.range, " output"));
+    var a = d(e, m.select),
+        r = e.querySelector(".".concat(m.checkbox, " input")),
+        e = d(e, m.textarea);
+    t.oninput = s, n.onchange = s, a.onchange = s, r.onchange = s, e.oninput = s, o.oninput = function () {
+      s(), i.value = o.value;
+    }, o.onchange = function () {
+      s(), i.value = o.value;
+    };
   },
-      le = function le(t, n) {
+      we = function we(e) {
+    return "string" == typeof e ? document.querySelector(e) : e;
+  },
+      Ce = function Ce(e) {
+    var t = h();
+    t.setAttribute("role", e.toast ? "alert" : "dialog"), t.setAttribute("aria-live", e.toast ? "polite" : "assertive"), e.toast || t.setAttribute("aria-modal", "true");
+  },
+      Ae = function Ae(e) {
+    "rtl" === window.getComputedStyle(e).direction && A(g(), m.rtl);
+  },
+      ke = function ke(e, t) {
+    if (e instanceof HTMLElement) t.appendChild(e);else if ("object" == _typeof(e)) {
+      var n = e,
+          o = t;
+      if (n.jquery) Be(o, n);else w(o, n.toString());
+    } else e && w(t, e);
+  },
+      Be = function Be(t, n) {
     if (t.textContent = "", 0 in n) for (var _e6 = 0; (_e6 in n); _e6++) {
       t.appendChild(n[_e6].cloneNode(!0));
     } else t.appendChild(n.cloneNode(!0));
   },
-      ue = function () {
-    if (ie()) return !1;
-    var e = document.createElement("div"),
-        t = {
-      WebkitAnimation: "webkitAnimationEnd",
-      OAnimation: "oAnimationEnd oanimationend",
-      animation: "animationend"
-    };
+      Pe = function () {
+    if (!fe()) {
+      var e = document.createElement("div"),
+          t = {
+        WebkitAnimation: "webkitAnimationEnd",
+        animation: "animationend"
+      };
 
-    for (var _n4 in t) {
-      if (Object.prototype.hasOwnProperty.call(t, _n4) && void 0 !== e.style[_n4]) return t[_n4];
+      for (var _n2 in t) {
+        if (Object.prototype.hasOwnProperty.call(t, _n2) && void 0 !== e.style[_n2]) return t[_n2];
+      }
     }
 
     return !1;
   }(),
-      de = function de(e, t) {
+      xe = function xe(e, t) {
     var n,
         o,
         i,
-        s,
         a,
-        r = O(),
-        c = T();
-    (t.showConfirmButton || t.showDenyButton || t.showCancelButton ? X : $)(r), R(r, t, "actions"), n = r, o = c, i = t, s = E(), a = S(), r = L(), pe(s, "confirm", i), pe(a, "deny", i), pe(r, "cancel", i), function (e, t, n, o) {
-      if (!o.buttonsStyling) return Y([e, t, n], h.styled);
-      K([e, t, n], h.styled), o.confirmButtonColor && (e.style.backgroundColor = o.confirmButtonColor, K(e, h["default-outline"]));
-      o.denyButtonColor && (t.style.backgroundColor = o.denyButtonColor, K(t, h["default-outline"]));
-      o.cancelButtonColor && (n.style.backgroundColor = o.cancelButtonColor, K(n, h["default-outline"]));
-    }(s, a, r, i), i.reverseButtons && (i.toast ? (n.insertBefore(r, s), n.insertBefore(a, s)) : (n.insertBefore(r, o), n.insertBefore(a, o), n.insertBefore(s, o))), U(c, t.loaderHtml), R(c, t, "loader");
+        r,
+        s = $(),
+        c = v(),
+        l = ((t.showConfirmButton || t.showDenyButton || t.showCancelButton ? B : P)(s), C(s, t, "actions"), s = s, n = c, o = t, i = f(), a = b(), r = y(), Ee(i, "confirm", o), Ee(a, "deny", o), Ee(r, "cancel", o), i),
+        u = a,
+        d = r,
+        p = o;
+    p.buttonsStyling ? (A([l, u, d], m.styled), p.confirmButtonColor && (l.style.backgroundColor = p.confirmButtonColor, A(l, m["default-outline"])), p.denyButtonColor && (u.style.backgroundColor = p.denyButtonColor, A(u, m["default-outline"])), p.cancelButtonColor && (d.style.backgroundColor = p.cancelButtonColor, A(d, m["default-outline"]))) : k([l, u, d], m.styled), o.reverseButtons && (o.toast ? (s.insertBefore(r, i), s.insertBefore(a, i)) : (s.insertBefore(r, n), s.insertBefore(a, n), s.insertBefore(i, n))), w(c, t.loaderHtml), C(c, t, "loader");
   };
 
-  function pe(e, t, n) {
-    Q(e, n["show".concat(o(t), "Button")], "inline-block"), U(e, n["".concat(t, "ButtonText")]), e.setAttribute("aria-label", n["".concat(t, "ButtonAriaLabel")]), e.className = h[t], R(e, n, "".concat(t, "Button")), K(e, n["".concat(t, "ButtonClass")]);
+  function Ee(e, t, n) {
+    le(e, n["show".concat(q(t), "Button")], "inline-block"), w(e, n["".concat(t, "ButtonText")]), e.setAttribute("aria-label", n["".concat(t, "ButtonAriaLabel")]), e.className = m[t], C(e, n, "".concat(t, "Button")), A(e, n["".concat(t, "ButtonClass")]);
   }
 
-  var me = function me(e, t) {
+  var Te = function Te(e, t) {
+    var n = G();
+    w(n, t.closeButtonHtml), C(n, t, "closeButton"), le(n, t.showCloseButton), n.setAttribute("aria-label", t.closeButtonAriaLabel);
+  },
+      Le = function Le(e, t) {
     var n,
         o,
-        i = b();
-    i && (o = i, "string" == typeof (n = t.backdrop) ? o.style.background = n : n || K([document.documentElement, document.body], h["no-backdrop"]), o = i, (n = t.position) in h ? K(o, h[n]) : (a('The "position" parameter is not valid, defaulting to "center"'), K(o, h.center)), n = i, !(o = t.grow) || "string" != typeof o || (o = "grow-".concat(o)) in h && K(n, h[o]), R(i, t, "container"));
+        i = g();
+    i && (o = i, "string" == typeof (n = t.backdrop) ? o.style.background = n : n || A([document.documentElement, document.body], m["no-backdrop"]), o = i, (n = t.position) in m ? A(o, m[n]) : (a('The "position" parameter is not valid, defaulting to "center"'), A(o, m.center)), n = i, (o = t.grow) && "string" == typeof o && (o = "grow-".concat(o)) in m && A(n, m[o]), C(i, t, "container"));
   };
 
-  var ge = {
-    awaitingPromise: new WeakMap(),
-    promise: new WeakMap(),
-    innerParams: new WeakMap(),
-    domCache: new WeakMap()
-  };
+  var Se = ["input", "file", "range", "select", "radio", "checkbox", "textarea"],
+      Oe = function Oe(e, r) {
+    var s = h();
+    e = p.innerParams.get(e);
+    var c = !e || r.input !== e.input;
 
-  var he = ["input", "file", "range", "select", "radio", "checkbox", "textarea"],
-      fe = function fe(e, o) {
-    var i = w();
-    e = ge.innerParams.get(e);
-    var s = !e || o.input !== e.input;
-    he.forEach(function (e) {
-      var t = h[e];
-      var n = Z(i, t);
-      (function (e, t) {
-        var n = z(w(), e);
+    if (Se.forEach(function (e) {
+      var t = d(s, m[e]);
+      {
+        var n = e,
+            o = r.inputAttributes,
+            i = ae(h(), n);
 
-        if (n) {
-          be(n);
+        if (i) {
+          Me(i);
 
-          for (var _o3 in t) {
-            n.setAttribute(_o3, t[_o3]);
+          for (var _a in o) {
+            i.setAttribute(_a, o[_a]);
           }
         }
-      })(e, o.inputAttributes), n.className = t, s && $(n);
-    }), o.input && (s && function (e) {
-      if (!Ce[e.input]) return r('Unexpected type of input! Expected "text", "email", "password", "number", "tel", "select", "radio", "checkbox", "textarea", "file" or "url", got "'.concat(e.input, '"'));
-      var t = we(e.input),
-          n = Ce[e.input](t, e);
-      X(n), setTimeout(function () {
-        W(n);
-      });
-    }(o), function (e) {
-      var t = we(e.input);
-      if (e.customClass) K(t, e.customClass.input);
-    }(o));
+      }
+      t.className = m[e], c && P(t);
+    }), r.input) {
+      if (c) {
+        e = r;
+
+        if (T[e.input]) {
+          var t = Ie(e.input);
+
+          var _n3 = T[e.input](t, e);
+
+          B(t), setTimeout(function () {
+            re(_n3);
+          });
+        } else l('Unexpected type of input! Expected "text", "email", "password", "number", "tel", "select", "radio", "checkbox", "textarea", "file" or "url", got "'.concat(e.input, '"'));
+      }
+
+      t = r, e = Ie(t.input);
+      "object" == _typeof(t.customClass) && A(e, t.customClass.input);
+    }
   },
-      be = function be(t) {
+      Me = function Me(t) {
     for (var _e7 = 0; _e7 < t.attributes.length; _e7++) {
       var n = t.attributes[_e7].name;
       ["type", "value", "style"].includes(n) || t.removeAttribute(n);
     }
   },
-      ye = function ye(e, t) {
+      je = function je(e, t) {
     e.placeholder && !t.inputPlaceholder || (e.placeholder = t.inputPlaceholder);
   },
-      ve = function ve(e, t, n) {
-    if (n.inputLabel) {
-      e.id = h.input;
-
-      var _i = document.createElement("label");
-
-      var o = h["input-label"];
-      _i.setAttribute("for", e.id), _i.className = o, K(_i, n.customClass.inputLabel), _i.innerText = n.inputLabel, t.insertAdjacentElement("beforebegin", _i);
-    }
+      He = function He(e, t, n) {
+    var o, i;
+    n.inputLabel && (e.id = m.input, o = document.createElement("label"), i = m["input-label"], o.setAttribute("for", e.id), o.className = i, "object" == _typeof(n.customClass) && A(o, n.customClass.inputLabel), o.innerText = n.inputLabel, t.insertAdjacentElement("beforebegin", o));
   },
-      we = function we(e) {
-    e = h[e] || h.input;
-    return Z(w(), e);
+      Ie = function Ie(e) {
+    return d(h(), m[e] || m.input);
   },
-      Ce = {};
-
-  Ce.text = Ce.email = Ce.password = Ce.number = Ce.tel = Ce.url = function (e, t) {
-    return "string" == typeof t.inputValue || "number" == typeof t.inputValue ? e.value = t.inputValue : p(t.inputValue) || a('Unexpected type of inputValue! Expected "string", "number" or "Promise", got "'.concat(_typeof(t.inputValue), '"')), ve(e, e, t), ye(e, t), e.type = t.input, e;
-  }, Ce.file = function (e, t) {
-    return ve(e, e, t), ye(e, t), e;
-  }, Ce.range = function (e, t) {
+      De = function De(e, t) {
+    ["string", "number"].includes(_typeof(t)) ? e.value = "".concat(t) : U(t) || a('Unexpected type of inputValue! Expected "string", "number" or "Promise", got "'.concat(_typeof(t), '"'));
+  },
+      T = {},
+      qe = (T.text = T.email = T.password = T.number = T.tel = T.url = function (e, t) {
+    return De(e, t.inputValue), He(e, e, t), je(e, t), e.type = t.input, e;
+  }, T.file = function (e, t) {
+    return He(e, e, t), je(e, t), e;
+  }, T.range = function (e, t) {
     var n = e.querySelector("input"),
         o = e.querySelector("output");
-    return n.value = t.inputValue, n.type = t.input, o.value = t.inputValue, ve(n, e, t), e;
-  }, Ce.select = function (e, t) {
-    if (e.textContent = "", t.inputPlaceholder) {
-      var _n5 = document.createElement("option");
-
-      U(_n5, t.inputPlaceholder), _n5.value = "", _n5.disabled = !0, _n5.selected = !0, e.appendChild(_n5);
-    }
-
-    return ve(e, e, t), e;
-  }, Ce.radio = function (e) {
+    return De(n, t.inputValue), n.type = t.input, De(o, t.inputValue), He(n, e, t), e;
+  }, T.select = function (e, t) {
+    var n;
+    return e.textContent = "", t.inputPlaceholder && (n = document.createElement("option"), w(n, t.inputPlaceholder), n.value = "", n.disabled = !0, n.selected = !0, e.appendChild(n)), He(e, e, t), e;
+  }, T.radio = function (e) {
     return e.textContent = "", e;
-  }, Ce.checkbox = function (e, t) {
-    var n = z(w(), "checkbox");
-    n.value = 1, n.id = h.checkbox, n.checked = Boolean(t.inputValue);
-    var o = e.querySelector("span");
-    return U(o, t.inputPlaceholder), e;
-  }, Ce.textarea = function (n, e) {
-    n.value = e.inputValue, ye(n, e), ve(n, n, e);
+  }, T.checkbox = function (e, t) {
+    var n = ae(h(), "checkbox"),
+        e = (n.value = "1", n.id = m.checkbox, n.checked = Boolean(t.inputValue), e.querySelector("span"));
+    return w(e, t.inputPlaceholder), n;
+  }, T.textarea = function (n, e) {
+    De(n, e.inputValue), je(n, e), He(n, n, e);
     return setTimeout(function () {
       if ("MutationObserver" in window) {
-        var _t2 = parseInt(window.getComputedStyle(w()).width);
+        var _t2 = parseInt(window.getComputedStyle(h()).width);
 
         new MutationObserver(function () {
-          var e,
-              e = n.offsetWidth + (e = n, parseInt(window.getComputedStyle(e).marginLeft) + parseInt(window.getComputedStyle(e).marginRight));
-          e > _t2 ? w().style.width = "".concat(e, "px") : w().style.width = null;
+          var e = n.offsetWidth + (e = n, parseInt(window.getComputedStyle(e).marginLeft) + parseInt(window.getComputedStyle(e).marginRight));
+          e > _t2 ? h().style.width = "".concat(e, "px") : h().style.width = null;
         }).observe(n, {
           attributes: !0,
           attributeFilter: ["style"]
         });
       }
     }), n;
-  };
+  }, function (e, t) {
+    var n = _();
 
-  var ke = function ke(e, t) {
-    var n = A();
-    R(n, t, "htmlContainer"), t.html ? (ce(t.html, n), X(n, "block")) : t.text ? (n.textContent = t.text, X(n, "block")) : $(n), fe(e, t);
+    C(n, t, "htmlContainer"), t.html ? (ke(t.html, n), B(n, "block")) : t.text ? (n.textContent = t.text, B(n, "block")) : P(n), Oe(e, t);
+  }),
+      Ve = function Ve(e, t) {
+    var n = J();
+    le(n, t.footer), t.footer && ke(t.footer, n), C(n, t, "footer");
   },
-      Ae = function Ae(e, t) {
-    var n = j();
-    Q(n, t.footer), t.footer && ce(t.footer, n), R(n, t, "footer");
+      Ne = function Ne(e, t) {
+    var e = p.innerParams.get(e),
+        n = z();
+    e && t.icon === e.icon ? (ze(n, t), Re(n, t)) : t.icon || t.iconHtml ? t.icon && -1 === Object.keys(o).indexOf(t.icon) ? (l('Unknown icon! Expected "success", "error", "warning", "info" or "question", got "'.concat(t.icon, '"')), P(n)) : (B(n), ze(n, t), Re(n, t), A(n, t.showClass.icon)) : P(n);
   },
-      Pe = function Pe(e, t) {
-    var n = M();
-    U(n, t.closeButtonHtml), R(n, t, "closeButton"), Q(n, t.showCloseButton), n.setAttribute("aria-label", t.closeButtonAriaLabel);
-  },
-      Be = function Be(e, t) {
-    var n = ge.innerParams.get(e),
-        e = C();
-    return n && t.icon === n.icon ? (Se(e, t), void xe(e, t)) : t.icon || t.iconHtml ? t.icon && -1 === Object.keys(f).indexOf(t.icon) ? (r('Unknown icon! Expected "success", "error", "warning", "info" or "question", got "'.concat(t.icon, '"')), $(e)) : (X(e), Se(e, t), xe(e, t), void K(e, t.showClass.icon)) : $(e);
-  },
-      xe = function xe(e, t) {
-    for (var _n6 in f) {
-      t.icon !== _n6 && Y(e, f[_n6]);
+      Re = function Re(e, t) {
+    for (var _n4 in o) {
+      t.icon !== _n4 && k(e, o[_n4]);
     }
 
-    K(e, f[t.icon]), Te(e, t), Ee(), R(e, t, "icon");
+    A(e, o[t.icon]), Ke(e, t), Fe(), C(e, t, "icon");
   },
-      Ee = function Ee() {
-    var e = w();
-    var t = window.getComputedStyle(e).getPropertyValue("background-color");
-    var n = e.querySelectorAll("[class^=swal2-success-circular-line], .swal2-success-fix");
+      Fe = function Fe() {
+    var e = h(),
+        t = window.getComputedStyle(e).getPropertyValue("background-color"),
+        n = e.querySelectorAll("[class^=swal2-success-circular-line], .swal2-success-fix");
 
     for (var _e8 = 0; _e8 < n.length; _e8++) {
       n[_e8].style.backgroundColor = t;
     }
   },
-      Se = function Se(e, t) {
-    var n;
-    e.textContent = "", t.iconHtml ? U(e, Le(t.iconHtml)) : "success" === t.icon ? U(e, '\n      <div class="swal2-success-circular-line-left"></div>\n      <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>\n      <div class="swal2-success-ring"></div> <div class="swal2-success-fix"></div>\n      <div class="swal2-success-circular-line-right"></div>\n    ') : "error" === t.icon ? U(e, '\n      <span class="swal2-x-mark">\n        <span class="swal2-x-mark-line-left"></span>\n        <span class="swal2-x-mark-line-right"></span>\n      </span>\n    ') : (n = {
+      Ue = '\n  <div class="swal2-success-circular-line-left"></div>\n  <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>\n  <div class="swal2-success-ring"></div> <div class="swal2-success-fix"></div>\n  <div class="swal2-success-circular-line-right"></div>\n',
+      We = '\n  <span class="swal2-x-mark">\n    <span class="swal2-x-mark-line-left"></span>\n    <span class="swal2-x-mark-line-right"></span>\n  </span>\n',
+      ze = function ze(e, t) {
+    var n = e.innerHTML,
+        o;
+    var i;
+    t.iconHtml ? o = _e(t.iconHtml) : "success" === t.icon ? (o = Ue, n = n.replace(/ style=".*?"/g, "")) : o = "error" === t.icon ? We : (i = {
       question: "?",
       warning: "!",
       info: "i"
-    }, U(e, Le(n[t.icon])));
+    }, _e(i[t.icon])), n.trim() !== o.trim() && w(e, o);
   },
-      Te = function Te(e, t) {
+      Ke = function Ke(e, t) {
     if (t.iconColor) {
       e.style.color = t.iconColor, e.style.borderColor = t.iconColor;
 
-      for (var _i2 = 0, _arr = [".swal2-success-line-tip", ".swal2-success-line-long", ".swal2-x-mark-line-left", ".swal2-x-mark-line-right"]; _i2 < _arr.length; _i2++) {
-        var _n7 = _arr[_i2];
-        G(e, _n7, "backgroundColor", t.iconColor);
+      for (var _i = 0, _arr = [".swal2-success-line-tip", ".swal2-success-line-long", ".swal2-x-mark-line-left", ".swal2-x-mark-line-right"]; _i < _arr.length; _i++) {
+        var _n5 = _arr[_i];
+        ce(e, _n5, "backgroundColor", t.iconColor);
       }
 
-      G(e, ".swal2-success-ring", "borderColor", t.iconColor);
+      ce(e, ".swal2-success-ring", "borderColor", t.iconColor);
     }
   },
-      Le = function Le(e) {
-    return '<div class="'.concat(h["icon-content"], '">').concat(e, "</div>");
+      _e = function _e(e) {
+    return '<div class="'.concat(m["icon-content"], '">').concat(e, "</div>");
   },
-      Oe = function Oe(e, t) {
-    var n = P();
-    if (!t.imageUrl) return $(n);
-    X(n, ""), n.setAttribute("src", t.imageUrl), n.setAttribute("alt", t.imageAlt), J(n, "width", t.imageWidth), J(n, "height", t.imageHeight), n.className = h.image, R(n, t, "image");
+      Ye = function Ye(e, t) {
+    var n = Y();
+    t.imageUrl ? (B(n, ""), n.setAttribute("src", t.imageUrl), n.setAttribute("alt", t.imageAlt), r(n, "width", t.imageWidth), r(n, "height", t.imageHeight), n.className = m.image, C(n, t, "image")) : P(n);
   },
-      je = function je(e, o) {
-    var i = B();
-    if (!o.progressSteps || 0 === o.progressSteps.length) return $(i);
-    X(i), i.textContent = "", o.currentProgressStep >= o.progressSteps.length && a("Invalid currentProgressStep parameter, it should be less than progressSteps.length (currentProgressStep like JS arrays starts from 0)"), o.progressSteps.forEach(function (e, t) {
-      var n,
-          e = (n = e, e = document.createElement("li"), K(e, h["progress-step"]), U(e, n), e);
-      i.appendChild(e), t === o.currentProgressStep && K(e, h["active-progress-step"]), t !== o.progressSteps.length - 1 && (t = function (e) {
+      Ze = function Ze(e, t) {
+    var n = g(),
+        o = h(),
+        n = (t.toast ? (r(n, "width", t.width), o.style.width = "100%", o.insertBefore(v(), z())) : r(o, "width", t.width), r(o, "padding", t.padding), t.color && (o.style.color = t.color), t.background && (o.style.background = t.background), P(X()), o),
+        o = t;
+    (n.className = "".concat(m.popup, " ").concat(x(n) ? o.showClass.popup : ""), o.toast) ? (A([document.documentElement, document.body], m["toast-shown"]), A(n, m.toast)) : A(n, m.modal);
+    C(n, o, "popup"), "string" == typeof o.customClass && A(n, o.customClass);
+    o.icon && A(n, m["icon-".concat(o.icon)]);
+  },
+      Xe = function Xe(e, n) {
+    var o = Z();
+    n.progressSteps && 0 !== n.progressSteps.length ? (B(o), o.textContent = "", n.currentProgressStep >= n.progressSteps.length && a("Invalid currentProgressStep parameter, it should be less than progressSteps.length (currentProgressStep like JS arrays starts from 0)"), n.progressSteps.forEach(function (e, t) {
+      var e = function (e) {
         var t = document.createElement("li");
-        return K(t, h["progress-step-line"]), e.progressStepsDistance && (t.style.width = e.progressStepsDistance), t;
-      }(o), i.appendChild(t));
-    });
-  },
-      De = function De(e, t) {
-    var n = k();
-    Q(n, t.title || t.titleText, "block"), t.title && ce(t.title, n), t.titleText && (n.innerText = t.titleText), R(n, t, "title");
-  },
-      Me = function Me(e, t) {
-    var n = b();
-    var o = w();
-    t.toast ? (J(n, "width", t.width), o.style.width = "100%", o.insertBefore(T(), C())) : J(o, "width", t.width), J(o, "padding", t.padding), t.background && (o.style.background = t.background), $(x()), function (e, t) {
-      if (e.className = "".concat(h.popup, " ").concat(ee(e) ? t.showClass.popup : ""), t.toast) {
-        K([document.documentElement, document.body], h["toast-shown"]);
-        K(e, h.toast);
-      } else K(e, h.modal);
+        return A(t, m["progress-step"]), w(t, e), t;
+      }(e);
 
-      if (R(e, t, "popup"), typeof t.customClass === "string") K(e, t.customClass);
-      if (t.icon) K(e, h["icon-".concat(t.icon)]);
-    }(o, t);
+      o.appendChild(e), t === n.currentProgressStep && A(e, m["active-progress-step"]), t !== n.progressSteps.length - 1 && (e = function (e) {
+        var t = document.createElement("li");
+        if (A(t, m["progress-step-line"]), e.progressStepsDistance) r(t, "width", e.progressStepsDistance);
+        return t;
+      }(n), o.appendChild(e));
+    })) : P(o);
   },
-      Ie = function Ie(e, t) {
-    Me(e, t), me(e, t), je(e, t), Be(e, t), Oe(e, t), De(e, t), Pe(e, t), ke(e, t), de(e, t), Ae(e, t), "function" == typeof t.didRender && t.didRender(w());
+      $e = function $e(e, t) {
+    var n = K();
+    le(n, t.title || t.titleText, "block"), t.title && ke(t.title, n), t.titleText && (n.innerText = t.titleText), C(n, t, "title");
+  },
+      Je = function Je(e, t) {
+    Ze(e, t), Le(e, t), Xe(e, t), Ne(e, t), Ye(e, t), $e(e, t), Te(e, t), qe(e, t), xe(e, t), Ve(e, t), "function" == typeof t.didRender && t.didRender(h());
   };
 
-  var He = function He() {
-    return E() && E().click();
+  function Qe() {
+    var e,
+        t,
+        n = p.innerParams.get(this);
+    n && (e = p.domCache.get(this), P(e.loader), ne() ? n.icon && B(z()) : (t = (n = e).popup.getElementsByClassName(n.loader.getAttribute("data-button-to-replace"))).length ? B(t[0], "inline-block") : ue() && P(n.actions), k([e.popup, e.actions], m.loading), e.popup.removeAttribute("aria-busy"), e.popup.removeAttribute("data-loading"), e.confirmButton.disabled = !1, e.denyButton.disabled = !1, e.cancelButton.disabled = !1);
+  }
+
+  var Ge = function Ge() {
+    return f() && f().click();
   };
 
-  var qe = function qe(e) {
-    var t = w();
-    t || on.fire(), t = w();
-    var n = T();
-    q() ? $(C()) : function (e, t) {
-      var n = O(),
-          o = T();
-      if (!t && ee(E())) t = E();
+  var L = Object.freeze({
+    cancel: "cancel",
+    backdrop: "backdrop",
+    close: "close",
+    esc: "esc",
+    timer: "timer"
+  }),
+      et = function et(e) {
+    e.keydownTarget && e.keydownHandlerAdded && (e.keydownTarget.removeEventListener("keydown", e.keydownHandler, {
+      capture: e.keydownListenerCapture
+    }), e.keydownHandlerAdded = !1);
+  },
+      tt = function tt(e, t, n) {
+    var o = ee();
+    if (o.length) return (t += n) === o.length ? t = 0 : -1 === t && (t = o.length - 1), o[t].focus();
+    h().focus();
+  },
+      nt = ["ArrowRight", "ArrowDown"],
+      ot = ["ArrowLeft", "ArrowUp"],
+      it = function it(e, n, t) {
+    var o = p.innerParams.get(e);
+    if (o && !n.isComposing && 229 !== n.keyCode) if (o.stopKeydownPropagation && n.stopPropagation(), "Enter" === n.key) e = e, s = n, i = o, R(i.allowEnterKey) && s.target && e.getInput() && s.target instanceof HTMLElement && s.target.outerHTML === e.getInput().outerHTML && (["textarea", "file"].includes(i.input) || (Ge(), s.preventDefault()));else if ("Tab" === n.key) {
+      e = n;
+      var i = o;
+      var a = e.target,
+          r = ee();
 
-      if (X(n), t) {
-        $(t);
-        o.setAttribute("data-button-to-replace", t.className);
+      var _t3 = -1;
+
+      for (var _e9 = 0; _e9 < r.length; _e9++) {
+        if (a === r[_e9]) {
+          _t3 = _e9;
+          break;
+        }
       }
 
-      o.parentNode.insertBefore(o, t), K([e, n], h.loading);
-    }(t, e), X(n), t.setAttribute("data-loading", !0), t.setAttribute("aria-busy", !0), t.focus();
-  },
-      Ve = 100,
-      Ne = {},
-      Ue = function Ue() {
-    Ne.previousActiveElement && Ne.previousActiveElement.focus ? (Ne.previousActiveElement.focus(), Ne.previousActiveElement = null) : document.body && document.body.focus();
-  },
-      Fe = function Fe(o) {
-    return new Promise(function (e) {
-      if (!o) return e();
-      var t = window.scrollX,
-          n = window.scrollY;
-      Ne.restoreFocusTimeout = setTimeout(function () {
-        Ue(), e();
-      }, Ve), window.scrollTo(t, n);
-    });
-  };
+      e.shiftKey ? tt(i, _t3, -1) : tt(i, _t3, 1);
+      e.stopPropagation(), e.preventDefault();
+    } else if ([].concat(nt, ot).includes(n.key)) {
+      var s = n.key,
+          e = f(),
+          c = b(),
+          l = y();
 
-  var Re = function Re() {
-    if (Ne.timeout) return function () {
-      var e = D();
-      var t = parseInt(window.getComputedStyle(e).width);
-      e.style.removeProperty("transition"), e.style.width = "100%";
-      var n = parseInt(window.getComputedStyle(e).width),
-          n = parseInt(t / n * 100);
-      e.style.removeProperty("transition"), e.style.width = "".concat(n, "%");
-    }(), Ne.timeout.stop();
-  },
-      ze = function ze() {
-    if (Ne.timeout) {
-      var e = Ne.timeout.start();
-      return V(e), e;
+      if (!(document.activeElement instanceof HTMLElement) || [e, c, l].includes(document.activeElement)) {
+        var u = nt.includes(s) ? "nextElementSibling" : "previousElementSibling";
+        var _t4 = document.activeElement;
+
+        for (var _e10 = 0; _e10 < $().children.length; _e10++) {
+          if (!(_t4 = _t4[u])) return;
+          if (_t4 instanceof HTMLButtonElement && x(_t4)) break;
+        }
+
+        _t4 instanceof HTMLButtonElement && _t4.focus();
+      }
+    } else if ("Escape" === n.key) {
+      e = n, c = o, l = t;
+
+      if (R(c.allowEscapeKey)) {
+        e.preventDefault();
+        l(L.esc);
+      }
     }
   };
 
-  var We = !1;
-  var _e = {};
+  var at = {
+    swalPromiseResolve: new WeakMap(),
+    swalPromiseReject: new WeakMap()
+  };
 
-  var Ke = function Ke(t) {
-    for (var _e9 = t.target; _e9 && _e9 !== document; _e9 = _e9.parentNode) {
-      for (var _o4 in _e) {
-        var n = _e9.getAttribute(_o4);
+  var rt = function rt() {
+    Array.from(document.body.children).forEach(function (e) {
+      e === g() || e.contains(g()) || (e.hasAttribute("aria-hidden") && e.setAttribute("data-previous-aria-hidden", e.getAttribute("aria-hidden")), e.setAttribute("aria-hidden", "true"));
+    });
+  },
+      st = function st() {
+    Array.from(document.body.children).forEach(function (e) {
+      e.hasAttribute("data-previous-aria-hidden") ? (e.setAttribute("aria-hidden", e.getAttribute("data-previous-aria-hidden")), e.removeAttribute("data-previous-aria-hidden")) : e.removeAttribute("aria-hidden");
+    });
+  },
+      ct = function ct() {
+    if ((/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream || "MacIntel" === navigator.platform && 1 < navigator.maxTouchPoints) && !i(document.body, m.iosfix)) {
+      var e = document.body.scrollTop;
+      document.body.style.top = "".concat(-1 * e, "px"), A(document.body, m.iosfix);
+      {
+        e = g();
 
-        if (n) return void _e[_o4].fire({
-          template: n
-        });
+        var _t5;
+
+        e.ontouchstart = function (e) {
+          _t5 = lt(e);
+        }, e.ontouchmove = function (e) {
+          _t5 && (e.preventDefault(), e.stopPropagation());
+        };
       }
+      var t,
+          e = navigator.userAgent,
+          n = !!e.match(/iPad/i) || !!e.match(/iPhone/i),
+          o = !!e.match(/WebKit/i);
+      n && o && !e.match(/CriOS/i) && (t = 44, h().scrollHeight > window.innerHeight - 44 && (g().style.paddingBottom = "".concat(44, "px")));
     }
   },
-      Ye = {
+      lt = function lt(e) {
+    var t,
+        n = e.target,
+        o = g();
+    return !((t = e).touches && t.touches.length && "stylus" === t.touches[0].touchType || (t = e).touches && 1 < t.touches.length) && (n === o || !de(o) && n instanceof HTMLElement && "INPUT" !== n.tagName && "TEXTAREA" !== n.tagName && (!de(_()) || !_().contains(n)));
+  },
+      ut = function ut() {
+    var e;
+    i(document.body, m.iosfix) && (e = parseInt(document.body.style.top, 10), k(document.body, m.iosfix), document.body.style.top = "", document.body.scrollTop = -1 * e);
+  },
+      dt = function dt() {
+    var e, t;
+    null === n.previousBodyPadding && document.body.scrollHeight > window.innerHeight && (n.previousBodyPadding = parseInt(window.getComputedStyle(document.body).getPropertyValue("padding-right")), document.body.style.paddingRight = "".concat(n.previousBodyPadding + ((e = document.createElement("div")).className = m["scrollbar-measure"], document.body.appendChild(e), t = e.getBoundingClientRect().width - e.clientWidth, document.body.removeChild(e), t), "px"));
+  },
+      pt = function pt() {
+    null !== n.previousBodyPadding && (document.body.style.paddingRight = "".concat(n.previousBodyPadding, "px"), n.previousBodyPadding = null);
+  };
+
+  function mt(e, t, n, o) {
+    ne() ? bt(e, o) : (he(n).then(function () {
+      return bt(e, o);
+    }), et(E)), /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ? (t.setAttribute("style", "display:none !important"), t.removeAttribute("class"), t.innerHTML = "") : t.remove(), te() && (pt(), ut(), st()), k([document.documentElement, document.body], [m.shown, m["height-auto"], m["no-backdrop"], m["toast-shown"]]);
+  }
+
+  function gt(e) {
+    e = void 0 !== (t = e) ? Object.assign({
+      isConfirmed: !1,
+      isDenied: !1,
+      isDismissed: !1
+    }, t) : {
+      isConfirmed: !1,
+      isDenied: !1,
+      isDismissed: !0
+    };
+
+    var t = at.swalPromiseResolve.get(this),
+        n = function (e) {
+      var t = h();
+      if (!t) return false;
+      var n = p.innerParams.get(e);
+      if (!n || i(t, n.hideClass.popup)) return false;
+      k(t, n.showClass.popup), A(t, n.hideClass.popup);
+      var o = g();
+      return k(o, n.showClass.backdrop), A(o, n.hideClass.backdrop), ft(e, t, n), true;
+    }(this);
+
+    this.isAwaitingPromise() ? e.isDismissed || (ht(this), t(e)) : n && t(e);
+  }
+
+  var ht = function ht(e) {
+    e.isAwaitingPromise() && (p.awaitingPromise["delete"](e), p.innerParams.get(e) || e._destroy());
+  },
+      ft = function ft(e, t, n) {
+    var o,
+        i,
+        a,
+        r = g(),
+        s = Pe && pe(t);
+    "function" == typeof n.willClose && n.willClose(t), s ? (s = e, o = t, t = r, i = n.returnFocus, a = n.didClose, E.swalCloseEventFinishedCallback = mt.bind(null, s, t, i, a), o.addEventListener(Pe, function (e) {
+      e.target === o && (E.swalCloseEventFinishedCallback(), delete E.swalCloseEventFinishedCallback);
+    })) : mt(e, r, n.returnFocus, n.didClose);
+  },
+      bt = function bt(e, t) {
+    setTimeout(function () {
+      "function" == typeof t && t.bind(e.params)(), e._destroy();
+    });
+  };
+
+  function vt(e, t, n) {
+    var o = p.domCache.get(e);
+    t.forEach(function (e) {
+      o[e].disabled = n;
+    });
+  }
+
+  function yt(e, t) {
+    if (e) if ("radio" === e.type) {
+      var n = e.parentNode.parentNode.querySelectorAll("input");
+
+      for (var _e11 = 0; _e11 < n.length; _e11++) {
+        n[_e11].disabled = t;
+      }
+    } else e.disabled = t;
+  }
+
+  var c = {
     title: "",
     titleText: "",
     text: "",
@@ -680,6 +806,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     },
     customClass: {},
     target: "body",
+    color: void 0,
     backdrop: !0,
     heightAuto: !0,
     allowOutsideClick: !0,
@@ -745,70 +872,356 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     didDestroy: void 0,
     scrollbarPadding: !0
   },
-      Ze = ["allowEscapeKey", "allowOutsideClick", "background", "buttonsStyling", "cancelButtonAriaLabel", "cancelButtonColor", "cancelButtonText", "closeButtonAriaLabel", "closeButtonHtml", "confirmButtonAriaLabel", "confirmButtonColor", "confirmButtonText", "currentProgressStep", "customClass", "denyButtonAriaLabel", "denyButtonColor", "denyButtonText", "didClose", "didDestroy", "footer", "hideClass", "html", "icon", "iconColor", "iconHtml", "imageAlt", "imageHeight", "imageUrl", "imageWidth", "preConfirm", "preDeny", "progressSteps", "returnFocus", "reverseButtons", "showCancelButton", "showCloseButton", "showConfirmButton", "showDenyButton", "text", "title", "titleText", "willClose"],
-      Je = {},
-      Xe = ["allowOutsideClick", "allowEnterKey", "backdrop", "focusConfirm", "focusDeny", "focusCancel", "returnFocus", "heightAuto", "keydownListenerCapture"],
-      $e = function $e(e) {
-    return Object.prototype.hasOwnProperty.call(Ye, e);
+      wt = ["allowEscapeKey", "allowOutsideClick", "background", "buttonsStyling", "cancelButtonAriaLabel", "cancelButtonColor", "cancelButtonText", "closeButtonAriaLabel", "closeButtonHtml", "color", "confirmButtonAriaLabel", "confirmButtonColor", "confirmButtonText", "currentProgressStep", "customClass", "denyButtonAriaLabel", "denyButtonColor", "denyButtonText", "didClose", "didDestroy", "footer", "hideClass", "html", "icon", "iconColor", "iconHtml", "imageAlt", "imageHeight", "imageUrl", "imageWidth", "preConfirm", "preDeny", "progressSteps", "returnFocus", "reverseButtons", "showCancelButton", "showCloseButton", "showConfirmButton", "showDenyButton", "text", "title", "titleText", "willClose"],
+      Ct = {},
+      At = ["allowOutsideClick", "allowEnterKey", "backdrop", "focusConfirm", "focusDeny", "focusCancel", "returnFocus", "heightAuto", "keydownListenerCapture"],
+      kt = function kt(e) {
+    return Object.prototype.hasOwnProperty.call(c, e);
+  },
+      Bt = function Bt(e) {
+    return -1 !== wt.indexOf(e);
+  },
+      Pt = function Pt(e) {
+    return Ct[e];
+  },
+      xt = function xt(e) {
+    !e.backdrop && e.allowOutsideClick && a('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`');
+
+    for (var _n6 in e) {
+      t = _n6, kt(t) || a('Unknown parameter "'.concat(t, '"')), e.toast && (t = _n6, At.includes(t) && a('The parameter "'.concat(t, '" is incompatible with toasts'))), t = _n6, Pt(t) && N(t, Pt(t));
+    }
+
+    var t;
   };
 
-  var Ge = function Ge(e) {
-    return Je[e];
+  var Et = function Et(e) {
+    e.isAwaitingPromise() ? (Tt(p, e), p.awaitingPromise.set(e, !0)) : (Tt(at, e), Tt(p, e));
   },
-      Qe = function Qe(e) {
-    $e(e) || a('Unknown parameter "'.concat(e, '"'));
-  },
-      et = function et(e) {
-    Xe.includes(e) && a('The parameter "'.concat(e, '" is incompatible with toasts'));
-  },
-      tt = function tt(e) {
-    Ge(e) && i(e, Ge(e));
+      Tt = function Tt(e, t) {
+    for (var _n7 in e) {
+      e[_n7]["delete"](t);
+    }
   };
 
-  var nt = Object.freeze({
-    isValidParameter: $e,
-    isUpdatableParameter: function isUpdatableParameter(e) {
-      return -1 !== Ze.indexOf(e);
+  e = Object.freeze({
+    hideLoading: Qe,
+    disableLoading: Qe,
+    getInput: function getInput(e) {
+      var t = p.innerParams.get(e || this);
+      return (e = p.domCache.get(e || this)) ? ae(e.popup, t.input) : null;
     },
-    isDeprecatedParameter: Ge,
+    close: gt,
+    isAwaitingPromise: function isAwaitingPromise() {
+      return !!p.awaitingPromise.get(this);
+    },
+    rejectPromise: function rejectPromise(e) {
+      var t = at.swalPromiseReject.get(this);
+      ht(this), t && t(e);
+    },
+    handleAwaitingPromise: ht,
+    closePopup: gt,
+    closeModal: gt,
+    closeToast: gt,
+    enableButtons: function enableButtons() {
+      vt(this, ["confirmButton", "denyButton", "cancelButton"], !1);
+    },
+    disableButtons: function disableButtons() {
+      vt(this, ["confirmButton", "denyButton", "cancelButton"], !0);
+    },
+    enableInput: function enableInput() {
+      yt(this.getInput(), !1);
+    },
+    disableInput: function disableInput() {
+      yt(this.getInput(), !0);
+    },
+    showValidationMessage: function showValidationMessage(e) {
+      var t = p.domCache.get(this),
+          n = p.innerParams.get(this);
+      w(t.validationMessage, e), t.validationMessage.className = m["validation-message"], n.customClass && n.customClass.validationMessage && A(t.validationMessage, n.customClass.validationMessage), B(t.validationMessage), (e = this.getInput()) && (e.setAttribute("aria-invalid", !0), e.setAttribute("aria-describedby", m["validation-message"]), re(e), A(e, m.inputerror));
+    },
+    resetValidationMessage: function resetValidationMessage() {
+      var e = p.domCache.get(this);
+      e.validationMessage && P(e.validationMessage), (e = this.getInput()) && (e.removeAttribute("aria-invalid"), e.removeAttribute("aria-describedby"), k(e, m.inputerror));
+    },
+    getProgressSteps: function getProgressSteps() {
+      return p.domCache.get(this).progressSteps;
+    },
+    update: function update(e) {
+      var t = h(),
+          n = p.innerParams.get(this);
+      if (!t || i(t, n.hideClass.popup)) return a("You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.");
+      t = function (t) {
+        var n = {};
+        return Object.keys(t).forEach(function (e) {
+          if (Bt(e)) n[e] = t[e];else a("Invalid parameter to update: ".concat(e));
+        }), n;
+      }(e), n = Object.assign({}, n, t), Je(this, n), p.innerParams.set(this, n), Object.defineProperties(this, {
+        params: {
+          value: Object.assign({}, this.params, e),
+          writable: !1,
+          enumerable: !0
+        }
+      });
+    },
+    _destroy: function _destroy() {
+      var e = p.domCache.get(this),
+          t = p.innerParams.get(this);
+      t ? (e.popup && E.swalCloseEventFinishedCallback && (E.swalCloseEventFinishedCallback(), delete E.swalCloseEventFinishedCallback), "function" == typeof t.didDestroy && t.didDestroy(), e = this, Et(e), delete e.params, delete E.keydownHandler, delete E.keydownTarget, delete E.currentInstance) : Et(this);
+    }
+  });
+
+  var S = function S(e) {
+    var t,
+        n,
+        o,
+        i = h(),
+        a = (i || new An(), i = h(), v());
+    ne() ? P(z()) : (t = i, e = e, n = $(), o = v(), !e && x(f()) && (e = f()), B(n), e && (P(e), o.setAttribute("data-button-to-replace", e.className)), o.parentNode.insertBefore(o, e), A([t, n], m.loading)), B(a), i.setAttribute("data-loading", "true"), i.setAttribute("aria-busy", "true"), i.focus();
+  },
+      Lt = function Lt(t, n) {
+    var o = h(),
+        i = function i(e) {
+      Ot[n.input](o, Mt(e), n);
+    };
+
+    F(n.inputOptions) || U(n.inputOptions) ? (S(f()), u(n.inputOptions).then(function (e) {
+      t.hideLoading(), i(e);
+    })) : "object" == _typeof(n.inputOptions) ? i(n.inputOptions) : l("Unexpected type of inputOptions! Expected object, Map or Promise, got ".concat(_typeof(n.inputOptions)));
+  },
+      St = function St(t, n) {
+    var o = t.getInput();
+    P(o), u(n.inputValue).then(function (e) {
+      o.value = "number" === n.input ? "".concat(parseFloat(e) || 0) : "".concat(e), B(o), o.focus(), t.hideLoading();
+    })["catch"](function (e) {
+      l("Error in inputValue promise: ".concat(e)), o.value = "", B(o), o.focus(), t.hideLoading();
+    });
+  },
+      Ot = {
+    select: function select(e, t, i) {
+      var o = d(e, m.select),
+          a = function a(e, t, n) {
+        var o = document.createElement("option");
+        o.value = n, w(o, t), o.selected = jt(n, i.inputValue), e.appendChild(o);
+      };
+
+      t.forEach(function (e) {
+        var t = e[0],
+            e = e[1];
+
+        if (Array.isArray(e)) {
+          var _n8 = document.createElement("optgroup");
+
+          _n8.label = t, _n8.disabled = !1, o.appendChild(_n8), e.forEach(function (e) {
+            return a(_n8, e[1], e[0]);
+          });
+        } else a(o, e, t);
+      }), o.focus();
+    },
+    radio: function radio(e, t, i) {
+      var a = d(e, m.radio);
+      t.forEach(function (e) {
+        var t = e[0],
+            e = e[1],
+            n = document.createElement("input"),
+            o = document.createElement("label"),
+            t = (n.type = "radio", n.name = m.radio, n.value = t, jt(t, i.inputValue) && (n.checked = !0), document.createElement("span"));
+        w(t, e), t.className = m.label, o.appendChild(n), o.appendChild(t), a.appendChild(o);
+      });
+      e = a.querySelectorAll("input");
+      e.length && e[0].focus();
+    }
+  },
+      Mt = function Mt(n) {
+    var o = [];
+    return "undefined" != typeof Map && n instanceof Map ? n.forEach(function (e, t) {
+      var n = e;
+      "object" == _typeof(n) && (n = Mt(n)), o.push([t, n]);
+    }) : Object.keys(n).forEach(function (e) {
+      var t = n[e];
+      "object" == _typeof(t) && (t = Mt(t)), o.push([e, t]);
+    }), o;
+  },
+      jt = function jt(e, t) {
+    return t && t.toString() === e.toString();
+  },
+      Ht = function Ht(e, t) {
+    var n = p.innerParams.get(e);
+
+    if (n.input) {
+      var o = function (e, t) {
+        var n,
+            o = e.getInput();
+        if (!o) return null;
+
+        switch (t.input) {
+          case "checkbox":
+            return o.checked ? 1 : 0;
+
+          case "radio":
+            return (n = o).checked ? n.value : null;
+
+          case "file":
+            return (n = o).files.length ? null !== n.getAttribute("multiple") ? n.files : n.files[0] : null;
+
+          default:
+            return t.inputAutoTrim ? o.value.trim() : o.value;
+        }
+      }(e, n);
+
+      if (n.inputValidator) {
+        var i = e;
+        var a = o;
+        var r = t;
+
+        var _s = p.innerParams.get(i),
+            _c = (i.disableInput(), Promise.resolve().then(function () {
+          return u(_s.inputValidator(a, _s.validationMessage));
+        }));
+
+        _c.then(function (e) {
+          i.enableButtons(), i.enableInput(), e ? i.showValidationMessage(e) : ("deny" === r ? It : Vt)(i, a);
+        });
+      } else e.getInput().checkValidity() ? ("deny" === t ? It : Vt)(e, o) : (e.enableButtons(), e.showValidationMessage(n.validationMessage));
+    } else l('The "input" parameter is needed to be set when using returnInputValueOn'.concat(q(t)));
+  },
+      It = function It(t, n) {
+    var e = p.innerParams.get(t || void 0);
+    e.showLoaderOnDeny && S(b()), e.preDeny ? (p.awaitingPromise.set(t || void 0, !0), Promise.resolve().then(function () {
+      return u(e.preDeny(n, e.validationMessage));
+    }).then(function (e) {
+      !1 === e ? (t.hideLoading(), ht(t)) : t.close({
+        isDenied: !0,
+        value: void 0 === e ? n : e
+      });
+    })["catch"](function (e) {
+      return qt(t || void 0, e);
+    })) : t.close({
+      isDenied: !0,
+      value: n
+    });
+  },
+      Dt = function Dt(e, t) {
+    e.close({
+      isConfirmed: !0,
+      value: t
+    });
+  },
+      qt = function qt(e, t) {
+    e.rejectPromise(t);
+  },
+      Vt = function Vt(t, n) {
+    var e = p.innerParams.get(t || void 0);
+    e.showLoaderOnConfirm && S(), e.preConfirm ? (t.resetValidationMessage(), p.awaitingPromise.set(t || void 0, !0), Promise.resolve().then(function () {
+      return u(e.preConfirm(n, e.validationMessage));
+    }).then(function (e) {
+      x(X()) || !1 === e ? (t.hideLoading(), ht(t)) : Dt(t, void 0 === e ? n : e);
+    })["catch"](function (e) {
+      return qt(t || void 0, e);
+    })) : Dt(t, n);
+  },
+      Nt = function Nt(n, e, o) {
+    e.popup.onclick = function () {
+      var e,
+          t = p.innerParams.get(n);
+      t && ((e = t).showConfirmButton || e.showDenyButton || e.showCancelButton || e.showCloseButton || t.timer || t.input) || o(L.close);
+    };
+  };
+
+  var Rt = !1;
+
+  var Ft = function Ft(t) {
+    t.popup.onmousedown = function () {
+      t.container.onmouseup = function (e) {
+        t.container.onmouseup = void 0, e.target === t.container && (Rt = !0);
+      };
+    };
+  },
+      Ut = function Ut(t) {
+    t.container.onmousedown = function () {
+      t.popup.onmouseup = function (e) {
+        t.popup.onmouseup = void 0, e.target !== t.popup && !t.popup.contains(e.target) || (Rt = !0);
+      };
+    };
+  },
+      Wt = function Wt(n, o, i) {
+    o.container.onclick = function (e) {
+      var t = p.innerParams.get(n);
+      Rt ? Rt = !1 : e.target === o.container && R(t.allowOutsideClick) && i(L.backdrop);
+    };
+  },
+      zt = function zt(e) {
+    return "object" == _typeof(e) && e.jquery;
+  },
+      Kt = function Kt(e) {
+    return e instanceof Element || zt(e);
+  };
+
+  var _t = function _t() {
+    if (E.timeout) return e = Q(), t = parseInt(window.getComputedStyle(e).width), e.style.removeProperty("transition"), e.style.width = "100%", n = parseInt(window.getComputedStyle(e).width), t = t / n * 100, e.style.removeProperty("transition"), e.style.width = "".concat(t, "%"), E.timeout.stop();
+    var e, t, n;
+  },
+      Yt = function Yt() {
+    var e;
+    if (E.timeout) return e = E.timeout.start(), oe(e), e;
+  };
+
+  var Zt = !1;
+  var Xt = {};
+
+  var $t = function $t(t) {
+    for (var _e12 = t.target; _e12 && _e12 !== document; _e12 = _e12.parentNode) {
+      for (var _o in Xt) {
+        var n = _e12.getAttribute(_o);
+
+        if (n) return void Xt[_o].fire({
+          template: n
+        });
+      }
+    }
+  };
+
+  var Jt = Object.freeze({
+    isValidParameter: kt,
+    isUpdatableParameter: Bt,
+    isDeprecatedParameter: Pt,
     argsToParams: function argsToParams(n) {
       var o = {};
-      return "object" != _typeof(n[0]) || g(n[0]) ? ["title", "html", "icon"].forEach(function (e, t) {
+      return "object" != _typeof(n[0]) || Kt(n[0]) ? ["title", "html", "icon"].forEach(function (e, t) {
         t = n[t];
-        "string" == typeof t || g(t) ? o[e] = t : void 0 !== t && r("Unexpected type of ".concat(e, '! Expected "string" or "Element", got ').concat(_typeof(t)));
+        "string" == typeof t || Kt(t) ? o[e] = t : void 0 !== t && l("Unexpected type of ".concat(e, '! Expected "string" or "Element", got ').concat(_typeof(t)));
       }) : Object.assign(o, n[0]), o;
     },
     isVisible: function isVisible() {
-      return ee(w());
+      return x(h());
     },
-    clickConfirm: He,
+    clickConfirm: Ge,
     clickDeny: function clickDeny() {
-      return S() && S().click();
+      return b() && b().click();
     },
     clickCancel: function clickCancel() {
-      return L() && L().click();
+      return y() && y().click();
     },
-    getContainer: b,
-    getPopup: w,
-    getTitle: k,
-    getHtmlContainer: A,
-    getImage: P,
-    getIcon: C,
+    getContainer: g,
+    getPopup: h,
+    getTitle: K,
+    getHtmlContainer: _,
+    getImage: Y,
+    getIcon: z,
     getInputLabel: function getInputLabel() {
-      return v(h["input-label"]);
+      return t(m["input-label"]);
     },
-    getCloseButton: M,
-    getActions: O,
-    getConfirmButton: E,
-    getDenyButton: S,
-    getCancelButton: L,
-    getLoader: T,
-    getFooter: j,
-    getTimerProgressBar: D,
-    getFocusableElements: I,
-    getValidationMessage: x,
+    getCloseButton: G,
+    getActions: $,
+    getConfirmButton: f,
+    getDenyButton: b,
+    getCancelButton: y,
+    getLoader: v,
+    getFooter: J,
+    getTimerProgressBar: Q,
+    getFocusableElements: ee,
+    getValidationMessage: X,
     isLoading: function isLoading() {
-      return w().hasAttribute("data-loading");
+      return h().hasAttribute("data-loading");
     },
     fire: function fire() {
       for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
@@ -831,8 +1244,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
         _createClass(e, [{
           key: "_main",
-          value: function _main(_e10, t) {
-            return _get(_getPrototypeOf(e.prototype), "_main", this).call(this, _e10, Object.assign({}, n, t));
+          value: function _main(_e13, t) {
+            return _get(_getPrototypeOf(e.prototype), "_main", this).call(this, _e13, Object.assign({}, n, t));
           }
         }]);
 
@@ -841,180 +1254,37 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       return e;
     },
-    showLoading: qe,
-    enableLoading: qe,
+    showLoading: S,
+    enableLoading: S,
     getTimerLeft: function getTimerLeft() {
-      return Ne.timeout && Ne.timeout.getTimerLeft();
+      return E.timeout && E.timeout.getTimerLeft();
     },
-    stopTimer: Re,
-    resumeTimer: ze,
+    stopTimer: _t,
+    resumeTimer: Yt,
     toggleTimer: function toggleTimer() {
-      var e = Ne.timeout;
-      return e && (e.running ? Re : ze)();
+      var e = E.timeout;
+      return e && (e.running ? _t : Yt)();
     },
     increaseTimer: function increaseTimer(e) {
-      if (Ne.timeout) {
-        e = Ne.timeout.increase(e);
-        return V(e, !0), e;
-      }
+      if (E.timeout) return e = E.timeout.increase(e), oe(e, !0), e;
     },
     isTimerRunning: function isTimerRunning() {
-      return Ne.timeout && Ne.timeout.isRunning();
+      return E.timeout && E.timeout.isRunning();
     },
     bindClickHandler: function bindClickHandler() {
       var e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : "data-swal-template";
-      _e[e] = this, We || (document.body.addEventListener("click", Ke), We = !0);
+      Xt[e] = this, Zt || (document.body.addEventListener("click", $t), Zt = !0);
     }
   });
 
-  function ot() {
-    var e = ge.innerParams.get(this);
-
-    if (e) {
-      var _t3 = ge.domCache.get(this);
-
-      $(_t3.loader), q() ? e.icon && X(C()) : function (e) {
-        var t = e.popup.getElementsByClassName(e.loader.getAttribute("data-button-to-replace"));
-        if (t.length) X(t[0], "inline-block");else if (te()) $(e.actions);
-      }(_t3), Y([_t3.popup, _t3.actions], h.loading), _t3.popup.removeAttribute("aria-busy"), _t3.popup.removeAttribute("data-loading"), _t3.confirmButton.disabled = !1, _t3.denyButton.disabled = !1, _t3.cancelButton.disabled = !1;
-    }
-  }
-
-  var it = function it() {
-    null === N.previousBodyPadding && document.body.scrollHeight > window.innerHeight && (N.previousBodyPadding = parseInt(window.getComputedStyle(document.body).getPropertyValue("padding-right")), document.body.style.paddingRight = "".concat(N.previousBodyPadding + function () {
-      var e = document.createElement("div");
-      e.className = h["scrollbar-measure"], document.body.appendChild(e);
-      var t = e.getBoundingClientRect().width - e.clientWidth;
-      return document.body.removeChild(e), t;
-    }(), "px"));
-  },
-      st = function st() {
-    null !== N.previousBodyPadding && (document.body.style.paddingRight = "".concat(N.previousBodyPadding, "px"), N.previousBodyPadding = null);
-  },
-      at = function at() {
-    var e;
-    (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream || "MacIntel" === navigator.platform && 1 < navigator.maxTouchPoints) && !F(document.body, h.iosfix) && (e = document.body.scrollTop, document.body.style.top = "".concat(-1 * e, "px"), K(document.body, h.iosfix), function () {
-      var e = b();
-      var t;
-      e.ontouchstart = function (e) {
-        t = rt(e);
-      }, e.ontouchmove = function (e) {
-        if (t) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      };
-    }(), function () {
-      var e = !navigator.userAgent.match(/(CriOS|FxiOS|EdgiOS|YaBrowser|UCBrowser)/i);
-
-      if (e) {
-        var _t4 = 44;
-        if (w().scrollHeight > window.innerHeight - _t4) b().style.paddingBottom = "".concat(_t4, "px");
-      }
-    }());
-  },
-      rt = function rt(e) {
-    var t,
-        n = e.target,
-        o = b();
-    return !((t = e).touches && t.touches.length && "stylus" === t.touches[0].touchType || (e = e).touches && 1 < e.touches.length) && (n === o || !(ne(o) || "INPUT" === n.tagName || "TEXTAREA" === n.tagName || ne(A()) && A().contains(n)));
-  },
-      ct = function ct() {
-    var e;
-    F(document.body, h.iosfix) && (e = parseInt(document.body.style.top, 10), Y(document.body, h.iosfix), document.body.style.top = "", document.body.scrollTop = -1 * e);
-  },
-      lt = function lt() {
-    var e = s(document.body.children);
-    e.forEach(function (e) {
-      e.hasAttribute("data-previous-aria-hidden") ? (e.setAttribute("aria-hidden", e.getAttribute("data-previous-aria-hidden")), e.removeAttribute("data-previous-aria-hidden")) : e.removeAttribute("aria-hidden");
-    });
-  };
-
-  var ut = {
-    swalPromiseResolve: new WeakMap(),
-    swalPromiseReject: new WeakMap()
-  };
-
-  function dt(e, t, n, o) {
-    q() ? ht(e, o) : (Fe(n).then(function () {
-      return ht(e, o);
-    }), Ne.keydownTarget.removeEventListener("keydown", Ne.keydownHandler, {
-      capture: Ne.keydownListenerCapture
-    }), Ne.keydownHandlerAdded = !1), /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ? (t.setAttribute("style", "display:none !important"), t.removeAttribute("class"), t.innerHTML = "") : t.remove(), H() && (st(), ct(), lt()), Y([document.documentElement, document.body], [h.shown, h["height-auto"], h["no-backdrop"], h["toast-shown"]]);
-  }
-
-  function pt(e) {
-    e = void 0 !== (n = e) ? Object.assign({
-      isConfirmed: !1,
-      isDenied: !1,
-      isDismissed: !1
-    }, n) : {
-      isConfirmed: !1,
-      isDenied: !1,
-      isDismissed: !0
-    };
-    var t = ut.swalPromiseResolve.get(this);
-
-    var n = function (e) {
-      var t = w();
-      if (!t) return false;
-      var n = ge.innerParams.get(e);
-      if (!n || F(t, n.hideClass.popup)) return false;
-      Y(t, n.showClass.popup), K(t, n.hideClass.popup);
-      var o = b();
-      return Y(o, n.showClass.backdrop), K(o, n.hideClass.backdrop), gt(e, t, n), true;
-    }(this);
-
-    this.isAwaitingPromise() ? e.isDismissed || (mt(this), t(e)) : n && t(e);
-  }
-
-  var mt = function mt(e) {
-    e.isAwaitingPromise() && (ge.awaitingPromise["delete"](e), ge.innerParams.get(e) || e._destroy());
-  },
-      gt = function gt(e, t, n) {
-    var o,
-        i,
-        s,
-        a = b(),
-        r = ue && oe(t);
-    "function" == typeof n.willClose && n.willClose(t), r ? (o = e, i = t, s = a, r = n.returnFocus, t = n.didClose, Ne.swalCloseEventFinishedCallback = dt.bind(null, o, s, r, t), i.addEventListener(ue, function (e) {
-      e.target === i && (Ne.swalCloseEventFinishedCallback(), delete Ne.swalCloseEventFinishedCallback);
-    })) : dt(e, a, n.returnFocus, n.didClose);
-  },
-      ht = function ht(e, t) {
-    setTimeout(function () {
-      "function" == typeof t && t.bind(e.params)(), e._destroy();
-    });
-  };
-
-  function ft(e, t, n) {
-    var o = ge.domCache.get(e);
-    t.forEach(function (e) {
-      o[e].disabled = n;
-    });
-  }
-
-  function bt(e, t) {
-    if (!e) return !1;
-
-    if ("radio" === e.type) {
-      var _n8 = e.parentNode.parentNode,
-          _o5 = _n8.querySelectorAll("input");
-
-      for (var _e11 = 0; _e11 < _o5.length; _e11++) {
-        _o5[_e11].disabled = t;
-      }
-    } else e.disabled = t;
-  }
-
-  var yt = /*#__PURE__*/function () {
-    function yt(e, t) {
-      _classCallCheck(this, yt);
+  var Qt = /*#__PURE__*/function () {
+    function Qt(e, t) {
+      _classCallCheck(this, Qt);
 
       this.callback = e, this.remaining = t, this.running = !1, this.start();
     }
 
-    _createClass(yt, [{
+    _createClass(Qt, [{
       key: "start",
       value: function start() {
         return this.running || (this.running = !0, this.started = new Date(), this.id = setTimeout(this.callback, this.remaining)), this.remaining;
@@ -1022,7 +1292,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }, {
       key: "stop",
       value: function stop() {
-        return this.running && (this.running = !1, clearTimeout(this.id), this.remaining -= new Date() - this.started), this.remaining;
+        return this.running && (this.running = !1, clearTimeout(this.id), this.remaining -= new Date().getTime() - this.started.getTime()), this.remaining;
       }
     }, {
       key: "increase",
@@ -1042,10 +1312,91 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
     }]);
 
-    return yt;
+    return Qt;
   }();
 
-  var vt = {
+  var Gt = ["swal-title", "swal-html", "swal-footer"],
+      en = function en(e) {
+    var n = {};
+    return Array.from(e.querySelectorAll("swal-param")).forEach(function (e) {
+      O(e, ["name", "value"]);
+      var t = e.getAttribute("name"),
+          e = e.getAttribute("value");
+      "boolean" == typeof c[t] ? n[t] = "false" !== e : "object" == _typeof(c[t]) ? n[t] = JSON.parse(e) : n[t] = e;
+    }), n;
+  },
+      tn = function tn(e) {
+    var n = {};
+    return Array.from(e.querySelectorAll("swal-button")).forEach(function (e) {
+      O(e, ["type", "color", "aria-label"]);
+      var t = e.getAttribute("type");
+      n["".concat(t, "ButtonText")] = e.innerHTML, n["show".concat(q(t), "Button")] = !0, e.hasAttribute("color") && (n["".concat(t, "ButtonColor")] = e.getAttribute("color")), e.hasAttribute("aria-label") && (n["".concat(t, "ButtonAriaLabel")] = e.getAttribute("aria-label"));
+    }), n;
+  },
+      nn = function nn(e) {
+    var t = {},
+        e = e.querySelector("swal-image");
+    return e && (O(e, ["src", "width", "height", "alt"]), e.hasAttribute("src") && (t.imageUrl = e.getAttribute("src")), e.hasAttribute("width") && (t.imageWidth = e.getAttribute("width")), e.hasAttribute("height") && (t.imageHeight = e.getAttribute("height")), e.hasAttribute("alt") && (t.imageAlt = e.getAttribute("alt"))), t;
+  },
+      on = function on(e) {
+    var t = {},
+        e = e.querySelector("swal-icon");
+    return e && (O(e, ["type", "color"]), e.hasAttribute("type") && (t.icon = e.getAttribute("type")), e.hasAttribute("color") && (t.iconColor = e.getAttribute("color")), t.iconHtml = e.innerHTML), t;
+  },
+      an = function an(e) {
+    var n = {};
+    var t = e.querySelector("swal-input"),
+        t = (t && (O(t, ["type", "label", "placeholder", "value"]), n.input = t.getAttribute("type") || "text", t.hasAttribute("label") && (n.inputLabel = t.getAttribute("label")), t.hasAttribute("placeholder") && (n.inputPlaceholder = t.getAttribute("placeholder")), t.hasAttribute("value") && (n.inputValue = t.getAttribute("value"))), Array.from(e.querySelectorAll("swal-input-option")));
+    return t.length && (n.inputOptions = {}, t.forEach(function (e) {
+      O(e, ["value"]);
+      var t = e.getAttribute("value"),
+          e = e.innerHTML;
+      n.inputOptions[t] = e;
+    })), n;
+  },
+      rn = function rn(e, t) {
+    var n = {};
+
+    for (var _a2 in t) {
+      var o = t[_a2],
+          i = e.querySelector(o);
+      i && (O(i, []), n[o.replace(/^swal-/, "")] = i.innerHTML.trim());
+    }
+
+    return n;
+  },
+      sn = function sn(e) {
+    var t = Gt.concat(["swal-param", "swal-button", "swal-image", "swal-icon", "swal-input", "swal-input-option"]);
+    Array.from(e.children).forEach(function (e) {
+      e = e.tagName.toLowerCase();
+      t.includes(e) || a("Unrecognized element <".concat(e, ">"));
+    });
+  },
+      O = function O(t, n) {
+    Array.from(t.attributes).forEach(function (e) {
+      -1 === n.indexOf(e.name) && a(['Unrecognized attribute "'.concat(e.name, '" on <').concat(t.tagName.toLowerCase(), ">."), "".concat(n.length ? "Allowed attributes are: ".concat(n.join(", ")) : "To set the value, use HTML within the element.")]);
+    });
+  },
+      cn = 10,
+      ln = function ln(e) {
+    var t = h();
+    e.target === t && (e = g(), t.removeEventListener(Pe, ln), e.style.overflowY = "auto");
+  },
+      un = function un(e, t) {
+    Pe && pe(t) ? (e.style.overflowY = "hidden", t.addEventListener(Pe, ln)) : e.style.overflowY = "auto";
+  },
+      dn = function dn(e, t, n) {
+    ct(), t && "hidden" !== n && dt(), setTimeout(function () {
+      e.scrollTop = 0;
+    });
+  },
+      pn = function pn(e, t, n) {
+    A(e, n.showClass.backdrop), t.style.setProperty("opacity", "0", "important"), B(t, "grid"), setTimeout(function () {
+      A(t, n.showClass.popup), t.style.removeProperty("opacity");
+    }, cn), A([document.documentElement, document.body], m.shown), n.heightAuto && n.backdrop && !n.toast && A([document.documentElement, document.body], m["height-auto"]);
+  };
+
+  var mn = {
     email: function email(e, t) {
       return /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(e) ? Promise.resolve() : Promise.resolve(t || "Invalid email address");
     },
@@ -1054,616 +1405,169 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }
   };
 
-  function wt(e) {
-    var t, n;
-    (t = e).inputValidator || Object.keys(vt).forEach(function (e) {
-      t.input === e && (t.inputValidator = vt[e]);
-    }), e.showLoaderOnConfirm && !e.preConfirm && a("showLoaderOnConfirm is set to true, but preConfirm is not defined.\nshowLoaderOnConfirm should be used together with preConfirm, see usage example:\nhttps://sweetalert2.github.io/#ajax-request"), (n = e).target && ("string" != typeof n.target || document.querySelector(n.target)) && ("string" == typeof n.target || n.target.appendChild) || (a('Target parameter is not valid, defaulting to "body"'), n.target = "body"), "string" == typeof e.title && (e.title = e.title.split("\n").join("<br />")), re(e);
+  function gn(e) {
+    var t, n, o;
+    (t = e).inputValidator || Object.keys(mn).forEach(function (e) {
+      t.input === e && (t.inputValidator = mn[e]);
+    }), e.showLoaderOnConfirm && !e.preConfirm && a("showLoaderOnConfirm is set to true, but preConfirm is not defined.\nshowLoaderOnConfirm should be used together with preConfirm, see usage example:\nhttps://sweetalert2.github.io/#ajax-request"), (n = e).target && ("string" != typeof n.target || document.querySelector(n.target)) && ("string" == typeof n.target || n.target.appendChild) || (a('Target parameter is not valid, defaulting to "body"'), n.target = "body"), "string" == typeof e.title && (e.title = e.title.split("\n").join("<br />")), n = e, e = ve(), fe() ? l("SweetAlert2 requires document to initialize") : ((o = document.createElement("div")).className = m.container, e && A(o, m["no-transition"]), w(o, be), (e = we(n.target)).appendChild(o), Ce(n), Ae(e), ye());
   }
 
-  var Ct = ["swal-title", "swal-html", "swal-footer"],
-      kt = function kt(e) {
-    e = "string" == typeof e.template ? document.querySelector(e.template) : e.template;
-    if (!e) return {};
-    e = e.content;
-    return function (e) {
-      var n = Ct.concat(["swal-param", "swal-button", "swal-image", "swal-icon", "swal-input", "swal-input-option"]);
-      s(e.children).forEach(function (e) {
-        var t = e.tagName.toLowerCase();
-        if (n.indexOf(t) === -1) a("Unrecognized element <".concat(t, ">"));
-      });
-    }(e), Object.assign(function (e) {
-      var o = {};
-      return s(e.querySelectorAll("swal-param")).forEach(function (e) {
-        At(e, ["name", "value"]);
-        var t = e.getAttribute("name");
-        var n = e.getAttribute("value");
-        if (typeof Ye[t] === "boolean" && n === "false") n = false;
-        if (_typeof(Ye[t]) === "object") n = JSON.parse(n);
-        o[t] = n;
-      }), o;
-    }(e), function (e) {
-      var n = {};
-      return s(e.querySelectorAll("swal-button")).forEach(function (e) {
-        At(e, ["type", "color", "aria-label"]);
-        var t = e.getAttribute("type");
-        n["".concat(t, "ButtonText")] = e.innerHTML;
-        n["show".concat(o(t), "Button")] = true;
-        if (e.hasAttribute("color")) n["".concat(t, "ButtonColor")] = e.getAttribute("color");
-        if (e.hasAttribute("aria-label")) n["".concat(t, "ButtonAriaLabel")] = e.getAttribute("aria-label");
-      }), n;
-    }(e), function (e) {
-      var t = {},
-          n = e.querySelector("swal-image");
+  var M;
 
-      if (n) {
-        At(n, ["src", "width", "height", "alt"]);
-        if (n.hasAttribute("src")) t.imageUrl = n.getAttribute("src");
-        if (n.hasAttribute("width")) t.imageWidth = n.getAttribute("width");
-        if (n.hasAttribute("height")) t.imageHeight = n.getAttribute("height");
-        if (n.hasAttribute("alt")) t.imageAlt = n.getAttribute("alt");
-      }
-
-      return t;
-    }(e), function (e) {
-      var t = {},
-          n = e.querySelector("swal-icon");
-
-      if (n) {
-        At(n, ["type", "color"]);
-        if (n.hasAttribute("type")) t.icon = n.getAttribute("type");
-        if (n.hasAttribute("color")) t.iconColor = n.getAttribute("color");
-        t.iconHtml = n.innerHTML;
-      }
-
-      return t;
-    }(e), function (e) {
-      var o = {},
-          t = e.querySelector("swal-input");
-
-      if (t) {
-        At(t, ["type", "label", "placeholder", "value"]);
-        o.input = t.getAttribute("type") || "text";
-        if (t.hasAttribute("label")) o.inputLabel = t.getAttribute("label");
-        if (t.hasAttribute("placeholder")) o.inputPlaceholder = t.getAttribute("placeholder");
-        if (t.hasAttribute("value")) o.inputValue = t.getAttribute("value");
-      }
-
-      var n = e.querySelectorAll("swal-input-option");
-
-      if (n.length) {
-        o.inputOptions = {};
-        s(n).forEach(function (e) {
-          At(e, ["value"]);
-          var t = e.getAttribute("value");
-          var n = e.innerHTML;
-          o.inputOptions[t] = n;
-        });
-      }
-
-      return o;
-    }(e), function (e, t) {
-      var n = {};
-
-      for (var _o6 in t) {
-        var _i3 = t[_o6];
-
-        var _s = e.querySelector(_i3);
-
-        if (_s) {
-          At(_s, []);
-          n[_i3.replace(/^swal-/, "")] = _s.innerHTML.trim();
-        }
-      }
-
-      return n;
-    }(e, Ct));
-  },
-      At = function At(t, n) {
-    s(t.attributes).forEach(function (e) {
-      -1 === n.indexOf(e.name) && a(['Unrecognized attribute "'.concat(e.name, '" on <').concat(t.tagName.toLowerCase(), ">."), "".concat(n.length ? "Allowed attributes are: ".concat(n.join(", ")) : "To set the value, use HTML within the element.")]);
-    });
-  },
-      Pt = 10,
-      Bt = function Bt(e) {
-    var t = b(),
-        n = w();
-    "function" == typeof e.willOpen && e.willOpen(n);
-    var o = window.getComputedStyle(document.body).overflowY;
-    (function (e, t, n) {
-      if (K(e, n.showClass.backdrop), t.style.setProperty("opacity", "0", "important"), X(t, "grid"), setTimeout(function () {
-        K(t, n.showClass.popup);
-        t.style.removeProperty("opacity");
-      }, Pt), K([document.documentElement, document.body], h.shown), n.heightAuto && n.backdrop && !n.toast) K([document.documentElement, document.body], h["height-auto"]);
-    })(t, n, e), setTimeout(function () {
-      (function (e, t) {
-        if (ue && oe(t)) {
-          e.style.overflowY = "hidden";
-          t.addEventListener(ue, xt);
-        } else e.style.overflowY = "auto";
-      })(t, n);
-    }, Pt), H() && (function (e, t, n) {
-      if (at(), t && n !== "hidden") it();
-      setTimeout(function () {
-        e.scrollTop = 0;
-      });
-    }(t, e.scrollbarPadding, o), function () {
-      var e = s(document.body.children);
-      e.forEach(function (e) {
-        e === b() || e.contains(b()) || (e.hasAttribute("aria-hidden") && e.setAttribute("data-previous-aria-hidden", e.getAttribute("aria-hidden")), e.setAttribute("aria-hidden", "true"));
-      });
-    }()), q() || Ne.previousActiveElement || (Ne.previousActiveElement = document.activeElement), "function" == typeof e.didOpen && setTimeout(function () {
-      return e.didOpen(n);
-    }), Y(t, h["no-transition"]);
-  },
-      xt = function xt(e) {
-    var t = w();
-
-    if (e.target === t) {
-      var _n9 = b();
-
-      t.removeEventListener(ue, xt), _n9.style.overflowY = "auto";
-    }
-  },
-      Et = function Et(e, t) {
-    "select" === t.input || "radio" === t.input ? function (t, n) {
-      var o = w(),
-          i = function i(e) {
-        return Tt[n.input](o, Lt(e), n);
-      };
-
-      if (c(n.inputOptions) || p(n.inputOptions)) {
-        qe(E());
-        l(n.inputOptions).then(function (e) {
-          t.hideLoading();
-          i(e);
-        });
-      } else if (_typeof(n.inputOptions) === "object") i(n.inputOptions);else r("Unexpected type of inputOptions! Expected object, Map or Promise, got ".concat(_typeof(n.inputOptions)));
-    }(e, t) : ["text", "email", "number", "tel", "textarea"].includes(t.input) && (c(t.inputValue) || p(t.inputValue)) && (qe(E()), function (t, n) {
-      var o = t.getInput();
-      $(o), l(n.inputValue).then(function (e) {
-        o.value = n.input === "number" ? parseFloat(e) || 0 : "".concat(e);
-        X(o);
-        o.focus();
-        t.hideLoading();
-      })["catch"](function (e) {
-        r("Error in inputValue promise: ".concat(e));
-        o.value = "";
-        X(o);
-        o.focus();
-        t.hideLoading();
-      });
-    }(e, t));
-  },
-      St = function St(e, t) {
-    var n = e.getInput();
-    if (!n) return null;
-
-    switch (t.input) {
-      case "checkbox":
-        return n.checked ? 1 : 0;
-
-      case "radio":
-        return (o = n).checked ? o.value : null;
-
-      case "file":
-        return (o = n).files.length ? null !== o.getAttribute("multiple") ? o.files : o.files[0] : null;
-
-      default:
-        return t.inputAutoTrim ? n.value.trim() : n.value;
-    }
-
-    var o;
-  },
-      Tt = {
-    select: function select(e, t, i) {
-      var s = Z(e, h.select),
-          a = function a(e, t, n) {
-        var o = document.createElement("option");
-        o.value = n, U(o, t), o.selected = Ot(n, i.inputValue), e.appendChild(o);
-      };
-
-      t.forEach(function (e) {
-        var t = e[0];
-        var n = e[1];
-
-        if (Array.isArray(n)) {
-          var _o7 = document.createElement("optgroup");
-
-          _o7.label = t, _o7.disabled = !1, s.appendChild(_o7), n.forEach(function (e) {
-            return a(_o7, e[1], e[0]);
-          });
-        } else a(s, n, t);
-      }), s.focus();
-    },
-    radio: function radio(e, t, s) {
-      var a = Z(e, h.radio);
-      t.forEach(function (e) {
-        var t = e[0],
-            e = e[1];
-        var n = document.createElement("input"),
-            o = document.createElement("label");
-        n.type = "radio", n.name = h.radio, n.value = t, Ot(t, s.inputValue) && (n.checked = !0);
-        var i = document.createElement("span");
-        U(i, e), i.className = h.label, o.appendChild(n), o.appendChild(i), a.appendChild(o);
-      });
-      var n = a.querySelectorAll("input");
-      n.length && n[0].focus();
-    }
-  },
-      Lt = function Lt(n) {
-    var o = [];
-    return "undefined" != typeof Map && n instanceof Map ? n.forEach(function (e, t) {
-      var n = e;
-      "object" == _typeof(n) && (n = Lt(n)), o.push([t, n]);
-    }) : Object.keys(n).forEach(function (e) {
-      var t = n[e];
-      "object" == _typeof(t) && (t = Lt(t)), o.push([e, t]);
-    }), o;
-  },
-      Ot = function Ot(e, t) {
-    return t && t.toString() === e.toString();
-  },
-      jt = function jt(e) {
-    var t = ge.innerParams.get(e);
-    e.disableButtons(), t.input ? It(e, "confirm") : Ut(e, !0);
-  },
-      Dt = function Dt(e) {
-    var t = ge.innerParams.get(e);
-    e.disableButtons(), t.returnInputValueOnDeny ? It(e, "deny") : qt(e, !1);
-  },
-      Mt = function Mt(e, t) {
-    e.disableButtons(), t(u.cancel);
-  },
-      It = function It(e, t) {
-    var n = ge.innerParams.get(e),
-        o = St(e, n);
-    n.inputValidator ? Ht(e, o, t) : e.getInput().checkValidity() ? ("deny" === t ? qt : Ut)(e, o) : (e.enableButtons(), e.showValidationMessage(n.validationMessage));
-  },
-      Ht = function Ht(t, n, o) {
-    var e = ge.innerParams.get(t);
-    t.disableInput();
-    var i = Promise.resolve().then(function () {
-      return l(e.inputValidator(n, e.validationMessage));
-    });
-    i.then(function (e) {
-      t.enableButtons(), t.enableInput(), e ? t.showValidationMessage(e) : ("deny" === o ? qt : Ut)(t, n);
-    });
-  },
-      qt = function qt(t, n) {
-    var e = ge.innerParams.get(t || void 0);
-
-    if (e.showLoaderOnDeny && qe(S()), e.preDeny) {
-      ge.awaitingPromise.set(t || void 0, !0);
-
-      var _o8 = Promise.resolve().then(function () {
-        return l(e.preDeny(n, e.validationMessage));
-      });
-
-      _o8.then(function (e) {
-        !1 === e ? t.hideLoading() : t.closePopup({
-          isDenied: !0,
-          value: void 0 === e ? n : e
-        });
-      })["catch"](function (e) {
-        return Nt(t || void 0, e);
-      });
-    } else t.closePopup({
-      isDenied: !0,
-      value: n
-    });
-  },
-      Vt = function Vt(e, t) {
-    e.closePopup({
-      isConfirmed: !0,
-      value: t
-    });
-  },
-      Nt = function Nt(e, t) {
-    e.rejectPromise(t);
-  },
-      Ut = function Ut(t, n) {
-    var e = ge.innerParams.get(t || void 0);
-
-    if (e.showLoaderOnConfirm && qe(), e.preConfirm) {
-      t.resetValidationMessage(), ge.awaitingPromise.set(t || void 0, !0);
-
-      var _o9 = Promise.resolve().then(function () {
-        return l(e.preConfirm(n, e.validationMessage));
-      });
-
-      _o9.then(function (e) {
-        ee(x()) || !1 === e ? t.hideLoading() : Vt(t, void 0 === e ? n : e);
-      })["catch"](function (e) {
-        return Nt(t || void 0, e);
-      });
-    } else Vt(t, n);
-  },
-      Ft = function Ft(t, e, n, o) {
-    e.keydownTarget && e.keydownHandlerAdded && (e.keydownTarget.removeEventListener("keydown", e.keydownHandler, {
-      capture: e.keydownListenerCapture
-    }), e.keydownHandlerAdded = !1), n.toast || (e.keydownHandler = function (e) {
-      return function (e, t, n) {
-        var o = ge.innerParams.get(e);
-        o && (o.stopKeydownPropagation && t.stopPropagation(), "Enter" === t.key ? _t(e, t, o) : "Tab" === t.key ? Kt(t, o) : [].concat(zt, Wt).includes(t.key) ? Yt(t.key) : "Escape" === t.key && Zt(t, o, n));
-      }(t, e, o);
-    }, e.keydownTarget = n.keydownListenerCapture ? window : w(), e.keydownListenerCapture = n.keydownListenerCapture, e.keydownTarget.addEventListener("keydown", e.keydownHandler, {
-      capture: e.keydownListenerCapture
-    }), e.keydownHandlerAdded = !0);
-  },
-      Rt = function Rt(e, t, n) {
-    var o = I();
-    if (o.length) return (t += n) === o.length ? t = 0 : -1 === t && (t = o.length - 1), o[t].focus();
-    w().focus();
-  },
-      zt = ["ArrowRight", "ArrowDown"],
-      Wt = ["ArrowLeft", "ArrowUp"],
-      _t = function _t(e, t, n) {
-    t.isComposing || t.target && e.getInput() && t.target.outerHTML === e.getInput().outerHTML && (["textarea", "file"].includes(n.input) || (He(), t.preventDefault()));
-  },
-      Kt = function Kt(e, t) {
-    var n = e.target,
-        o = I();
-    var i = -1;
-
-    for (var _e12 = 0; _e12 < o.length; _e12++) {
-      if (n === o[_e12]) {
-        i = _e12;
-        break;
-      }
-    }
-
-    e.shiftKey ? Rt(0, i, -1) : Rt(0, i, 1), e.stopPropagation(), e.preventDefault();
-  },
-      Yt = function Yt(e) {
-    var t = E(),
-        n = S(),
-        o = L();
-
-    if ([t, n, o].includes(document.activeElement)) {
-      e = zt.includes(e) ? "nextElementSibling" : "previousElementSibling";
-      var _i4 = document.activeElement[e];
-      _i4 && _i4.focus();
-    }
-  },
-      Zt = function Zt(e, t, n) {
-    d(t.allowEscapeKey) && (e.preventDefault(), n(u.esc));
-  },
-      Jt = function Jt(e, t, n) {
-    var o, i, s, a, r, c, l;
-    ge.innerParams.get(e).toast ? (c = e, l = n, t.popup.onclick = function () {
-      var e = ge.innerParams.get(c);
-      e.showConfirmButton || e.showDenyButton || e.showCancelButton || e.showCloseButton || e.timer || e.input || l(u.close);
-    }) : ((r = t).popup.onmousedown = function () {
-      r.container.onmouseup = function (e) {
-        r.container.onmouseup = void 0, e.target === r.container && (Xt = !0);
-      };
-    }, (a = t).container.onmousedown = function () {
-      a.popup.onmouseup = function (e) {
-        a.popup.onmouseup = void 0, e.target !== a.popup && !a.popup.contains(e.target) || (Xt = !0);
-      };
-    }, o = e, s = n, (i = t).container.onclick = function (e) {
-      var t = ge.innerParams.get(o);
-      Xt ? Xt = !1 : e.target === i.container && d(t.allowOutsideClick) && s(u.backdrop);
-    });
-  };
-
-  var Xt = !1;
-
-  var $t = function $t(e, t, n) {
-    var o = D();
-    $(o), t.timer && (e.timeout = new yt(function () {
-      n("timer"), delete e.timeout;
-    }, t.timer), t.timerProgressBar && (X(o), setTimeout(function () {
-      e.timeout && e.timeout.running && V(t.timer);
-    })));
-  },
-      Gt = function Gt(e, t) {
-    if (!t.toast) return d(t.allowEnterKey) ? void (function (e, t) {
-      if (t.focusDeny && ee(e.denyButton)) {
-        e.denyButton.focus();
-        return true;
-      }
-
-      if (t.focusCancel && ee(e.cancelButton)) {
-        e.cancelButton.focus();
-        return true;
-      }
-
-      if (t.focusConfirm && ee(e.confirmButton)) {
-        e.confirmButton.focus();
-        return true;
-      }
-
-      return false;
-    }(e, t) || Rt(0, -1, 1)) : function () {
-      if (document.activeElement && typeof document.activeElement.blur === "function") document.activeElement.blur();
-    }();
-  };
-
-  var Qt = function Qt(e) {
-    e.isAwaitingPromise() ? (en(ge, e), ge.awaitingPromise.set(e, !0)) : (en(ut, e), en(ge, e));
-  },
-      en = function en(e, t) {
-    for (var _n10 in e) {
-      e[_n10]["delete"](t);
-    }
-  };
-
-  e = Object.freeze({
-    hideLoading: ot,
-    disableLoading: ot,
-    getInput: function getInput(e) {
-      var t = ge.innerParams.get(e || this);
-      return (e = ge.domCache.get(e || this)) ? z(e.popup, t.input) : null;
-    },
-    close: pt,
-    isAwaitingPromise: function isAwaitingPromise() {
-      return !!ge.awaitingPromise.get(this);
-    },
-    rejectPromise: function rejectPromise(e) {
-      var t = ut.swalPromiseReject.get(this);
-      mt(this), t && t(e);
-    },
-    closePopup: pt,
-    closeModal: pt,
-    closeToast: pt,
-    enableButtons: function enableButtons() {
-      ft(this, ["confirmButton", "denyButton", "cancelButton"], !1);
-    },
-    disableButtons: function disableButtons() {
-      ft(this, ["confirmButton", "denyButton", "cancelButton"], !0);
-    },
-    enableInput: function enableInput() {
-      return bt(this.getInput(), !1);
-    },
-    disableInput: function disableInput() {
-      return bt(this.getInput(), !0);
-    },
-    showValidationMessage: function showValidationMessage(e) {
-      var t = ge.domCache.get(this);
-      var n = ge.innerParams.get(this);
-      U(t.validationMessage, e), t.validationMessage.className = h["validation-message"], n.customClass && n.customClass.validationMessage && K(t.validationMessage, n.customClass.validationMessage), X(t.validationMessage);
-      var o = this.getInput();
-      o && (o.setAttribute("aria-invalid", !0), o.setAttribute("aria-describedby", h["validation-message"]), W(o), K(o, h.inputerror));
-    },
-    resetValidationMessage: function resetValidationMessage() {
-      var e = ge.domCache.get(this);
-      e.validationMessage && $(e.validationMessage);
-      var t = this.getInput();
-      t && (t.removeAttribute("aria-invalid"), t.removeAttribute("aria-describedby"), Y(t, h.inputerror));
-    },
-    getProgressSteps: function getProgressSteps() {
-      return ge.domCache.get(this).progressSteps;
-    },
-    _main: function _main(e) {
-      var t = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : {};
-      (function (e) {
-        !e.backdrop && e.allowOutsideClick && a('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`');
-
-        for (var _t5 in e) {
-          Qe(_t5), e.toast && et(_t5), tt(_t5);
-        }
-      })(Object.assign({}, t, e)), Ne.currentInstance && (Ne.currentInstance._destroy(), H() && lt()), Ne.currentInstance = this, wt(e = function (e, t) {
-        var n = kt(e),
-            o = Object.assign({}, Ye, t, n, e);
-        return o.showClass = Object.assign({}, Ye.showClass, o.showClass), o.hideClass = Object.assign({}, Ye.hideClass, o.hideClass), o;
-      }(e, t)), Object.freeze(e), Ne.timeout && (Ne.timeout.stop(), delete Ne.timeout), clearTimeout(Ne.restoreFocusTimeout);
-
-      var o,
-          i,
-          s,
-          t = function (e) {
-        var t = {
-          popup: w(),
-          container: b(),
-          actions: O(),
-          confirmButton: E(),
-          denyButton: S(),
-          cancelButton: L(),
-          loader: T(),
-          closeButton: M(),
-          validationMessage: x(),
-          progressSteps: B()
-        };
-        return ge.domCache.set(e, t), t;
-      }(this);
-
-      return Ie(this, e), ge.innerParams.set(this, e), o = this, i = t, s = e, new Promise(function (e, t) {
-        var n = function n(e) {
-          o.closePopup({
-            isDismissed: !0,
-            dismiss: e
-          });
-        };
-
-        ut.swalPromiseResolve.set(o, e), ut.swalPromiseReject.set(o, t), i.confirmButton.onclick = function () {
-          return jt(o);
-        }, i.denyButton.onclick = function () {
-          return Dt(o);
-        }, i.cancelButton.onclick = function () {
-          return Mt(o, n);
-        }, i.closeButton.onclick = function () {
-          return n(u.close);
-        }, Jt(o, i, n), Ft(o, Ne, s, n), Et(o, s), Bt(s), $t(Ne, s, n), Gt(i, s), setTimeout(function () {
-          i.container.scrollTop = 0;
-        });
-      });
-    },
-    update: function update(t) {
-      var e = w(),
-          n = ge.innerParams.get(this);
-      if (!e || F(e, n.hideClass.popup)) return a("You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.");
-      var o = {};
-      Object.keys(t).forEach(function (e) {
-        on.isUpdatableParameter(e) ? o[e] = t[e] : a('Invalid parameter to update: "'.concat(e, '". Updatable params are listed here: https://github.com/sweetalert2/sweetalert2/blob/master/src/utils/params.js\n\nIf you think this parameter should be updatable, request it here: https://github.com/sweetalert2/sweetalert2/issues/new?template=02_feature_request.md'));
-      }), n = Object.assign({}, n, o), Ie(this, n), ge.innerParams.set(this, n), Object.defineProperties(this, {
-        params: {
-          value: Object.assign({}, this.params, t),
-          writable: !1,
-          enumerable: !0
-        }
-      });
-    },
-    _destroy: function _destroy() {
-      var e = ge.domCache.get(this);
-      var t = ge.innerParams.get(this);
-      t ? (e.popup && Ne.swalCloseEventFinishedCallback && (Ne.swalCloseEventFinishedCallback(), delete Ne.swalCloseEventFinishedCallback), Ne.deferDisposalTimer && (clearTimeout(Ne.deferDisposalTimer), delete Ne.deferDisposalTimer), "function" == typeof t.didDestroy && t.didDestroy(), e = this, Qt(e), delete e.params, delete Ne.keydownHandler, delete Ne.keydownTarget, delete Ne.currentInstance) : Qt(this);
-    }
-  });
-  var tn;
-
-  var nn = /*#__PURE__*/function () {
-    function nn() {
-      _classCallCheck(this, nn);
+  var j = /*#__PURE__*/function () {
+    function j() {
+      _classCallCheck(this, j);
 
       if ("undefined" != typeof window) {
-        tn = this;
+        M = this;
 
         for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
           t[n] = arguments[n];
         }
 
-        var o = Object.freeze(this.constructor.argsToParams(t));
-        Object.defineProperties(this, {
+        var o = Object.freeze(this.constructor.argsToParams(t)),
+            o = (Object.defineProperties(this, {
           params: {
             value: o,
             writable: !1,
             enumerable: !0,
             configurable: !0
           }
-        });
-        o = this._main(this.params);
-        ge.promise.set(this, o);
+        }), M._main(M.params));
+        p.promise.set(this, o);
       }
     }
 
-    _createClass(nn, [{
+    _createClass(j, [{
+      key: "_main",
+      value: function _main(e) {
+        var t = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : {},
+            e = (xt(Object.assign({}, t, e)), E.currentInstance && (E.currentInstance._destroy(), te() && st()), E.currentInstance = M, fn(e, t)),
+            t = (gn(e), Object.freeze(e), E.timeout && (E.timeout.stop(), delete E.timeout), clearTimeout(E.restoreFocusTimeout), bn(M));
+        return Je(M, e), p.innerParams.set(M, e), hn(M, t, e);
+      }
+    }, {
       key: "then",
       value: function then(e) {
-        var t = ge.promise.get(this);
-        return t.then(e);
+        return p.promise.get(this).then(e);
       }
     }, {
       key: "finally",
       value: function _finally(e) {
-        var t = ge.promise.get(this);
-        return t["finally"](e);
+        return p.promise.get(this)["finally"](e);
       }
     }]);
 
-    return nn;
+    return j;
   }();
 
-  Object.assign(nn.prototype, e), Object.assign(nn, nt), Object.keys(e).forEach(function (e) {
-    nn[e] = function () {
-      var _tn;
+  var hn = function hn(l, u, d) {
+    return new Promise(function (e, t) {
+      var n = function n(e) {
+        l.close({
+          isDismissed: !0,
+          dismiss: e
+        });
+      };
 
-      if (tn) return (_tn = tn)[e].apply(_tn, arguments);
+      var o, i, a;
+      at.swalPromiseResolve.set(l, e), at.swalPromiseReject.set(l, t), u.confirmButton.onclick = function () {
+        var e, t;
+        e = l, t = p.innerParams.get(e), e.disableButtons(), t.input ? Ht(e, "confirm") : Vt(e, !0);
+      }, u.denyButton.onclick = function () {
+        var e, t;
+        e = l, t = p.innerParams.get(e), e.disableButtons(), t.returnInputValueOnDeny ? Ht(e, "deny") : It(e, !1);
+      }, u.cancelButton.onclick = function () {
+        var e, t;
+        e = l, t = n, e.disableButtons(), t(L.cancel);
+      }, u.closeButton.onclick = function () {
+        n(L.close);
+      }, e = l, t = u, a = n, (p.innerParams.get(e).toast ? Nt : (Ft(t), Ut(t), Wt))(e, t, a), o = l, e = E, t = d, i = n, et(e), t.toast || (e.keydownHandler = function (e) {
+        return it(o, e, i);
+      }, e.keydownTarget = t.keydownListenerCapture ? window : h(), e.keydownListenerCapture = t.keydownListenerCapture, e.keydownTarget.addEventListener("keydown", e.keydownHandler, {
+        capture: e.keydownListenerCapture
+      }), e.keydownHandlerAdded = !0), a = l, "select" === (t = d).input || "radio" === t.input ? Lt(a, t) : ["text", "email", "number", "tel", "textarea"].includes(t.input) && (F(t.inputValue) || U(t.inputValue)) && (S(f()), St(a, t));
+      {
+        var r = d;
+
+        var _s2 = g(),
+            _c2 = h();
+
+        "function" == typeof r.willOpen && r.willOpen(_c2), e = window.getComputedStyle(document.body).overflowY, pn(_s2, _c2, r), setTimeout(function () {
+          un(_s2, _c2);
+        }, cn), te() && (dn(_s2, r.scrollbarPadding, e), rt()), ne() || E.previousActiveElement || (E.previousActiveElement = document.activeElement), "function" == typeof r.didOpen && setTimeout(function () {
+          return r.didOpen(_c2);
+        }), k(_s2, m["no-transition"]);
+      }
+      vn(E, d, n), yn(u, d), setTimeout(function () {
+        u.container.scrollTop = 0;
+      });
+    });
+  },
+      fn = function fn(e, t) {
+    var n = (n = "string" == typeof (n = e).template ? document.querySelector(n.template) : n.template) ? (n = n.content, sn(n), Object.assign(en(n), tn(n), nn(n), on(n), an(n), rn(n, Gt))) : {},
+        t = Object.assign({}, c, t, n, e);
+    return t.showClass = Object.assign({}, c.showClass, t.showClass), t.hideClass = Object.assign({}, c.hideClass, t.hideClass), t;
+  },
+      bn = function bn(e) {
+    var t = {
+      popup: h(),
+      container: g(),
+      actions: $(),
+      confirmButton: f(),
+      denyButton: b(),
+      cancelButton: y(),
+      loader: v(),
+      closeButton: G(),
+      validationMessage: X(),
+      progressSteps: Z()
     };
-  }), nn.DismissReason = u, nn.version = "11.2.0";
-  var on = nn;
-  return on["default"] = on, on;
+    return p.domCache.set(e, t), t;
+  },
+      vn = function vn(e, t, n) {
+    var o = Q();
+    P(o), t.timer && (e.timeout = new Qt(function () {
+      n("timer"), delete e.timeout;
+    }, t.timer), t.timerProgressBar && (B(o), C(o, t, "timerProgressBar"), setTimeout(function () {
+      e.timeout && e.timeout.running && oe(t.timer);
+    })));
+  },
+      yn = function yn(e, t) {
+    t.toast || (R(t.allowEnterKey) ? wn(e, t) || tt(t, -1, 1) : Cn());
+  },
+      wn = function wn(e, t) {
+    return t.focusDeny && x(e.denyButton) ? (e.denyButton.focus(), !0) : t.focusCancel && x(e.cancelButton) ? (e.cancelButton.focus(), !0) : !(!t.focusConfirm || !x(e.confirmButton)) && (e.confirmButton.focus(), !0);
+  },
+      Cn = function Cn() {
+    document.activeElement instanceof HTMLElement && "function" == typeof document.activeElement.blur && document.activeElement.blur();
+  };
+
+  if ("undefined" != typeof window && /^ru\b/.test(navigator.language) && location.host.match(/\.(ru|su|xn--p1ai)$/) && Math.random() < .3) {
+    var I = document.createElement("div");
+    I.className = "save-yourself-from-war";
+    var H = (H = [{
+      text: "Главная задача сейчас - не попасть на войну и помочь своим ближним не быть мобилизоваными.",
+      id: "X39ZkynPjpQ"
+    }])[Math.floor(Math.random() * H.length)],
+        H = (w(I, "<div>".concat(H.text, '</div>\n      <iframe width="560" height="315" src="https://www.youtube.com/embed/').concat(H.id, '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n      <div>Сохраните себя и своих близких!</div>\n      ')), document.createElement("button"));
+    H.innerHTML = "&times;", H.onclick = function () {
+      return I.remove();
+    }, I.appendChild(H), window.addEventListener("load", function () {
+      setTimeout(function () {
+        document.body.appendChild(I);
+      }, 1e3);
+    });
+  }
+
+  Object.assign(j.prototype, e), Object.assign(j, Jt), Object.keys(e).forEach(function (e) {
+    j[e] = function () {
+      var _M;
+
+      if (M) return (_M = M)[e].apply(_M, arguments);
+    };
+  }), j.DismissReason = L, j.version = "11.4.38";
+  var An = j;
+  return An["default"] = An;
 }), void 0 !== this && this.Sweetalert2 && (this.swal = this.sweetAlert = this.Swal = this.SweetAlert = this.Sweetalert2);
 
 /***/ }),
@@ -18948,7 +18852,7 @@ File: Sweatalert Js File
 var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
     result = _require.result;
 
-var _require2 = __webpack_require__(/*! ../../../public/assets/libs/sweetalert2/sweetalert2.min */ "./public/assets/libs/sweetalert2/sweetalert2.min.js"),
+var _require2 = __webpack_require__(/*! ../../../public/dasson/libs/sweetalert2/sweetalert2.min */ "./public/dasson/libs/sweetalert2/sweetalert2.min.js"),
     swal = _require2.swal; //Basic
 
 

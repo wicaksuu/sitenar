@@ -27,11 +27,11 @@
     <div id="dtr-wrapper" class="clearfix">
 
         <!-- preloader starts -->
-        <div class="dtr-preloader">
+        {{-- <div class="dtr-preloader">
             <div class="dtr-preloader-inner">
                 <div class="dtr-loader">Loading...</div>
             </div>
-        </div>
+        </div> --}}
         <!-- preloader ends -->
 
         <!-- Small Devices Header
@@ -158,7 +158,17 @@
                                     <!-- text -->
                                     <span class="dtr-btn-text">Sekarang</span>
                                 </p>
-                            </a>@endif
+                            </a>
+                            @else
+                            <a class="dtr-btn dtr-btn-small dtr-mt-50" href="{{ url(Auth::user()->role) }}"
+                                role="button">
+                                <!-- icon -->
+                                <i class="icon-laptop-fill" aria-hidden="true"></i>
+                                <p>
+                                    <span class="dtr-btn-text">Dashboard</span>
+                                </p>
+                            </a>
+                            @endif
                             <!-- button ends -->
 
                         </div>
@@ -212,210 +222,83 @@
 
                 <!--== row starts ==-->
                 <div class="dtr-slick-slider dtr-testimonial-slider dtr-slick-has-dots">
-                    <!-- column 1 starts -->
+
+                    @foreach ($pengumuman as $pengumumans)
+                    @if (isset($pengumumans->tubmails))
+
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-post-item">
-                            <div class="dtr-post-img"> <img style="height: 200px"
-                                    src="https://www.harianbhirawa.co.id/wp-content/uploads/2022/09/02-kilas-dar-3.jpg"
-                                    alt="image">
+                            <div class="dtr-post-img">
+                                {!! $pengumumans->tubmails !!}
                             </div>
+
                             <div class="dtr-post-content"> <span class="dtr-meta-category">
-                                    <a href="#">Berita</a>
+                                    <a href="{{ url('user/berita-pelatihan/') }}/{{ $pengumumans->type }}">{{
+                                        $pengumumans->type }}</a>
                                 </span>
-                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Konsolidasi Pemkab Madiun dengan
-                                        LKS...</a></h5>
+                                <h5 class="dtr-post-title"><a
+                                        href="{{ url('user/berita-pelatihan/') }}/{{ $pengumumans->type }}"
+                                        rel="bookmark">{{
+                                        $pengumumans->judul }}</a></h5>
                                 <div class="dtr-meta color-dark-gray"> <span class="dtr-meta-author-avatar"><img
-                                            src="assets/images/user-1-80x80.jpg" alt="image"></span> Helmi
-                                    Supriyatno<span class="dtr-meta-date">14. 09. 2022</span></div>
-                                <p class="dtr-post-excerpt">Bupati Madiun H. Ahmad Dawami mengharapkan komitmen Lembaga
-                                    Kerja
-                                    Sama (LKS) Tripartit yang terdiri dari unsur pemerintah, pengusaha, serta pekerja
-                                    dapat
-                                    dijalankan sesuai dengan kesepakatan.</p>
-                                <a class="dtr-read-more"
-                                    href="https://www.harianbhirawa.co.id/konsolidasi-pemkab-madiun-dengan-lks-tripartit-dapat-bekerja-sesuai-kesepakatan/"><span
-                                        class="dtr-read-more-content">Continue
-                                        Reading ...</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column 1 ends -->
-
-                    <!-- column 2 starts -->
-                    <div class="dtr-testimonial bg-white">
-                        <div class="dtr-post-item">
-                            <div class="dtr-post-img"> <img style="height: 200px"
-                                    src="https://www.jatimpos.co/images/2022/06/06/20220606-1831_1654539707344.jpg"
-                                    alt="image">
-                            </div>
-                            <div class="dtr-post-content"> <span class="dtr-meta-category"><a href="#">Berita</a></span>
-                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Gandeng PT DMA, Disnaker
-                                        Kabupaten...</a>
-                                </h5>
-                                <div class="dtr-meta color-dark-gray"> <span class="dtr-meta-author-avatar"><img
-                                            src="assets/images/user-2-80x80.jpg" alt="image"></span> Mataraman<span
-                                        class="dtr-meta-date">20. 07. 2022</span></div>
-                                <p class="dtr-post-excerpt">Pemerintah Kabupaten Madiun melalui Dinas Tenaga Kerja
-                                    (Disnaker)
-                                    Kabupaten Madiun menggelar pelatihan berbasis kompetensi bagi karyawan pabrik rokok
-                                    PT.
-                                    Digjaya Mulia Abadi (DMA), yang ada di Desa Tiron, Kecamatan Madiun.</p>
-                                <a class="dtr-read-more"
-                                    href="https://www.jatimpos.co/jatim/mataraman/8878-gandeng-pt-dma-disnaker-kabupaten-madiun-gelar-pelatihan-prosesing-menjahit-dan-tata-rias-rambut"><span
-                                        class="dtr-read-more-content">Continue
-                                        Reading ...</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column 2 ends -->
-
-                    <!-- column 3 starts -->
-                    <div class="dtr-testimonial bg-white">
-                        <div class="dtr-post-item">
-                            <div class="dtr-post-img"> <img style="height: 200px"
-                                    src="https://radarsukabumi.com/wp-content/uploads/2019/10/Pelatihan-Menjahit-Sukabumi.jpg"
-                                    alt="image">
-                            </div>
-                            <div class="dtr-post-content"> <span class="dtr-meta-category"><a
-                                        href="#">Pelatihan</a></span>
-                                <h5 class="dtr-post-title"><a href="#" rel="bookmark">Pelatihan Menjahit Sepatu Oleh
-                                        Disnaker</a></h5>
-                                <div class="dtr-meta color-dark-gray"> <span class="dtr-meta-author-avatar"><img
-                                            src="https://sitenar.madiunkab.go.id/assets/images/icons/icon.png"
-                                            alt="image"></span> Disnaker<span class="dtr-meta-date">22. 06. 2021</span>
+                                            src="{{ $pengumumans->image_perusahaan }}" alt="image"></span>
+                                    {{ $pengumumans->perusahaan }}<span class="dtr-meta-date">{{
+                                        $pengumumans->create_at }}</span>
                                 </div>
-                                <p class="dtr-post-excerpt">Kerjasama antara dinas tenaga kerja Kab. Madiun dengan
-                                    asosiasi
-                                    persepatuan Indonesia yang bertempat di balaidesa Ngampel Mejayan dan dilakasanakan
-                                    pada
-                                    bulan Oktober tahun 2022 </p>
-                                <a class="dtr-read-more" href="https://bit.ly/menjahitsepatu2022"><span
-                                        class="dtr-read-more-content">Continue
-                                        Reading ...</span></a>
+                                <p class="dtr-post-excerpt">{!! $pengumumans->deskripsi !!}</p>
+                                <a class="dtr-read-more"
+                                    href="{{ url('user/berita-pelatihan/') }}/{{ $pengumumans->type }}"><span
+                                        class="dtr-read-more-content">Lanjut...</span></a>
                             </div>
                         </div>
                     </div>
-                    <!-- column 3 ends -->
+                    @endif
+                    @endforeach
+
+
 
                 </div>
-                <!--== row ends ==-->
             </div>
         </section>
-        <!-- blog section ends
-            ================================================== -->
 
-        <!-- testimonial section starts
-================================================== -->
         <section id="lowongan" class="dtr-section dtr-section-with-bg dtr-py-100"
             style="background-image: url(assets/images/section-bg-img2.jpg);">
 
-            <!-- overlay -->
             <div class="dtr-overlay dtr-overlay-dark"></div>
 
-            <!-- content on overlay starts -->
             <div class="container-fluid dtr-overlay-content">
 
-                <!-- heading starts -->
                 <div class="dtr-section-intro dtr-dark-bg-intro text-center dtr-mb-50">
                     <h2 class="dtr-intro-heading">Lowongan Pekerjaan</h2>
                 </div>
-                <!-- heading ends -->
 
-                <!--===== testimonial slider starts =====-->
                 <div class="dtr-slick-slider dtr-testimonial-slider dtr-slick-has-dots">
 
-                    <!--== slide 1 starts ==-->
+                    @foreach ($loker as $lokers)
                     <div class="dtr-testimonial bg-white">
                         <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img
-                                    src="https://th.bing.com/th/id/R.b599bb8d59a28f752b1f7375690f31ec?rik=aBfiGZYdYldGtA&riu=http%3a%2f%2fcpfood.co.id%2fthemes%2fcpfood%2fassets%2fimages%2ffavicon-singa-merah.png&ehk=g0y5tPMQYAawbYwsigdU%2bxN%2fkg5kPzgf8zUu7nFQ2t4%3d&risl=&pid=ImgRaw&r=0"
-                                    alt="Eleanor Jensen"></p>
+                            <p class="dtr-testimonial-user"><img src="{{ $lokers->image_perusahaan }}" alt="Sitenar">
+                            </p>
                             <div>
-                                <h5 class="dtr-client-name">Food Division</h5>
-                                <span class="dtr-client-job">PT. Charoen Pokphand Indonesia</span>
+                                <h5 class="dtr-client-name">{{ $lokers->judul_lowongan }}</h5>
+                                <span class="dtr-client-job">{{ $lokers->nama_perusahaan }}</span>
                             </div>
-                            <span class="dtr-testimonial-stars dtr-stars-5"></span>
+                            <div class="col d-flex align-items-start justify-content-end gap-2 mb-2">
+                                {{$lokers->lokasi_kerja }}
+                            </div>
                         </div>
-                        <p class="dtr-testimonial-content">Kami membutuhkan Sales/marketing, Foreman Engineering,
-                            Operator WWT,
-                            Forman Produksi, QC Inspector dan Teknisi</p>
-                        <a class="dtr-read-more" href="#"><span class="dtr-read-more-content">Continue
-                                Reading ...</span></a>
+                        <p class="dtr-testimonial-content">{{ $lokers->deskripsi }}</p>
+                        <a class="dtr-read-more" href="{{ url('daftar-lowongan') }}"><span
+                                class="dtr-read-more-content">Lanjut...</span></a>
                     </div>
-                    <!--== slide 1 ends ==-->
+                    @endforeach
 
-                    <!--== slide 2 starts ==-->
-                    <div class="dtr-testimonial bg-white">
-                        <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img
-                                    src="https://lh5.ggpht.com/AiDTpPjet2_aSGbOtQQuhZoFrIrurbK1l0ePrjjAAi0wIFt7AgndKuYfN3rsyXn2K1rl=w300"
-                                    alt="Eleanor Jensen"></p>
-                            <div>
-                                <h5 class="dtr-client-name">Agen Perisai BPJS</h5>
-                                <span class="dtr-client-job">BPJS Ketenagakerjaan</span>
-                            </div>
-                            <span class="dtr-testimonial-stars dtr-stars-4"></span>
-                        </div>
-                        <p class="dtr-testimonial-content">Membutuhkan agen perisai ketenaga kerjaan diutamakan domisili
-                            di Kota
-                            Madiun, Kabupaten Madiun dan Kabupaten Magetan</p><a class="dtr-read-more"
-                            href="https://bit.ly/perisaimadiun"><span class="dtr-read-more-content">Continue
-                                Reading ...</span></a>
-                    </div>
-                    <!--== slide 2 ends ==-->
-
-                    <!--== slide 3 starts ==-->
-                    <div class="dtr-testimonial bg-white">
-                        <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img
-                                    src="https://cdn0.astonhotelsinternational.com/v3/assets/images/brand_logo/aston-logo-color.png"
-                                    alt="Eleanor Jensen"></p>
-                            <div>
-                                <h5 class="dtr-client-name">Front Desk Agent</h5>
-                                <span class="dtr-client-job">Aston Hotel</span>
-                            </div>
-                            <span class="dtr-testimonial-stars dtr-stars-5"></span>
-                        </div>
-                        <p class="dtr-testimonial-content">Lokasi kerja Aston Mojokerto Hotel & Conference Center.
-                            Salary Upah
-                            Minimum Kabupaten/Kota setempat</p><a class="dtr-read-more" href="#"><span
-                                class="dtr-read-more-content">Continue
-                                Reading ...</span></a>
-                    </div>
-                    <!--== slide 3 ends ==-->
-
-                    <!--== slide 4 starts ==-->
-                    <div class="dtr-testimonial bg-white">
-                        <div class="dtr-client-info">
-                            <p class="dtr-testimonial-user"><img
-                                    src="https://sitenar.madiunkab.go.id/assets/images/icons/icon.png"
-                                    alt="Eleanor Jensen"></p>
-                            <div>
-                                <h5 class="dtr-client-name">Sales Marketing</h5>
-                                <span class="dtr-client-job">PT. Sinar Kediri Sakti</span>
-                            </div>
-                            <span class="dtr-testimonial-stars dtr-stars-4"></span>
-                        </div>
-                        <p class="dtr-testimonial-content">Pengalaman sales minimal 1 tahun. Dimisili Madiun dan
-                            menguasai area
-                            Kota dan Kabupaten Madiun </p><a class="dtr-read-more" href="#"><span
-                                class="dtr-read-more-content">Continue
-                                Reading ...</span></a>
-                    </div>
-                    <!--== slide 4 ends ==-->
 
                 </div>
-                <!--===== testimonial slider ends =====-->
 
             </div>
-            <!-- content on overlay ends -->
 
         </section>
-        <!-- testimonial section ends
-================================================== -->
-
-        <!-- team section starts
-    ================================================== -->
         <section id="team" class="dtr-section dtr-pt-100 dtr-pb-70">
             <div class="container">
 
@@ -677,10 +560,22 @@
 
                 <!--== row starts ==-->
                 <div class="row">
-
                     <!-- column 1 starts -->
-                    <div class="col-12 col-md-4 dtr-py-50 text-center">
+                    <div class="col-12 col-md-3 dtr-py-50 text-center">
+                        <!-- counter starts -->
+                        <div class="dtr-counter "> <i class="icon-door-fill color-blue"></i>
+                            <div> <span class="dtr-counter-number counting-number color-blue" data-from="0"
+                                    data-to="{{ 722 }}" data-speed="1600">{{ 722 }}</span>
+                                <span class="dtr-counter-suffix color-light-purple">+</span>
+                                <p class="dtr-count-text">Jumlah Pengunjung</p>
+                            </div>
+                        </div>
+                        <!-- counter ends -->
 
+                    </div>
+                    <!-- column 1 ends -->
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-3 dtr-py-50 dtr-border-left dtr-border-right text-center">
                         <!-- counter starts -->
                         <div class="dtr-counter "> <i class="icon-cursor-fill color-blue"></i>
                             <div> <span class="dtr-counter-number counting-number color-blue" data-from="0"
@@ -695,7 +590,7 @@
                     <!-- column 1 ends -->
 
                     <!-- column 2 starts -->
-                    <div class="col-12 col-md-4 dtr-py-50 dtr-border-left dtr-border-right text-center">
+                    <div class="col-12 col-md-3 dtr-py-50 dtr-border-left dtr-border-right text-center">
 
                         <!-- counter starts -->
                         <div class="dtr-counter "> <i class="icon-cloud-arrow-down-fill color-blue"></i>
@@ -711,7 +606,7 @@
                     <!-- column 2 ends -->
 
                     <!-- column 3 starts -->
-                    <div class="col-12 col-md-4 dtr-py-50 text-center">
+                    <div class="col-12 col-md-3 dtr-py-50 text-center">
 
                         <!-- counter starts -->
                         <div class="dtr-counter "> <i class="icon-user-circle-gear-fill color-blue"></i>
@@ -736,7 +631,7 @@
                     <div class="dtr-overlay"></div>
 
                     <!-- image -->
-                    <img src="assets/images/video-bg.jpg" alt="image">
+                    <img src="assets/images/sitenar-bg.png" alt="image">
 
                     <!-- pulsating button starts -->
                     <div class="dtr-video-pulse-wrapper dtr-overlay-content">

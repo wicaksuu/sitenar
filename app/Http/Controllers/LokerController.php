@@ -505,10 +505,96 @@ class LokerController extends Controller
     }
     public function welcome()
     {
-        // User::where('role', 'perusahaan')->get();
+        $loker = Loker::orderBy('created_at', 'DESC')->paginate(5);
+        $pengumuman = PelatihanNaker::orderBy('created_at', 'DESC')->paginate(5);
+
+        foreach ($loker as $value) {
+            $user = User::where('id', $value['user_id'])->first();
+            $data['lowongan_id']            = $value['id'];
+            $data['judul_lowongan']         = $value['judul_lowongan'];
+            $data['email']                  = $value['email'];
+            $data['nomor_wa_pendaftaran']   = $value['nomor_wa_pendaftaran'];
+            $data['lokasi_kerja']           = $value['lokasi_kerja'];
+            $data['link_pendaftaran']       = $value['link_pendaftaran'];
+            $data['deskripsi']              = $value['deskripsi'];
+            $data['create_at']              = $value['created_at']->toFormattedDateString();
+            $data['image']                  = url('lowongan/' . $value['image']);
+            $data['nama_perusahaan']        = $user->name;
+            if ($user->profile_photo_path == '') {
+                $data['image_perusahaan']       = url('assets/images/icons/icon.png');
+            } else {
+                $data['image_perusahaan']       = $user->profile_photo_path;
+            }
+            unset($data_pencaker);
+            $saver[] = $data;
+        }
+
+        if (!isset($saver)) {
+            $saver = [];
+        }
+        $save = json_decode(json_encode($saver));
+
+        foreach ($pengumuman as $peserta) {
+            $perusahaan = User::where('id', $peserta->user_id)->first();
+            $dump_pealtihan['perusahaan'] = $perusahaan->name;
+            $dump_pealtihan['nama_pelatihan'] = substr($peserta->judul, 0, 35);
+            $dump_pealtihan['deskripsi'] = substr($peserta->deskripsi, 0, 200);
+            $dump_pealtihan['type'] = $peserta->type;
+            $dump_pealtihan['judul'] = substr($peserta->judul, 0, 35) . "...";
+            $dump_pealtihan['_type'] = explode('.', $peserta->image)[1];
+            $dump_pealtihan['image'] = url('berita/' . $peserta->image);
+
+            switch ($dump_pealtihan['_type']) {
+                case 'jfif':
+                    $dump_pealtihan['content_type'] = 'image';
+                    $dump_pealtihan['tubmails'] = '<img style="height: 200px" src="' . $dump_pealtihan['image'] . '" alt="image">';
+                    break;
+                case 'png':
+                    $dump_pealtihan['content_type'] = 'image';
+                    $dump_pealtihan['tubmails'] = '<img style="height: 200px" src="' . $dump_pealtihan['image'] . '" alt="image">';
+                    break;
+                case 'png':
+                    $dump_pealtihan['content_type'] = 'image';
+                    $dump_pealtihan['tubmails'] = '<img style="height: 200px" src="' . $dump_pealtihan['image'] . '" alt="image">';
+                    break;
+                case 'jpg':
+                    $dump_pealtihan['content_type'] = 'image';
+                    $dump_pealtihan['tubmails'] = '<img style="height: 200px" src="' . $dump_pealtihan['image'] . '" alt="image">';
+                    break;
+                case 'jpeg':
+                    $dump_pealtihan['content_type'] = 'image';
+                    $dump_pealtihan['tubmails'] = '<img style="height: 200px" src="' . $dump_pealtihan['image'] . '" alt="image">';
+                    break;
+                case 'mp4':
+                    $dump_pealtihan['content_type'] = 'video';
+                    $dump_pealtihan['tubmails'] = '<center><iframe class="embed-responsive-item" style="height: 200px"
+                                        src="' . $dump_pealtihan['image'] . '" allowfullscreen></iframe></center>';
+                    break;
+            }
+
+            $dump_pealtihan['lokasi_pelatihan'] = $peserta->lokasi_pelatihan;
+            $dump_pealtihan['link_pendaftaran'] = $peserta->link_pendaftaran;
+            $dump_pealtihan['email'] = $perusahaan->email;
+            $dump_pealtihan['list_pelatihan_id'] = $peserta->id;
+            $dump_pealtihan['create_at'] = $value['created_at']->toFormattedDateString();
+
+            if ($perusahaan->profile_photo_path == '') {
+                $dump_pealtihan['image_perusahaan']       = url('assets/images/icons/icon.png');
+            } else {
+                $dump_pealtihan['image_perusahaan']       = $perusahaan->profile_photo_path;
+            }
+
+            $perusahaan_pelatihan[] = $dump_pealtihan;
+            unset($dump_pealtihan);
+        }
+        if (!isset($perusahaan_pelatihan)) {
+            $perusahaan_pelatihan[] = '';
+        }
+        $perusahaan_pelatihan = json_decode(json_encode($perusahaan_pelatihan));
+
         return view('welcome', [
-            'loker' => '',
-            'pengumuman' => '',
+            'loker' => $save,
+            'pengumuman' => $perusahaan_pelatihan,
             'count_lowongan' => count(Loker::get()),
             'count_perusahaan' => count(User::where('role', 'perusahaan')->get()),
             'count_pekerja' => count(User::where('role', 'user')->get())

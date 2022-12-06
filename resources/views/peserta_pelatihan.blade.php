@@ -39,6 +39,7 @@
 
                     <tbody>
                         @foreach ($data as $peserta_pelatihan )
+                        @if (isset($peserta_pelatihan->nama_peserta))
 
                         <tr>
                             <td>{{ $peserta_pelatihan->nama_peserta }}</td>
@@ -71,6 +72,7 @@
                                 </div>
                             </td>
                         </tr>
+                        @endif
                         @endforeach
 
                     </tbody>

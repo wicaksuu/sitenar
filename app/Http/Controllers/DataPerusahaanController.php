@@ -183,4 +183,24 @@ class DataPerusahaanController extends Controller
 
         return view('perusahaan.waiting_valid', ["data" => $data]);
     }
+
+
+    public function view_user()
+    {
+        $data = User::get();
+        return view('user_management', ['data' => $data]);
+    }
+
+    public function dell_user($id)
+    {
+        try {
+            User::where('id', $id)->delete();
+            $message = "User berhasil dihapus";
+        } catch (\Throwable $th) {
+
+            $message = $th->getMessage();
+        }
+
+        return back()->with('message', $message);
+    }
 }

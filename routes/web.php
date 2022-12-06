@@ -19,6 +19,7 @@ use App\Http\Controllers\PelatihanNakerController;
 */
 
 Route::get('/', [LokerController::class, 'welcome']);
+Route::get('/negara', [AlamatController::class, 'negara']);
 Route::get('/provinsi', [AlamatController::class, 'provinsi']);
 Route::get('/kabupaten/{id}', [AlamatController::class, 'kabupaten']);
 Route::get('/kecamatan/{id}', [AlamatController::class, 'kecamatan']);
@@ -52,6 +53,10 @@ Route::middleware([
         return view('perusahaan.start');
     });
 
+
+    Route::get('user-data', [DataPerusahaanController::class, 'view_user']);
+    Route::get('hapus-user/{id}', [DataPerusahaanController::class, 'dell_user']);
+// hapus-user
     Route::get('perusahaan', [LokerController::class, 'dashboard']);
     Route::get('perusahaan-profile', [UserController::class, 'index']);
     Route::post('perusahaan-update-profile', [UserController::class, 'update_profile']);

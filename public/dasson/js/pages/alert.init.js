@@ -169,11 +169,11 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/assets/js/pages/alert.init": 0,
-/******/ 			"assets/css/app": 0,
-/******/ 			"assets/css/preloader": 0,
-/******/ 			"assets/css/icons": 0,
-/******/ 			"assets/css/bootstrap": 0
+/******/ 			"/dasson/js/pages/alert.init": 0,
+/******/ 			"dasson/css/app": 0,
+/******/ 			"dasson/css/preloader": 0,
+/******/ 			"dasson/css/icons": 0,
+/******/ 			"dasson/css/bootstrap": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -208,12 +208,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkDason"] = self["webpackChunkDason"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -223,11 +223,11 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/preloader","assets/css/icons","assets/css/bootstrap"], () => (__webpack_require__("./resources/js/pages/alert.init.js")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/preloader","assets/css/icons","assets/css/bootstrap"], () => (__webpack_require__("./resources/scss/bootstrap.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/preloader","assets/css/icons","assets/css/bootstrap"], () => (__webpack_require__("./resources/scss/icons.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/preloader","assets/css/icons","assets/css/bootstrap"], () => (__webpack_require__("./resources/scss/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/app","assets/css/preloader","assets/css/icons","assets/css/bootstrap"], () => (__webpack_require__("./resources/scss/preloader.scss")))
+/******/ 	__webpack_require__.O(undefined, ["dasson/css/app","dasson/css/preloader","dasson/css/icons","dasson/css/bootstrap"], () => (__webpack_require__("./resources/js/pages/alert.init.js")))
+/******/ 	__webpack_require__.O(undefined, ["dasson/css/app","dasson/css/preloader","dasson/css/icons","dasson/css/bootstrap"], () => (__webpack_require__("./resources/scss/bootstrap.scss")))
+/******/ 	__webpack_require__.O(undefined, ["dasson/css/app","dasson/css/preloader","dasson/css/icons","dasson/css/bootstrap"], () => (__webpack_require__("./resources/scss/icons.scss")))
+/******/ 	__webpack_require__.O(undefined, ["dasson/css/app","dasson/css/preloader","dasson/css/icons","dasson/css/bootstrap"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dasson/css/app","dasson/css/preloader","dasson/css/icons","dasson/css/bootstrap"], () => (__webpack_require__("./resources/scss/preloader.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

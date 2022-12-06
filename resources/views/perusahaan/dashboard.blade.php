@@ -94,7 +94,85 @@
         </div><!-- end card -->
     </div><!-- end col -->
 </div><!-- end row-->
+<div class="row">
+    <div class="col-xl-8">
+        <!-- card -->
+        <div class="card">
+            <!-- card body -->
+            <div class="card-body">
+                <div class="d-flex flex-wrap align-items-center mb-4">
+                    <h5 class="card-title me-2">Penyerapan Pencaker</h5>
+                </div>
 
+                <div class="row align-items-center">
+                    <div class="col-xl-12">
+                        <div>
+                            <div id="market-overview" data-colors='["#1c84ee", "#33c38e"]' class="apex-charts"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row-->
+
+    <div class="col-xl-4">
+        <!-- card -->
+        <div class="card">
+            <!-- card body -->
+            <div class="card-body">
+                <div class="d-flex flex-wrap align-items-center mb-4">
+                    <h5 class="card-title me-2">Pesebaran Pekerja</h5>
+                    <div class="ms-auto">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-reset" href="#" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="text-muted font-size-12">Sort By:</span> <span class="fw-medium">World<i
+                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                <a class="dropdown-item" href="#">Malaysia</a>
+                                <a class="dropdown-item" href="#">Singapura</a>
+                                <a class="dropdown-item" href="#">Hongkong</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sales-by-locations" data-colors='["#33c38e"]' style="height: 253px"></div>
+
+                <div class="px-2 py-2">
+                    <p class="mb-1">Malaysia <span class="float-end">80%</span></p>
+                    <div class="progress mt-2" style="height: 6px;">
+                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 80%"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="80">
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-1">Singapura <span class="float-end">55%</span></p>
+                    <div class="progress mt-2" style="height: 6px;">
+                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 55%"
+                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="55">
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-1">Hongkong <span class="float-end">65%</span></p>
+                    <div class="progress mt-2" style="height: 6px;">
+                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 65%"
+                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="65">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
 
 <!-- end row-->
 
